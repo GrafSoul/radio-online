@@ -30,7 +30,7 @@ const Header = () => {
         <div className={classes.header}>
             <div className={classes.topBar}>
                 <div className={classes.title}>
-                    <i className="far fa-headphones"></i>
+                    <i className="fas fa-radio-alt"></i> {' '}
                     Radio Online
                 </div>
                 <div>

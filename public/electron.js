@@ -50,7 +50,7 @@ const createWindow = async () => {
         maxWidth: 600,
         maxHeight: 500,
         titleBarStyle: 'hidden',
-        backgroundColor: '#282c34',
+        backgroundColor: '#1b212e',
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true,
