@@ -1,0 +1,59 @@
+.header {
+	position: relative;
+	z-index: 2000;
+	-webkit-user-select: none;
+	background-color: #1d1f25;
+	overflow: hidden;
+
+	.topBar {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 5px 0 5px 13px;
+		background-color: #21252b;
+		-webkit-app-region: drag;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		color: #fff;
+		z-index: 10;
+		transition: all 0.3s ease;
+	}
+
+	.title {
+		margin-top: 7px;
+		font-family: "SFUIProDisplay", sans-serif;
+		font-size: 16px;
+		font-weight: bold;
+		color: rgb(173, 173, 173);
+		;
+	}
+
+	.title i {
+		margin-right: 5px;
+	}
+
+	.btnWindow,
+	.closeWindow {
+		font-size: 17px;
+		margin: -5px 0;
+		padding: 11px 15px;
+		cursor: pointer;
+		-webkit-app-region: no-drag;
+		background-color: #21252b;
+		color: rgb(173, 173, 173);
+		border: none;
+		outline: none;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: #fff;
+			background-color: #37373b;
+		}
+	}
+
+	.closeWindow:hover {
+		background-color: #f50a3d !important;
+	}
+}
