@@ -47,8 +47,8 @@ const createWindow = async () => {
         height: mainWindowState.height,
         minWidth: 300,
         minHeight: 200,
-        maxWidth: 600,
-        maxHeight: 500,
+        maxWidth: 1600,
+        maxHeight: 1500,
         titleBarStyle: 'hidden',
         backgroundColor: '#1b212e',
         webPreferences: {

@@ -14,19 +14,47 @@ const [isDeleteModal, setIsDeleteModal ] = useState(false);
 const [isEditModal, setIsEditModal ] = useState(false);
 
     const listStations = () => {
-        let currentList = stations.map((item) => {
-            return <ReactListItem 
-                key={item.id} 
-                id={item.id}
-                station={item.name}                
-                url={item.url}
-                category={item.category}
-                setStation={setStation}
-                deleteModal={handlerDeleteModal}
-                editModal={handlerEditModal}
-            />
+        let allCategory = [];
+        stations.forEach((item) => {
+            allCategory.push(item.category);
         });
+
+        let uniqueCategory = Array.from(new Set(allCategory));
+
+        let currentList = uniqueCategory.map((category, index)=> {
+            return <div key={index}>
+                <div className={classes.categoryName}>{category}</div>
+                {stations.map((item) => {
+                    return category === item.category ? 
+                    <ReactListItem 
+                        key={item.id} 
+                        id={item.id}
+                        station={item.name}
+                        url={item.url}
+                        category={item.category}
+                        setStation={setStation}
+                        deleteModal={handlerDeleteModal}
+                        editModal={handlerEditModal}
+                    /> : null
+                })}
+            </div>
+        });
+
+        // let currentList = stations.map((item) => {
+        //     return <ReactListItem 
+        //         key={item.id} 
+        //         id={item.id}
+        //         station={item.name}                
+        //         url={item.url}
+        //         category={item.category}
+        //         setStation={setStation}
+        //         deleteModal={handlerDeleteModal}
+        //         editModal={handlerEditModal}
+        //     />
+        // });
+
         return currentList;
+
     }
 
     const handlerDeleteModal = (id) => {
@@ -45,10 +73,6 @@ const [isEditModal, setIsEditModal ] = useState(false);
         setEditStation(currentStation);
         setIsEditModal(true);
     }
-
-    // const handlerEditStation = () => {
-
-    // }
 
     const handlerAddStation = () => {
         setIsAddModal(true);
