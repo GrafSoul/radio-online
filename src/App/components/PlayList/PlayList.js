@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 
 import ReactListItem from './PlayListItem/PlayListItem';
-import ModalForm from '../ModalForm/ModalForm.js'
+import ModalAdd from '../ModalAdd/ModalAdd.js'
+import ModalEdit from '../ModalEdit/ModalEdit.js'
 import ModalDelete from '../ModalDelete/ModalDelete.js'
 import classes from './PlayList.module.scss';
 
 const PlayList = ({ stations, setStation, setStations }) => {
 const [currentId, setCurrentId ] = useState('');
+const [editStation, setEditStation ] = useState({});
 const [isAddModal, setIsAddModal ] = useState(false);
 const [isDeleteModal, setIsDeleteModal ] = useState(false);
+const [isEditModal, setIsEditModal ] = useState(false);
 
     const listStations = () => {
         let currentList = stations.map((item) => {
@@ -20,6 +23,7 @@ const [isDeleteModal, setIsDeleteModal ] = useState(false);
                 category={item.category}
                 setStation={setStation}
                 deleteModal={handlerDeleteModal}
+                editModal={handlerEditModal}
             />
         });
         return currentList;
@@ -36,11 +40,23 @@ const [isDeleteModal, setIsDeleteModal ] = useState(false);
         setIsDeleteModal(false);
     }
 
+    const handlerEditModal = (id) => {
+        let currentStation = stations.find(item => item.id === id);
+        setEditStation(currentStation);
+        setIsEditModal(true);
+    }
+
+    // const handlerEditStation = () => {
+
+    // }
+
     const handlerAddStation = () => {
         setIsAddModal(true);
     }
-    const handlerCancelModal = () => {
+    const handlerCancelModal = (e) => {
+        e.preventDefault();   
         setIsAddModal(false);
+        setIsEditModal(false);
         setIsDeleteModal(false);
     }
     
@@ -49,11 +65,23 @@ const [isDeleteModal, setIsDeleteModal ] = useState(false);
             {listStations()}
 
             {isAddModal &&
-                <ModalForm 
+                <ModalAdd
                     stations={stations} 
+                    station={editStation}
                     setStations={setStations} 
                     setIsAddModal={setIsAddModal}
                     cancelModal={handlerCancelModal}
+                />
+            }
+
+            {isEditModal &&
+                <ModalEdit 
+                    stations={stations}
+                    station={editStation}                  
+                    setStations={setStations} 
+                    setIsEditModal={setIsEditModal}
+                    cancelModal={handlerCancelModal}
+
                 />
             }
 
@@ -64,6 +92,8 @@ const [isDeleteModal, setIsDeleteModal ] = useState(false);
                     deleteStation={handlerDeleteStation}
                 />
             }
+
+
             <div className={classes.addButtonWrap}>
                 <button className={classes.addButton} onClick={handlerAddStation}>Add</button>
             </div>

@@ -11,11 +11,13 @@
 }
 
 .editBtn {
-    position: relative;
+    position: absolute;
+    right: 10px;
     z-index: 100;
 }
 
 .deleteBtn {
-    position: absolute;
+    position: relative;
+    right: 0;
     z-index: 100;
 }

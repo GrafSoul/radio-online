@@ -62,7 +62,6 @@ const Player = ({station}) => {
         <div className={classes.audioContent}>
 
             <audio 
-                autoPlay
                 ref={audioStream}
             >
                 <source  src={station.url} type="audio/mpeg"></source>
