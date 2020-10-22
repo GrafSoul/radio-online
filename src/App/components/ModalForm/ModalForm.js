@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import classes from './ModalForm.module.scss';
 
-const ModalForm = ({ stations, setStations, setIsAddModal }) => {
+const ModalForm = ({ stations, setStations, setIsAddModal, cancelModal }) => {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
     const [category, setCategory] = useState('');
@@ -42,6 +42,7 @@ const ModalForm = ({ stations, setStations, setIsAddModal }) => {
                     onChange={(e) =>  setCategory(e.target.value)}
                 />
                 <button onClick={(e) => handlerAddNewStation(e)}>Add</button>
+                <button onClick={cancelModal}>Cancel</button>
             </form>
         </div>
     );
