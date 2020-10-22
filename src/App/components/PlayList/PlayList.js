@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 
 import ReactListItem from './PlayListItem/PlayListItem';
+import ModalForm from '../ModalForm/ModalForm.js'
 import classes from './PlayList.module.scss';
 
 const PlayList = ({ stations, setStation, setStations }) => {
-    const [name, setName] = useState('');
-    const [url, setUrl] = useState('');
-    const [category, setCategory] = useState('');
+const [isAddModal, setIsAddModal ] = useState(false);
 
     const listStations = () => {
         let currentList = stations.map((item) => {
@@ -22,45 +21,24 @@ const PlayList = ({ stations, setStation, setStations }) => {
         return currentList;
     }
 
-    const handlerAddNewStation = (e) => {
-        e.preventDefault();
-        
-        let newStation = { id: stations.length + 1, name, url, category };
-        setStations(prevStations => [...prevStations, newStation]);        
-        setName('');
-        setUrl('');
-        setCategory('');
+    const handlerAddStation = () => {
+        setIsAddModal(true);
     }
     
     return (
         <div className={classes.playListContent}>
             {listStations()}
-
-            <div className={classes.addNewStation}>
-                <form action="">
-                    <input 
-                        type="text" 
-                        name="name" 
-                        value={name} 
-                        onChange={(e) =>  setName(e.target.value)}
-                    />
-
-                    <input 
-                        type="text" 
-                        name="url" 
-                        value={url}
-                        onChange={(e) =>  setUrl(e.target.value)}
-                    />
-
-                    <input 
-                        type="text" 
-                        name="category" 
-                        value={category}
-                        onChange={(e) =>  setCategory(e.target.value)}
-                    />
-                    <button onClick={(e) => handlerAddNewStation(e)}>Add</button>
-                </form>
+            {isAddModal &&
+                <ModalForm 
+                    stations={stations} 
+                    setStations={setStations} 
+                    setIsAddModal={setIsAddModal}
+                />
+            }
+            <div className={classes.addButtonWrap}>
+                <button className={classes.addButton} onClick={handlerAddStation}>Add</button>
             </div>
+
 
         </div>
     );
