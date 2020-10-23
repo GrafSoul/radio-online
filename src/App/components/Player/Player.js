@@ -1,9 +1,9 @@
-import React, {useState, useRef, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 
 import classes from './Player.module.scss'; 
 
-const Player = ({station}) => {
-    const audioStream = useRef(null);  
+const Player = ({audioStream, station, stations}) => {
+ 
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
     const [isStop, setIsStop] = useState(false);
@@ -13,7 +13,7 @@ const Player = ({station}) => {
     useEffect(() => {
         audioStream.current.load();
         setIsPlay(false)
-    }, [station]);
+    }, [station, audioStream]);
 
     const playAudio = () => {
         if(isStop) {
@@ -78,7 +78,6 @@ const Player = ({station}) => {
         <div className={classes.audioContent}>
 
             <audio 
-                // autoPlay
                 ref={audioStream}
             >
                 <source  src={station.url} type="audio/mpeg"></source>
@@ -86,30 +85,35 @@ const Player = ({station}) => {
             </audio>
 
             <div className={classes.audioName}>
-                { station.station === '' ? 'Select or Add Radio Station' : station.station }
+                { station.station === '' || stations.length === 0 ?
+                 'Select or Add Radio Station' : station.station }
             </div>
-            
-            <div className={classes.audioName}>{station.category}</div>
 
-            <div className={classes.audioControlPlay}>
-                {!isPlay ?
-                    <button className={classes.audioPlayBtn} onClick={playAudio}>Play</button>
-                    :
-                    <button className={classes.audioPauseBtn} onClick={pauseAudio}>Pause</button>
-                }
-                <button className={classes.audioPauseBtn} onClick={stopAudio}>Stop</button>
-                <div className={classes.liveAudio}>
-                {isLive ? isStop ? 'Live' : 'Live!': <button className={classes.audioReloadBtn} onClick={handlerLiveAudio}>Back to Live</button>}               
+            <div className={[classes.controlWrap, 
+                station.station === '' ||
+                stations.length === 0  ?
+                classes.hidden : null].join(' ')}>
+                <div className={classes.audioName}>{station.category}</div>
+
+                <div className={classes.audioControlPlay}>
+                    {!isPlay ?
+                        <button className={classes.audioPlayBtn} onClick={playAudio}>Play</button>
+                        :
+                        <button className={classes.audioPauseBtn} onClick={pauseAudio}>Pause</button>
+                    }
+                    <button className={classes.audioPauseBtn} onClick={stopAudio}>Stop</button>
+                    <div className={classes.liveAudio}>
+                    {isLive ? isStop ? 'Live' : 'Live!': <button className={classes.audioReloadBtn} onClick={handlerLiveAudio}>Back to Live</button>}               
+                    </div>
+                </div>
+
+                <div className={classes.audioControlVolume}>
+                    <input type="range" value={volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
+                    <button className={classes.audioSoundBtn} onClick={handlerToggleSound}>
+                        {isPlay ? 'Off' : 'On'}
+                    </button>
                 </div>
             </div>
-
-            <div className={classes.audioControlVolume}>
-                <input type="range" value={volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
-                <button className={classes.audioSoundBtn} onClick={handlerToggleSound}>
-                    {isPlay ? 'Off' : 'On'}
-                </button>
-            </div>
-
         </div>
     );
 }

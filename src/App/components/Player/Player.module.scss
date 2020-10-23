@@ -20,6 +20,17 @@
     align-items: center; 
 }
 
+.controlWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.hidden {
+    display: none;
+}
+
 .audioControl {}
 
 .audioPlayBtn {}

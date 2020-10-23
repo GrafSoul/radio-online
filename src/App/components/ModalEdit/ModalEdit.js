@@ -12,7 +12,8 @@ const ModalEdit = ({ station, stations, setStations, setIsEditModal, cancelModal
 
         let editedStation = { id: station.id, name, url, category };
         let newStations = stations.map((item) => item.id === station.id ? editedStation : item);
-        setStations(newStations);   
+        setStations(newStations); 
+        localStorage.setItem('stations', JSON.stringify(newStations));  
         setName('');
         setUrl('');
         setCategory('');

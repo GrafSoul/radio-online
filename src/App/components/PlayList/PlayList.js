@@ -39,22 +39,7 @@ const [isEditModal, setIsEditModal ] = useState(false);
                 })}
             </div>
         });
-
-        // let currentList = stations.map((item) => {
-        //     return <ReactListItem 
-        //         key={item.id} 
-        //         id={item.id}
-        //         station={item.name}                
-        //         url={item.url}
-        //         category={item.category}
-        //         setStation={setStation}
-        //         deleteModal={handlerDeleteModal}
-        //         editModal={handlerEditModal}
-        //     />
-        // });
-
         return currentList;
-
     }
 
     const handlerDeleteModal = (id) => {
@@ -64,7 +49,11 @@ const [isEditModal, setIsEditModal ] = useState(false);
 
     const handlerDeleteStation = () => {
         let newStations = stations.filter(item => item.id !== currentId);
+        localStorage.setItem('stations', JSON.stringify(newStations));
         setStations(newStations); 
+        if(stations.length === 1) {
+            setStation({id: '', station: '', url: '', category: ''})
+        }      
         setIsDeleteModal(false);
     }
 

@@ -11,7 +11,8 @@ const ModalAdd = ({ stations, setStations, setIsAddModal, cancelModal }) => {
         e.preventDefault();
         
         let newStation = { id: stations.length + 1, name, url, category };
-        setStations(prevStations => [...prevStations, newStation]);        
+        setStations(prevStations => [...prevStations, newStation]);  
+        localStorage.setItem('stations', JSON.stringify([...stations, newStation]));      
         setName('');
         setUrl('');
         setCategory('');
