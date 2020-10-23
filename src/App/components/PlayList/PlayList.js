@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+// import { Scrollbars } from 'react-custom-scrollbars';
 
 import ReactListItem from './PlayListItem/PlayListItem';
 import ModalAdd from '../ModalAdd/ModalAdd.js'
@@ -75,8 +76,9 @@ const [isEditModal, setIsEditModal ] = useState(false);
     
     return (
         <div className={classes.playListContent}>
-            {listStations()}
-
+            {/* <Scrollbars style={{ width: '100vw', height: '100vh' }}> */}
+                {listStations()}
+            {/* </Scrollbars> */}
             {isAddModal &&
                 <ModalAdd
                     stations={stations} 
