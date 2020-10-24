@@ -1,6 +1,6 @@
 {
   "name": "radio-online",
-  "productName": "Radio Online",
+  "productName": "Radion",
   "description": "Applications for listening to the broadcast of radio stations. Made using - Electron.js, React.js.",
   "version": "0.1.0",
   "repository": {

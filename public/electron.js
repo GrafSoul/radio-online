@@ -24,7 +24,7 @@ const getIcon = () => {
     return `${path.join(__dirname, '/icons/16x16.png')}`;
 };
 
-const nameApp = 'Radio Online'
+const nameApp = 'Radion'
 let mainWindow, tray, contextMenu;
 
 

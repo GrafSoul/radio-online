@@ -9,7 +9,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 5px 0 5px 13px;
+		padding: 3px 0 3px 10px;
 		background-color: #151a24;
 		-webkit-app-region: drag;
 		position: fixed;
@@ -22,34 +22,35 @@
 	}
 
 	.title {
-		margin-top: 7px;
+		margin-top: 0;
 		font-family: "SFUIProDisplay", sans-serif;
 		font-size: 16px;
-		font-weight: bold;
-		color: rgb(105, 133, 156);
+		color:rgb(129, 186, 218);
 		;
 	}
 
-	.title i {
-		margin-right: 5px;
+	.logo {
+		margin-bottom: -2px;
+		margin-right: 1px;
+		display: inline-block;
 	}
 
 	.btnWindow,
 	.closeWindow {
-		font-size: 17px;
-		margin: -5px 0;
-		padding: 11px 15px;
+		font-size: 16px;
+		margin: -4px 0;
+		padding: 4px 10px;
 		cursor: pointer;
 		-webkit-app-region: no-drag;
 		background-color:#151a24;
-		color: rgb(105, 133, 156);
+		color:rgb(129, 186, 218);
 		border: none;
 		outline: none;
 		transition: all 0.3s ease;
 
 		&:hover {
 			color: #fff;
-			background-color:#1b212e;
+			background-color:#262f41;
 		}
 	}
 

@@ -1,4 +1,4 @@
-# Radio Online
+# Radion | Internet Radio Online
 
 Applications for listening to the broadcast of radio stations.
 Made using - Electron.js, React.js.
@@ -30,7 +30,7 @@ yarn build
 
 ## Copyright
 
-&#169; 2020 | Radio Online | [MIT licensed].
+&#169; 2020 | Radion | [MIT licensed].
 
 [mit licensed]: https://github.com/GrafSoul/radio-online/blob/master/LICENSE
 [nodejs]: https://nodejs.org/

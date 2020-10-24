@@ -22,7 +22,9 @@ const App =() =>{
     useEffect(() => {
         const localStations = JSON.parse(localStorage.getItem('stations'));
 
-        if(localStations.length === 0 || localStations.length === null) {
+        console.log(localStations)
+
+        if( localStations === null || localStations.length === 0) {
             localStorage.setItem('stations', JSON.stringify(resources)); 
             setStations(resources)            
         } else {

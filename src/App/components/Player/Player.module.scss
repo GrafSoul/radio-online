@@ -1,9 +1,10 @@
 .audioContent {
-    margin-top: 50px;
+    margin-top: 36px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    outline: 1px solid red;
 }
 
 .audioName {

@@ -30,8 +30,12 @@ const Header = () => {
         <div className={classes.header}>
             <div className={classes.topBar}>
                 <div className={classes.title}>
-                    <i className="fas fa-radio-alt"></i> {' '}
-                    Radio Online
+                <img
+                        src="./icons/16x16.png"
+                        alt="Logo"
+                        className={classes.logo}
+                    />{' '}
+                    Radion
                 </div>
                 <div>
                     <button
