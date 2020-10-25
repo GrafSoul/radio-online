@@ -84,33 +84,41 @@ const Player = ({audioStream, station, stations}) => {
                 <source src={station.url} type="audio/ogg"></source>
             </audio>
 
-            <div className={classes.audioName}>
-                { station.station === '' || stations.length === 0 ?
-                 'Select or Add Radio Station' : station.station }
-            </div>
+            <div className={classes.audioInfo}>
+                <div className={classes.audioName}>
+                    { station.station === '' || stations.length === 0 ?
+                    'Select or Add Radio Station' : station.station }
+
+                </div>
+                <div className={classes.audioCategory}>{station.category}</div>
+            </div>  
 
             <div className={[classes.controlWrap, 
                 station.station === '' ||
                 stations.length === 0  ?
-                classes.hidden : null].join(' ')}>
-                <div className={classes.audioName}>{station.category}</div>
+                classes.hidden : null].join(' ')}>             
 
                 <div className={classes.audioControlPlay}>
-                    {!isPlay ?
-                        <button className={classes.audioPlayBtn} onClick={playAudio}>Play</button>
-                        :
-                        <button className={classes.audioPauseBtn} onClick={pauseAudio}>Pause</button>
-                    }
-                    <button className={classes.audioPauseBtn} onClick={stopAudio}>Stop</button>
-                    <div className={classes.liveAudio}>
-                    {isLive ? isStop ? 'Live' : 'Live!': <button className={classes.audioReloadBtn} onClick={handlerLiveAudio}>Back to Live</button>}               
+                    <div className={classes.audioControlPlayBtn}>                    
+                        {!isPlay ?
+                            <button className={classes.audioPlayBtn} onClick={playAudio}><i className="fas fa-play-circle"></i></button>
+                            :
+                            <button className={classes.audioPauseBtn} onClick={pauseAudio}><i className="fas fa-pause-circle"></i></button>
+                        }
+                        <button className={classes.audioStopBtn} onClick={stopAudio}><i className="fas fa-stop-circle"></i></button>
+
+                        <div className={classes.liveAudio}>
+                            {isLive ? isStop ? <span className={classes.liveOff}>Live</span> : 
+                            <span className={classes.liveOn}><span className={classes.onlineIndicator}></span> Live</span> : 
+                            <button className={classes.audioReloadBtn} onClick={handlerLiveAudio}>Back to Live</button>}               
+                        </div>
                     </div>
                 </div>
 
                 <div className={classes.audioControlVolume}>
-                    <input type="range" value={volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
+                    <input type="range" value={volume} className={classes.volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
                     <button className={classes.audioSoundBtn} onClick={handlerToggleSound}>
-                        {isPlay ? 'Off' : 'On'}
+                        {isPlay ? <i className="fas fa-volume-down"></i> : <i className="fas fa-volume-up"></i>}
                     </button>
                 </div>
             </div>

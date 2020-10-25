@@ -2,7 +2,7 @@
 	position: relative;
 	z-index: 2000;
 	-webkit-user-select: none;
-	background-color: #151a24;
+	background-color: rgb(21, 26, 36);
 	overflow: hidden;
 
 	.topBar {
@@ -10,9 +10,10 @@
 		flex-direction: row;
 		justify-content: space-between;
 		padding: 3px 0 3px 10px;
-		background-color: #151a24;
+		background-color: rgb(21, 26, 36);
 		-webkit-app-region: drag;
 		position: fixed;
+		box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.8);
 		top: 0;
 		left: 0;
 		right: 0;
@@ -24,7 +25,7 @@
 	.title {
 		margin-top: 0;
 		font-family: "SFUIProDisplay", sans-serif;
-		font-size: 16px;
+		font-size: 1em;
 		color:rgb(129, 186, 218);
 		;
 	}
@@ -42,19 +43,19 @@
 		padding: 4px 10px;
 		cursor: pointer;
 		-webkit-app-region: no-drag;
-		background-color:#151a24;
+		background-color:rgb(21, 26, 36);
 		color:rgb(129, 186, 218);
 		border: none;
 		outline: none;
 		transition: all 0.3s ease;
 
 		&:hover {
-			color: #fff;
+			color: rgb(255, 255, 255);
 			background-color:#262f41;
 		}
 	}
 
 	.closeWindow:hover {
-		background-color: #f50a3d !important;
+		background-color: rgb(245, 10, 61) !important;
 	}
 }
