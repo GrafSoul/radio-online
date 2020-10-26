@@ -1,0 +1,33 @@
+.footerContent {
+    // display: none;
+    padding: 8px 5px 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom:0;
+    z-index: 150;
+    color:rgb(129, 186, 218);
+    border-top: 1px solid rgb(38, 47, 66);
+    background-color: rgb(23, 28, 39);
+    box-shadow: -1px -1px 16px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.addButton {
+    display: inline-block;
+    padding: 0;
+    height: 28px;    
+    background-color:transparent;
+    color:  rgb(64, 91, 107);
+    border-radius: 18px;
+    border: none;
+    font-size: 1.7em;
+    line-height: 0;
+    outline: none;
+    cursor: pointer;
+    transition: .3s all ease;
+
+    &:hover {
+        color:  rgb(129, 186, 218);
+    }
+}

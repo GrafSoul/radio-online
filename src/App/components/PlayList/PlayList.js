@@ -1,16 +1,17 @@
 import React, {useState} from 'react';
-// import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import ReactListItem from './PlayListItem/PlayListItem';
 import ModalAdd from '../ModalAdd/ModalAdd.js'
 import ModalEdit from '../ModalEdit/ModalEdit.js'
 import ModalDelete from '../ModalDelete/ModalDelete.js'
+
 import classes from './PlayList.module.scss';
 
-const PlayList = ({ stations, setStation, setStations }) => {
+const PlayList = ({ stations, setStation, setStations, isAddModal, setIsAddModal }) => {
 const [currentId, setCurrentId ] = useState('');
 const [editStation, setEditStation ] = useState({});
-const [isAddModal, setIsAddModal ] = useState(false);
+
 const [isDeleteModal, setIsDeleteModal ] = useState(false);
 const [isEditModal, setIsEditModal ] = useState(false);
 
@@ -33,9 +34,11 @@ const [isEditModal, setIsEditModal ] = useState(false);
                         station={item.name}
                         url={item.url}
                         category={item.category}
+                        favorite={item.favorite}
                         setStation={setStation}
                         deleteModal={handlerDeleteModal}
                         editModal={handlerEditModal}
+                        setFavorite={handlerSetFavorite}
                     /> : null
                 })}
             </div>
@@ -53,7 +56,7 @@ const [isEditModal, setIsEditModal ] = useState(false);
         localStorage.setItem('stations', JSON.stringify(newStations));
         setStations(newStations); 
         if(stations.length === 1) {
-            setStation({id: '', station: '', url: '', category: ''})
+            setStation({id: '', station: '', url: '', category: '', favorite: false})
         }      
         setIsDeleteModal(false);
     }
@@ -64,9 +67,15 @@ const [isEditModal, setIsEditModal ] = useState(false);
         setIsEditModal(true);
     }
 
-    const handlerAddStation = () => {
-        setIsAddModal(true);
+    const handlerSetFavorite = (id) => { 
+        let newStations = stations.map(item => {
+            if(item.id === id) item.favorite = !item.favorite;            
+            return item;
+        });
+        setStations(newStations)
+        localStorage.setItem('stations', JSON.stringify(newStations));
     }
+
     const handlerCancelModal = (e) => {
         e.preventDefault();   
         setIsAddModal(false);
@@ -76,9 +85,11 @@ const [isEditModal, setIsEditModal ] = useState(false);
     
     return (
         <div className={classes.playListContent}>
-            {/* <Scrollbars style={{ width: '100vw', height: '100vh' }}> */}
+
+            <Scrollbars style={{ position: 'absolute', width: '100vw', top: '0', bottom: '0'}}>
                 {listStations()}
-            {/* </Scrollbars> */}
+            </Scrollbars>
+
             {isAddModal &&
                 <ModalAdd
                     stations={stations} 
@@ -107,11 +118,6 @@ const [isEditModal, setIsEditModal ] = useState(false);
                     deleteStation={handlerDeleteStation}
                 />
             }
-
-
-            <div className={classes.addButtonWrap}>
-                <button className={classes.addButton} onClick={handlerAddStation}>Add</button>
-            </div>
 
         </div>
     );

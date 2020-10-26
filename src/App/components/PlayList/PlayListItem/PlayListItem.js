@@ -2,24 +2,32 @@ import React from 'react';
 
 import classes from './PlayListItem.module.scss'
 
-const PlayListItem = ({id, station, url, category, setStation, deleteModal, editModal}) => {
+const PlayListItem = ({id, station, url, category, favorite, setStation, deleteModal, editModal, setFavorite}) => {
 
     const handlerSetStation = () => {
-        setStation({id, station, url, category})
+        setStation({id, station, url, category, favorite})
     }
 
     return (
         <div 
-            className={classes.playListItemContent} 
-            onClick={handlerSetStation}>
-            <div className={classes.nameStation}>{station}</div>
-            <div className={classes.categoryStation}>{category}</div>
-            <button 
-            onClick={() => editModal(id)} 
-            className={classes.editBtn}>Edit</button>
-            <button 
-            className={classes.deleteBtn} 
-            onClick={() => deleteModal(id)}>Del</button>
+            className={classes.playListItemContent}>
+
+            <div className={classes.playListItemName} onClick={handlerSetStation}>
+                <div className={classes.nameStation}>{station}</div>
+                <div className={classes.categoryStation}>{category}</div>
+            </div>
+
+            <div className={classes.playListItemControl}>
+                <button 
+                onClick={() => editModal(id)} 
+                className={classes.editBtn}><i className="far fa-edit"></i></button>
+                <button 
+                className={classes.deleteBtn} 
+                onClick={() => deleteModal(id)}><i className="far fa-trash-alt"></i></button>
+                <button 
+                className={classes.favoriteBtn} 
+                onClick={() => setFavorite(id)}>{favorite ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}</button>
+            </div>
         </div>        
     );
 }

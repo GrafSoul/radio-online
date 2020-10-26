@@ -1,0 +1,77 @@
+.editStation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 250;
+    background-color: rgba(3, 4, 7, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editStationContent {
+    width: 300px;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(88, 125, 144);
+
+    input {
+        display: block;
+        padding: 3px 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        border: 1px solid rgb(88, 125, 144);
+        outline: none;
+    }
+}
+
+.editStationBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .saveBtn {
+        display: inline-block;
+        margin: 10px 5px 0;
+        padding: 3px 15px;   
+        background-color:rgb(41, 112, 0);
+        color:rgb(255, 255, 255);
+        border-radius: 6px;
+        border: none;
+        font-size: 1em;
+        outline: none;
+        cursor: pointer;
+        transition: .3s all ease;
+    
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    .cancelBtn {
+        display: inline-block;
+        padding: 3px 15px; 
+        margin: 10px 5px 0;
+        background-color: rgb(110, 110, 110);
+        color:rgb(255, 255, 255);
+        border-radius: 6px;
+        border: none;
+        font-size: 1em;
+        outline: none;
+        cursor: pointer;
+        transition: .3s all ease;
+    
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}

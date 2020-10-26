@@ -84,11 +84,16 @@ const Player = ({audioStream, station, stations}) => {
                 <source src={station.url} type="audio/ogg"></source>
             </audio>
 
+            
+            { station.station === '' || stations.length === 0 ?
+            <div className={classes.audioSelect}>
+            <span className={classes.selectOrAdd}>Select or add a new radio station!</span>
+            </div> : null }            
+
             <div className={classes.audioInfo}>
                 <div className={classes.audioName}>
                     { station.station === '' || stations.length === 0 ?
-                    'Select or Add Radio Station' : station.station }
-
+                    null : station.station }
                 </div>
                 <div className={classes.audioCategory}>{station.category}</div>
             </div>  

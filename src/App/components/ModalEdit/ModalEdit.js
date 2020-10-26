@@ -21,29 +21,39 @@ const ModalEdit = ({ station, stations, setStations, setIsEditModal, cancelModal
     }
 
     return (
-        <div className={classes.addNewStation}>
-            <input 
-                type="text" 
-                name="name" 
-                value={name} 
-                onChange={(e) =>  setName(e.target.value)}
-            />
+        <div className={classes.editStation}>
+            <div className={classes.editStationContent}>
+                <input 
+                    type="text" 
+                    name="name" 
+                    value={name}
+                    maxLength="45" 
+                    placeholder="Enter name"
+                    onChange={(e) =>  setName(e.target.value)}
+                />
 
-            <input 
-                type="text" 
-                name="url" 
-                value={url}
-                onChange={(e) =>  setUrl(e.target.value)}
-            />
+                <input 
+                    type="text" 
+                    name="url" 
+                    value={url}
+                    placeholder="Enter URL"
+                    onChange={(e) =>  setUrl(e.target.value)}
+                />
 
-            <input 
-                type="text" 
-                name="category" 
-                value={category}
-                onChange={(e) =>  setCategory(e.target.value)}
-            />
-            <button onClick={(e) => handlerSaveStation(e)}>Save</button>
-            <button onClick={(e) => cancelModal(e)}>Cancel</button>
+                <input 
+                    type="text" 
+                    name="category" 
+                    value={category}
+                    maxLength="10"
+                    placeholder="Enter category"
+                    onChange={(e) =>  setCategory(e.target.value)}
+                />
+                <div className={classes.editStationBtns}>
+                    <button  className={classes.saveBtn} onClick={(e) => handlerSaveStation(e)}>Save</button>
+                    <button className={classes.cancelBtn} onClick={cancelModal}>Cancel</button>
+                </div>
+
+            </div>
         </div>
     );
 }

@@ -1,23 +1,76 @@
 .playListItemContent {
+    height: 30px;
     position: relative;
     z-index: 50;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    color: rgb(104, 130, 179);
+    cursor: pointer;
+    border-bottom: 1px solid  rgb(38, 46, 65);
+    transition: .3s all ease;
+
+    &:hover {
+        background-color: rgb(28, 48, 61);
+    }
+}
+
+.playListItemName {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.nameStation {
+    padding: 0 10px 0 15px;
+    color: rgb(129, 186, 218);;
+    font-size: .8em;
+}
+
+.categoryStation {
+    padding: 0 5px;
+    color: rgb(8, 12, 14);
+    font-family: "SFUIProDisplay", sans-serif;
+    font-size: 0.6em;
+    display: inline-block;
+    background-color: rgb(60, 85, 100);
+    border-radius: 12px;
+}
+
+.playListItemControl {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    z-index: 150;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.editBtn, 
+.deleteBtn, 
+.favoriteBtn {
+    display: block;
+    width: 28px;
+    height: 34px;
+    padding: 0;
+    margin: 0 5px 0 0;
+    line-height: 0em;
+    background-color: transparent;
+    border: none;
+    color: rgb(58, 84, 98);
     font-size: .8em;
     cursor: pointer;
+    outline: none;
+    transition: .3s all ease;
+
+    &:hover {
+        color: rgb(129, 184, 214);
+    }
 }
 
-.editBtn {
-    position: absolute;
-    right: 10px;
-    z-index: 100;
-}
-
-.deleteBtn {
-    position: relative;
-    right: 0;
-    z-index: 100;
-}

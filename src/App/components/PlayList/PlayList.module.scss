@@ -1,8 +1,25 @@
+.playListContent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 116px;
+    bottom: 43px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    z-index: 50;
+}
+
 .categoryName {
-    padding: 3px 10px;
-    font-size: .7em;
-    border-top: 1px solid #262f42;
-    border-bottom: 1px solid #262f42;
-    background-color: #141a24;
-    color:#425070;
+    position: relative;
+    padding: 3px 15px;
+    font-size: .8em;
+    border-top: 1px solid rgb(38, 47, 66);
+    border-bottom: 1px solid rgb(38, 47, 66);
+    background-color: rgb(20, 26, 36);
+    color:rgb(83, 99, 138);
+}
+
+.categoryName:first-child {
+    border-top: none;
 }
