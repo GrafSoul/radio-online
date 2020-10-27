@@ -46,13 +46,10 @@ const App = () => {
         setIsFavorites(true);
     };
     const handlerWriteData = () => {
-        var file = new File(
-            [JSON.stringify(localStations.current)],
-            'radiostations.radion',
-            {
-                type: 'text/plain;charset=utf-8',
-            },
-        );
+        let data = JSON.parse(localStorage.getItem('stations'));
+        let file = new File([JSON.stringify(data)], 'radiostations.txt', {
+            type: 'text/plain;charset=utf-8',
+        });
         FileSaver.saveAs(file);
     };
 

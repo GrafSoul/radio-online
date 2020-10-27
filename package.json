@@ -2,7 +2,7 @@
   "name": "radio-online",
   "productName": "Radion",
   "description": "Applications for listening to the broadcast of radio stations. Made using - Electron.js, React.js.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GrafSoul/radio-online.git"

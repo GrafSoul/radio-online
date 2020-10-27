@@ -35,7 +35,7 @@ const Header = () => {
                         alt="Logo"
                         className={classes.logo}
                     />{' '}
-                    Radion <span className={classes.addVersion}>0.1.0</span>
+                    Radion <span className={classes.addVersion}>0.2.0</span>
                 </div>
                 <div>
                     <button

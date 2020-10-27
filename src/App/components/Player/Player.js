@@ -1,9 +1,8 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import classes from './Player.module.scss'; 
+import classes from './Player.module.scss';
 
-const Player = ({audioStream, station, stations}) => {
- 
+const Player = ({ audioStream, station, stations }) => {
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
     const [isStop, setIsStop] = useState(true);
@@ -18,35 +17,35 @@ const Player = ({audioStream, station, stations}) => {
     }, [station, audioStream]);
 
     const playAudio = () => {
-        if(isStop) {
+        if (isStop) {
             audioStream.current.src = station.url;
             audioStream.current.play();
-            setIsStop(false)
+            setIsStop(false);
             setIsPlay(true);
         } else {
             audioStream.current.play();
             setIsPlay(true);
         }
         return false;
-    }
+    };
 
     const pauseAudio = () => {
         audioStream.current.pause();
         setIsLive(false);
         setIsPlay(false);
         return false;
-    }
+    };
 
     const stopAudio = () => {
-        audioStream.current.src = ''
-        setIsStop(true)
+        audioStream.current.src = '';
+        setIsStop(true);
         setIsLive(true);
         setIsPlay(false);
         return false;
-    }
+    };
 
     const handlerLiveAudio = () => {
-        if(!isLive) {   
+        if (!isLive) {
             audioStream.current.load();
             audioStream.current.play();
             setIsLive(!isLive);
@@ -55,84 +54,145 @@ const Player = ({audioStream, station, stations}) => {
             setIsLive(true);
         }
         return false;
-    }
+    };
 
     const handlerVolumeControl = (e) => {
         audioStream.current.volume = e.target.value;
         setVolume(e.target.value);
         return false;
-    }
+    };
 
     const handlerToggleSound = () => {
         setStopVolume(volume);
-        if(isSound) {
-            audioStream.current.volume = 0;   
+        if (isSound) {
+            audioStream.current.volume = 0;
             setVolume(0);
-            setIsSound(false)
+            setIsSound(false);
         } else {
             audioStream.current.volume = 1;
             setVolume(stopVolume);
-            setIsSound(true)
+            setIsSound(true);
         }
-        // setIsPlay(!isPlay);
         return false;
-    }
+    };
 
     return (
         <div className={classes.audioContent}>
-
-            <audio 
-                ref={audioStream}
-            >
-                <source  src={station.url} type="audio/mpeg"></source>
+            <audio ref={audioStream}>
+                <source src={station.url} type="audio/mpeg"></source>
                 <source src={station.url} type="audio/ogg"></source>
             </audio>
 
-            
-            { station.station === '' || stations.length === 0 ?
-            <div className={classes.audioSelect}>
-            <span className={classes.selectOrAdd}>Select or add a new radio station!</span>
-            </div> : null }            
+            {station.station === '' || stations.length === 0 ? (
+                <div className={classes.audioSelect}>
+                    <span className={classes.selectOrAdd}>
+                        Select or add a new radio station!
+                    </span>
+                </div>
+            ) : null}
 
             <div className={classes.audioInfo}>
                 <div className={classes.audioName}>
-                    { station.station === '' || stations.length === 0 ?
-                    null : station.station }
+                    {station.station === '' || stations.length === 0
+                        ? null
+                        : station.station}
                 </div>
                 <div className={classes.audioCategory}>{station.category}</div>
-            </div>  
+            </div>
 
-            <div className={[classes.controlWrap, 
-                station.station === '' ||
-                stations.length === 0  ?
-                classes.hidden : null].join(' ')}>             
-
+            <div
+                className={[
+                    classes.controlWrap,
+                    station.station === '' || stations.length === 0
+                        ? classes.hidden
+                        : null,
+                ].join(' ')}
+            >
                 <div className={classes.audioControlPlay}>
-                    <div className={classes.audioControlPlayBtn}>                    
-                        {!isPlay ?
-                            <button className={classes.audioPlayBtn} title="Play" onClick={playAudio}><i className="fas fa-play-circle"></i></button>
-                            :
-                            <button className={classes.audioPauseBtn} title="Pause" onClick={pauseAudio}><i className="fas fa-pause-circle"></i></button>
-                        }
-                        <button className={classes.audioStopBtn} title="Stop" onClick={stopAudio}><i className="fas fa-stop-circle"></i></button>
+                    <div className={classes.audioControlPlayBtn}>
+                        {!isPlay ? (
+                            <button
+                                className={classes.audioPlayBtn}
+                                title="Play"
+                                onClick={playAudio}
+                            >
+                                <i className="fas fa-play-circle"></i>
+                            </button>
+                        ) : (
+                            <button
+                                className={classes.audioPauseBtn}
+                                title="Pause"
+                                onClick={pauseAudio}
+                            >
+                                <i className="fas fa-pause-circle"></i>
+                            </button>
+                        )}
+                        <button
+                            className={classes.audioStopBtn}
+                            title="Stop"
+                            onClick={stopAudio}
+                        >
+                            <i className="fas fa-stop-circle"></i>
+                        </button>
 
                         <div className={classes.liveAudio}>
-                            {isLive ? isStop ? <span className={classes.liveOff}>Live</span> : 
-                            <span className={classes.liveOn}><span className={classes.onlineIndicator}></span> Live</span> : 
-                            <button className={classes.audioReloadBtn} title="Disable playback from the buffer" onClick={handlerLiveAudio}>Back to Live</button>}               
+                            {isLive ? (
+                                isStop ? (
+                                    <span className={classes.liveOff}>
+                                        Live
+                                    </span>
+                                ) : (
+                                    <span className={classes.liveOn}>
+                                        <span
+                                            className={classes.onlineIndicator}
+                                        ></span>{' '}
+                                        Live
+                                    </span>
+                                )
+                            ) : (
+                                <button
+                                    className={classes.audioReloadBtn}
+                                    title="Disable playback from the buffer"
+                                    onClick={handlerLiveAudio}
+                                >
+                                    Back to Live
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>
 
                 <div className={classes.audioControlVolume}>
-                    <input type="range" value={volume} title="Volume control" className={classes.volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
-                    <button className={classes.audioSoundBtn} onClick={handlerToggleSound}>
-                        {!isSound ? <i className="fas fa-volume-down" title="Sound Off"></i> : <i className="fas fa-volume-up" title="Sound On"></i>}
+                    <input
+                        type="range"
+                        value={volume}
+                        title="Volume control"
+                        className={classes.volume}
+                        onChange={(e) => handlerVolumeControl(e)}
+                        min={0}
+                        max={1}
+                        step={0.1}
+                    />
+                    <button
+                        className={classes.audioSoundBtn}
+                        onClick={handlerToggleSound}
+                    >
+                        {!isSound ? (
+                            <i
+                                className="fas fa-volume-down"
+                                title="Sound Off"
+                            ></i>
+                        ) : (
+                            <i
+                                className="fas fa-volume-up"
+                                title="Sound On"
+                            ></i>
+                        )}
                     </button>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Player;
