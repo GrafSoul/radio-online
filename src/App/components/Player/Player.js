@@ -6,13 +6,15 @@ const Player = ({audioStream, station, stations}) => {
  
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
-    const [isStop, setIsStop] = useState(false);
+    const [isStop, setIsStop] = useState(true);
+    const [isSound, setIsSound] = useState(true);
     const [volume, setVolume] = useState(0.5);
     const [stopVolume, setStopVolume] = useState(0.5);
 
     useEffect(() => {
         audioStream.current.load();
-        setIsPlay(false)
+        setIsPlay(false);
+        setIsStop(true);
     }, [station, audioStream]);
 
     const playAudio = () => {
@@ -63,14 +65,16 @@ const Player = ({audioStream, station, stations}) => {
 
     const handlerToggleSound = () => {
         setStopVolume(volume);
-        if(isPlay) {
+        if(isSound) {
             audioStream.current.volume = 0;   
             setVolume(0);
+            setIsSound(false)
         } else {
             audioStream.current.volume = 1;
             setVolume(stopVolume);
+            setIsSound(true)
         }
-        setIsPlay(!isPlay);
+        // setIsPlay(!isPlay);
         return false;
     }
 
@@ -123,7 +127,7 @@ const Player = ({audioStream, station, stations}) => {
                 <div className={classes.audioControlVolume}>
                     <input type="range" value={volume} title="Volume control" className={classes.volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
                     <button className={classes.audioSoundBtn} onClick={handlerToggleSound}>
-                        {isPlay ? <i className="fas fa-volume-down" title="Sound Off"></i> : <i className="fas fa-volume-up" title="Sound On"></i>}
+                        {!isSound ? <i className="fas fa-volume-down" title="Sound Off"></i> : <i className="fas fa-volume-up" title="Sound On"></i>}
                     </button>
                 </div>
             </div>

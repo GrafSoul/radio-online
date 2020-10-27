@@ -1,88 +1,258 @@
 const resources = [
     {
-        id: 1,
+        id: '268e3260-1822-11eb-b030-97ce9fa7892b',
         name: 'Classic Rock Florida (TM)',
         url: 'https://vip2.fastcast4u.com/proxy/classicrockdoug?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 2,
+        id: '31d9bcc0-1822-11eb-946c-a53d2f480df5',
         name: 'Mellow Rock Florida (TM)',
         url: 'https://vip2.fastcast4u.com/proxy/mellowrock?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 3,
+        id: '3be80c30-1822-11eb-bc9e-0fa386761b3a',
         name: 'Classic Rock Planet (TM)',
         url: 'https://vip2.fastcast4u.com/proxy/crphd?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 4,
+        id: '49438ad0-1822-11eb-ad5a-b702af6de265',
         name: 'Classic Rock HD (TM)',
         url: 'https://vip2.fastcast4u.com/proxy/crhd?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 5,
+        id: '54ff8a40-1822-11eb-8124-9f98b0a6eb52',
         name: 'Classic Rock Miami (TM)',
         url: 'https://vip2.fastcast4u.com/proxy/miamirock?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 6,
+        id: '5fdfcfb0-1822-11eb-aa8c-a3368f475571',
         name: 'Miami Rock Classics HD (TM)',
         url: 'https://vip2.fastcast4u.com/proxy/miarockhd?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 7,
-        name: 'Album Rock Miami - SHE\'s Rock and Roll (TM)',
+        id: '733bb6a0-1822-11eb-b8d0-db75343e43e1',
+        name: "Album Rock Miami - SHE's Rock and Roll (TM)",
         url: 'https://vip2.fastcast4u.com/proxy/albumrockmia?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 8,
+        id: '7964dca0-1822-11eb-875c-7d19a47ceed4',
         name: 'Miami Rock Radio Classics Online',
         url: 'https://vip2.fastcast4u.com/proxy/miarockhd?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 9,
+        id: '8083ad40-1822-11eb-b953-9b9f221f9e9c',
         name: 'Boomtown Richmond',
         url: 'https://vip2.fastcast4u.com/proxy/boomtownrich?mp=/1',
         category: 'Rock',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 10,
+        id: '88ff9ce0-1822-11eb-80cb-2da6c480efed',
         name: 'Pirate FM',
         url: 'http://uk3.internet-radio.com:8160/stream',
         category: 'Rock n Roll',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 11,
+        id: '916b38d0-1822-11eb-bff6-67007922c1bb',
         name: 'TOP BLUES',
         url: 'http://us3.internet-radio.com:8342/stream',
         category: 'Blues',
-        favorite: false
+        favorite: false,
     },
     {
-        id: 12,
+        id: '9832c1b0-1822-11eb-8ab6-bde223f0d51a',
         name: 'The Ranch - Classic Country',
         url: 'http://us3.internet-radio.com:8297/stream',
         category: 'Country',
-        favorite: false
-    }
-]
+        favorite: false,
+    },
+    {
+        id: '9fe7c8c0-182b-11eb-808a-adf41c4b8291',
+        name: 'Crocus City Hall',
+        url: 'http://ic7.101.ru:8000/c18_17',
+        category: 'Commercial',
+        favorite: false,
+    },
+    {
+        id: 'fd6e3290-182b-11eb-808a-adf41c4b8291',
+        name: 'Club Dance',
+        url: 'http://ic7.101.ru:8000/c4_2',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '16a805b0-182c-11eb-808a-adf41c4b8291',
+        name: 'Дискотека 80-х',
+        url: 'http://ic7.101.ru:8000/a1',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '309179c0-182c-11eb-808a-adf41c4b8291',
+        name: 'Radio First',
+        url: 'http://ic7.101.ru:8000/c4_2',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '3faafc10-182c-11eb-808a-adf41c4b8291',
+        name: 'Лето Non-Stop',
+        url: 'http://ic7.101.ru:8000/c13_16',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '53d52f80-182c-11eb-808a-adf41c4b8291',
+        name: 'Euro Hits',
+        url: 'http://ic7.101.ru:8000/c16_13',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '64b65270-182c-11eb-808a-adf41c4b8291',
+        name: 'House',
+        url: 'http://ic7.101.ru:8000/c6_5',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '77707b20-182c-11eb-808a-adf41c4b8291',
+        name: 'Big Room',
+        url: 'http://ic7.101.ru:8000/c18_18',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '894f10e0-182c-11eb-808a-adf41c4b8291',
+        name: 'Electro',
+        url: 'http://ic7.101.ru:8000/c6_3',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '9c9acb30-182c-11eb-808a-adf41c4b8291',
+        name: 'Hot Traxx',
+        url: 'http://ic7.101.ru:8000/c4_4',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: 'b6f6d730-182c-11eb-808a-adf41c4b8291',
+        name: 'Дискотека СССР',
+        url: 'http://ic7.101.ru:8000/a144',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: 'cbb55b60-182c-11eb-808a-adf41c4b8291',
+        name: 'Россия 90-х',
+        url: 'http://ic7.101.ru:8000/a33',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: 'de5a7570-182c-11eb-808a-adf41c4b8291',
+        name: 'Russian Dance',
+        url: 'http://ic7.101.ru:8000/c4_6',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: 'ff242a80-182c-11eb-808a-adf41c4b8291',
+        name: 'La Costa Latina',
+        url: 'http://ic7.101.ru:8000/c7_39',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '1b109a80-182d-11eb-808a-adf41c4b8291',
+        name: 'Progressive',
+        url: 'http://ic7.101.ru:8000/c8_4',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '311fba90-182d-11eb-808a-adf41c4b8291',
+        name: 'Дискотека 90-х',
+        url: 'http://ic7.101.ru:8000/a74',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '4d545720-182d-11eb-808a-adf41c4b8291',
+        name: 'Disco',
+        url: 'http://ic7.101.ru:8000/a80',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: '627fa6e0-182d-11eb-808a-adf41c4b8291',
+        name: 'Italo Disco',
+        url: 'http://ic7.101.ru:8000/a161',
+        category: 'Dance',
+        favorite: false,
+    },
+    {
+        id: 'a92c4da0-182d-11eb-808a-adf41c4b8291',
+        name: 'Trance',
+        url: 'http://ic7.101.ru:8000/c13_3',
+        category: 'Electronic',
+        favorite: false,
+    },
+    {
+        id: 'bedcfa00-182d-11eb-808a-adf41c4b8291',
+        name: 'Tech House',
+        url: 'http://ic7.101.ru:8000/c18_5',
+        category: 'Electronic',
+    },
+    {
+        id: 'eaa79be0-182d-11eb-808a-adf41c4b8291',
+        name: 'DubStep',
+        url: 'http://ic7.101.ru:8000/a136',
+        category: 'Electronic',
+    },
+    {
+        id: '114fd960-182e-11eb-808a-adf41c4b8291',
+        name: 'ChillStep',
+        url: 'http://ic7.101.ru:8000/a260',
+        category: 'Electronic',
+    },
+    {
+        id: '373fc360-182e-11eb-808a-adf41c4b8291',
+        name: 'Drum & Bass',
+        url: 'http://ic7.101.ru:8000/a6',
+        category: 'Electronic',
+        favorite: false,
+    },
+    {
+        id: '4a374330-182e-11eb-808a-adf41c4b8291',
+        name: 'Trap',
+        url: 'http://ic7.101.ru:8000/a193',
+        category: 'Electronic',
+    },
+    {
+        id: '6788e880-182e-11eb-808a-adf41c4b8291',
+        name: 'Techno',
+        url: 'http://ic7.101.ru:8000/c17_3',
+        category: 'Electronic',
+    },
+];
 
-export default resources
+export default resources;

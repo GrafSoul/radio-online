@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { v1 as uuid } from 'uuid';
 
 import classes from './ModalAdd.module.scss';
 
@@ -11,7 +12,7 @@ const ModalAdd = ({ stations, setStations, setIsAddModal, cancelModal }) => {
         e.preventDefault();
 
         if(name !== '' && url !== '' && category !== '') {
-            let newStation = { id: stations.length + 1, name, url, category, favorite: false };
+            let newStation = { id: uuid(), name, url, category, favorite: false };
             setStations(prevStations => [...prevStations, newStation]);  
             localStorage.setItem('stations', JSON.stringify([...stations, newStation]));      
             setName('');

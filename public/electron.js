@@ -24,15 +24,14 @@ const getIcon = () => {
     return `${path.join(__dirname, '/icons/16x16.png')}`;
 };
 
-const nameApp = 'Radion'
+const nameApp = 'Radion';
 let mainWindow, tray, contextMenu;
-
 
 const createWindow = async () => {
     installExtension(REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS);
 
     let mainWindowState = windowStateKeeper({
-        defaultWidth:600,
+        defaultWidth: 600,
         defaultHeight: 500,
     });
 

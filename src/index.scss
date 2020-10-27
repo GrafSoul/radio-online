@@ -71,6 +71,11 @@ select {
 	background-color: transparent;
 }
 
+input[type="text"]::selection {
+  background-color: rgb(76, 94, 133);
+  color:  rgb(192, 209, 245);
+}
+
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
