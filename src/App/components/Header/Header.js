@@ -30,12 +30,12 @@ const Header = () => {
         <div className={classes.header}>
             <div className={classes.topBar}>
                 <div className={classes.title}>
-                <img
+                    <img
                         src="./icons/16x16.png"
                         alt="Logo"
                         className={classes.logo}
                     />{' '}
-                    Radion
+                    Radion <span className={classes.addVersion}>0.1.0</span>
                 </div>
                 <div>
                     <button
@@ -74,4 +74,3 @@ const Header = () => {
 };
 
 export default Header;
-

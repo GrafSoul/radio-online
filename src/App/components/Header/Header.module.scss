@@ -6,6 +6,10 @@
 	overflow: hidden;
 	cursor: default;
 
+	.addVersion {
+		font-size: .8em;
+	}
+
 	.topBar {
 		display: flex;
 		flex-direction: row;

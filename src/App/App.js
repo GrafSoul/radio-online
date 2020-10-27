@@ -48,7 +48,7 @@ const App = () => {
     const handlerWriteData = () => {
         var file = new File(
             [JSON.stringify(localStations.current)],
-            'radiostations.js',
+            'radiostations.radion',
             {
                 type: 'text/plain;charset=utf-8',
             },
