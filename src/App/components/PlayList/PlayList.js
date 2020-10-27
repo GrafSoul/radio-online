@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 import ReactListItem from './PlayListItem/PlayListItem';
@@ -8,7 +8,8 @@ import ModalDelete from '../ModalDelete/ModalDelete.js'
 
 import classes from './PlayList.module.scss';
 
-const PlayList = ({ stations, setStation, setStations, isAddModal, setIsAddModal }) => {
+const PlayList = ({ stations, setStation, setStations, isAddModal, setIsAddModal, isFavorites }) => {
+const currentStations = useRef([]);
 const [currentId, setCurrentId ] = useState('');
 const [editStation, setEditStation ] = useState({});
 
@@ -17,17 +18,19 @@ const [isEditModal, setIsEditModal ] = useState(false);
 
     const listStations = () => {
         let allCategory = [];
-        stations.forEach((item) => {
+        currentStations.current = isFavorites ? stations.filter(item => item.favorite === true) : stations;
+
+        currentStations.current.forEach((item) => {
             allCategory.push(item.category);
         });
 
-        let uniqueCategory = Array.from(new Set(allCategory));
+        let uniqueCategory = Array.from(new Set(allCategory));        
 
         let currentList = uniqueCategory.map((category, index)=> {
             return <div key={index}>
-                <div className={classes.categoryName}>{category}</div>
-                {stations.map((item) => {
-                    return category === item.category ? 
+                <div className={classes.categoryName}>{category}</div>                
+                {currentStations.current.map((item) => {                    
+                    return category === item.category ?                     
                     <ReactListItem 
                         key={item.id} 
                         id={item.id}
@@ -85,6 +88,10 @@ const [isEditModal, setIsEditModal ] = useState(false);
     
     return (
         <div className={classes.playListContent}>
+
+            {(isFavorites && currentStations.current.length === 0) && 
+                <div className={classes.favoritesInfo}>Add stations to your favorites!</div>
+            }
 
             <Scrollbars style={{ position: 'absolute', width: '100vw', top: '0', bottom: '0'}}>
                 {listStations()}

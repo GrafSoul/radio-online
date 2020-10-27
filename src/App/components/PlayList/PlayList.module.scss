@@ -7,7 +7,9 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
+    text-align: center;
     z-index: 50;
+    cursor: default;
 }
 
 .categoryName {
@@ -22,4 +24,13 @@
 
 .categoryName:first-child {
     border-top: none;
+}
+
+.favoritesInfo {
+    margin-top: 30px;
+    padding: 0px 10px;
+    display: inline-block;
+    border-radius: 12px;
+    background-color: rgb(88, 125, 144);
+    color:rgb(12, 17, 20);
 }

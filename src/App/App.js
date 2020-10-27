@@ -9,9 +9,11 @@ import Footer from './components/Footer/Footer';
 import resources from './resources/resources';
 
 const App =() =>{
-    const audioStream = useRef(null); 
+    const audioStream = useRef(null);
+    const localStations = useRef([]); 
     const [stations, setStations] = useState([]);
     const [isAddModal, setIsAddModal ] = useState(false);
+    const [isFavorites, setIsFavorites ] = useState(false);
     const [station, setStation] = useState(
         {
             id: '',
@@ -23,17 +25,26 @@ const App =() =>{
     );    
 
     useEffect(() => {
-        const localStations = JSON.parse(localStorage.getItem('stations'));
-        if( localStations === null || localStations.length === 0) {
+        localStations.current = JSON.parse(localStorage.getItem('stations'));
+        if( localStations.current === null || localStations.current.length === 0) {
             localStorage.setItem('stations', JSON.stringify(resources)); 
             setStations(resources)            
         } else {
-            setStations(localStations)
+            setStations(localStations.current)
         }
     }, []);
 
     const handlerAddStation = () => {
         setIsAddModal(true);
+    }
+    const handlerSelectAll = () => {
+        setIsFavorites(false)
+    }
+    const handlerSelectFavorites = () => {
+        setIsFavorites(true)
+        // let filteredStations = localStations.current.filter(item => item.favorite === true );
+        // console.log(filteredStations)
+        // setStations(filteredStations)
     }
 
     return (
@@ -50,8 +61,13 @@ const App =() =>{
                 setStations={setStations}
                 isAddModal={isAddModal}
                 setIsAddModal={setIsAddModal}
+                isFavorites={isFavorites}
             />
-            <Footer addStation={handlerAddStation}/>
+            <Footer 
+            addStation={handlerAddStation} 
+            selectAll={handlerSelectAll}
+            selectFavorites={handlerSelectFavorites}   
+            />
         </Aux>
     );
 

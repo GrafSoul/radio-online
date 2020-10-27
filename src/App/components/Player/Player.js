@@ -106,24 +106,24 @@ const Player = ({audioStream, station, stations}) => {
                 <div className={classes.audioControlPlay}>
                     <div className={classes.audioControlPlayBtn}>                    
                         {!isPlay ?
-                            <button className={classes.audioPlayBtn} onClick={playAudio}><i className="fas fa-play-circle"></i></button>
+                            <button className={classes.audioPlayBtn} title="Play" onClick={playAudio}><i className="fas fa-play-circle"></i></button>
                             :
-                            <button className={classes.audioPauseBtn} onClick={pauseAudio}><i className="fas fa-pause-circle"></i></button>
+                            <button className={classes.audioPauseBtn} title="Pause" onClick={pauseAudio}><i className="fas fa-pause-circle"></i></button>
                         }
-                        <button className={classes.audioStopBtn} onClick={stopAudio}><i className="fas fa-stop-circle"></i></button>
+                        <button className={classes.audioStopBtn} title="Stop" onClick={stopAudio}><i className="fas fa-stop-circle"></i></button>
 
                         <div className={classes.liveAudio}>
                             {isLive ? isStop ? <span className={classes.liveOff}>Live</span> : 
                             <span className={classes.liveOn}><span className={classes.onlineIndicator}></span> Live</span> : 
-                            <button className={classes.audioReloadBtn} onClick={handlerLiveAudio}>Back to Live</button>}               
+                            <button className={classes.audioReloadBtn} title="Disable playback from the buffer" onClick={handlerLiveAudio}>Back to Live</button>}               
                         </div>
                     </div>
                 </div>
 
                 <div className={classes.audioControlVolume}>
-                    <input type="range" value={volume} className={classes.volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
+                    <input type="range" value={volume} title="Volume control" className={classes.volume}  onChange={(e) => handlerVolumeControl(e)} min={0} max={1} step={0.1}/>
                     <button className={classes.audioSoundBtn} onClick={handlerToggleSound}>
-                        {isPlay ? <i className="fas fa-volume-down"></i> : <i className="fas fa-volume-up"></i>}
+                        {isPlay ? <i className="fas fa-volume-down" title="Sound Off"></i> : <i className="fas fa-volume-up" title="Sound On"></i>}
                     </button>
                 </div>
             </div>
