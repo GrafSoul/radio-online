@@ -23,8 +23,7 @@ const ModalEdit = ({
             item.id === station.id ? editedStation : item,
         );
         setStations(newStations);
-        console.log(editedStation);
-        // setStation(editedStation);
+        setStation(editedStation);
         localStorage.setItem('stations', JSON.stringify(newStations));
         setName('');
         setUrl('');
