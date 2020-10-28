@@ -33,15 +33,15 @@ const Footer = ({
                     onClick={selectFavorites}
                     title="Selected radio stations"
                 >
-                    <i className="fas fa-heart-circle"></i>
+                    <i className="fal fa-heart-circle"></i>
                 </button>
 
                 <button
-                    className={classes.favoritesButton}
+                    className={classes.saveButton}
                     onClick={writeData}
                     title="Save radio stations"
                 >
-                    <i className="far fa-save"></i>
+                    <i className="fal fa-save"></i>
                 </button>
             </div>
 
@@ -51,7 +51,7 @@ const Footer = ({
                     onClick={addStation}
                     title="Add a new radio station"
                 >
-                    <i className="far fa-plus-circle"></i>
+                    <i className="fal fa-plus-circle"></i>
                 </button>
             </div>
         </div>

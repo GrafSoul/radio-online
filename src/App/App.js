@@ -15,9 +15,10 @@ const App = () => {
     const [stations, setStations] = useState([]);
     const [isAddModal, setIsAddModal] = useState(false);
     const [isFavorites, setIsFavorites] = useState(false);
+    const [isError, setIsError] = useState(false);
     const [station, setStation] = useState({
         id: '',
-        station: '',
+        name: '',
         url: '',
         category: '',
         favorite: false,
@@ -53,6 +54,19 @@ const App = () => {
         FileSaver.saveAs(file);
     };
 
+    const handlerSetFavorite = (id) => {
+        let newStations = stations.map((item) => {
+            if (item.id === id) item.favorite = !item.favorite;
+            return item;
+        });
+        setStations(newStations);
+
+        let newStation = station;
+        newStation.favorite = !station.favorite;
+        setStation(newStation);
+        localStorage.setItem('stations', JSON.stringify(newStations));
+    };
+
     return (
         <Aux>
             <Header />
@@ -60,6 +74,9 @@ const App = () => {
                 audioStream={audioStream}
                 station={station}
                 stations={stations}
+                isError={isError}
+                setIsError={setIsError}
+                setFavorite={handlerSetFavorite}
             />
             <PlayList
                 stations={stations}
@@ -68,6 +85,8 @@ const App = () => {
                 isAddModal={isAddModal}
                 setIsAddModal={setIsAddModal}
                 isFavorites={isFavorites}
+                setFavorite={handlerSetFavorite}
+                setIsError={setIsError}
             />
             <Footer
                 addStation={handlerAddStation}

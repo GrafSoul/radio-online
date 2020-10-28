@@ -39,7 +39,6 @@
 
 .audioName {
     display: inline-block;
-    margin-right: 10px;
     color: rgb(129, 186, 218);
     font-family: "SFUIProDisplay", sans-serif;
     font-size: 1em;
@@ -55,6 +54,26 @@
     display: inline-block;
     background-color: rgb(129, 186, 218);
     border-radius: 12px;
+}
+
+.stationFavorite {
+    display: inline-block;
+    width: 28px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    line-height: 0em;
+    background-color: transparent;
+    border: none;
+    color: rgb(25, 124, 0);
+    font-size: .9em;
+    cursor: pointer;
+    outline: none;
+    transition: .3s all ease;
+    
+    &:hover {
+        color: rgb(114, 214, 90);
+    }
 }
 
 .controlWrap {
@@ -221,4 +240,15 @@
     .audioInfo {
         margin-right: 0;  
     }
+}
+
+.errorStation {
+    position: absolute;
+    padding: 2px 10px;
+    width: 350px;
+    font-size: .9em;
+    text-align: center;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(245, 10, 61);
 }

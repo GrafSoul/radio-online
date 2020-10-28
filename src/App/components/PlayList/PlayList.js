@@ -15,6 +15,8 @@ const PlayList = ({
     isAddModal,
     setIsAddModal,
     isFavorites,
+    setIsError,
+    setFavorite,
 }) => {
     const currentStations = useRef([]);
     const [currentId, setCurrentId] = useState('');
@@ -51,7 +53,7 @@ const PlayList = ({
                                 setStation={setStation}
                                 deleteModal={handlerDeleteModal}
                                 editModal={handlerEditModal}
-                                setFavorite={handlerSetFavorite}
+                                setFavorite={setFavorite}
                             />
                         ) : null;
                     })}
@@ -73,28 +75,20 @@ const PlayList = ({
         if (stations.length === 1) {
             setStation({
                 id: '',
-                station: '',
+                name: '',
                 url: '',
                 category: '',
                 favorite: false,
             });
         }
         setIsDeleteModal(false);
+        setIsError(false);
     };
 
     const handlerEditModal = (id) => {
         let currentStation = stations.find((item) => item.id === id);
         setEditStation(currentStation);
         setIsEditModal(true);
-    };
-
-    const handlerSetFavorite = (id) => {
-        let newStations = stations.map((item) => {
-            if (item.id === id) item.favorite = !item.favorite;
-            return item;
-        });
-        setStations(newStations);
-        localStorage.setItem('stations', JSON.stringify(newStations));
     };
 
     const handlerCancelModal = (e) => {
@@ -137,9 +131,11 @@ const PlayList = ({
                 <ModalEdit
                     stations={stations}
                     station={editStation}
+                    setStation={setStation}
                     setStations={setStations}
                     setIsEditModal={setIsEditModal}
                     cancelModal={handlerCancelModal}
+                    setIsError={setIsError}
                 />
             )}
 

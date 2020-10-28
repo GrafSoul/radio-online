@@ -5,9 +5,11 @@ import classes from './ModalEdit.module.scss';
 const ModalEdit = ({
     station,
     stations,
+    setStation,
     setStations,
     setIsEditModal,
     cancelModal,
+    setIsError,
 }) => {
     const [name, setName] = useState(station.name);
     const [url, setUrl] = useState(station.url);
@@ -21,11 +23,14 @@ const ModalEdit = ({
             item.id === station.id ? editedStation : item,
         );
         setStations(newStations);
+        console.log(editedStation);
+        // setStation(editedStation);
         localStorage.setItem('stations', JSON.stringify(newStations));
         setName('');
         setUrl('');
         setCategory('');
         setIsEditModal(false);
+        setIsError(false);
     };
 
     return (

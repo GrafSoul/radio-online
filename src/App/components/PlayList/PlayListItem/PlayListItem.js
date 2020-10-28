@@ -14,7 +14,7 @@ const PlayListItem = ({
     setFavorite,
 }) => {
     const handlerSetStation = () => {
-        setStation({ id, station, url, category, favorite });
+        setStation({ id, name: station, url, category, favorite });
     };
 
     return (

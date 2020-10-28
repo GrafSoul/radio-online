@@ -2,7 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import classes from './Player.module.scss';
 
-const Player = ({ audioStream, station, stations }) => {
+const Player = ({
+    audioStream,
+    station,
+    stations,
+    isError,
+    setIsError,
+    setFavorite,
+}) => {
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
     const [isStop, setIsStop] = useState(true);
@@ -14,14 +21,22 @@ const Player = ({ audioStream, station, stations }) => {
         audioStream.current.load();
         setIsPlay(false);
         setIsStop(true);
-    }, [station, audioStream]);
+        setIsError(false);
+    }, [station, audioStream, setIsError]);
 
     const playAudio = () => {
         if (isStop) {
             audioStream.current.src = station.url;
-            audioStream.current.play();
-            setIsStop(false);
-            setIsPlay(true);
+            audioStream.current
+                .play()
+                .then(() => {
+                    setIsStop(false);
+                    setIsPlay(true);
+                })
+                .catch((error) => {
+                    setIsError(true);
+                    console.log('playback prevented', error);
+                });
         } else {
             audioStream.current.play();
             setIsPlay(true);
@@ -83,7 +98,7 @@ const Player = ({ audioStream, station, stations }) => {
                 <source src={station.url} type="audio/ogg"></source>
             </audio>
 
-            {station.station === '' || stations.length === 0 ? (
+            {station.name === '' || stations.length === 0 ? (
                 <div className={classes.audioSelect}>
                     <span className={classes.selectOrAdd}>
                         Select or add a new radio station!
@@ -92,23 +107,42 @@ const Player = ({ audioStream, station, stations }) => {
             ) : null}
 
             <div className={classes.audioInfo}>
-                <div className={classes.audioName}>
-                    {station.station === '' || stations.length === 0
-                        ? null
-                        : station.station}
-                </div>
-                <div className={classes.audioCategory}>{station.category}</div>
+                {station.name === '' || stations.length === 0 ? null : (
+                    <div>
+                        <div className={classes.audioName}>{station.name}</div>
+                        <button
+                            title={'Add to favorites - ' + station.name}
+                            className={classes.stationFavorite}
+                            onClick={() => setFavorite(station.id)}
+                        >
+                            {station.favorite ? (
+                                <i className="fas fa-heart"></i>
+                            ) : (
+                                <i className="far fa-heart"></i>
+                            )}
+                        </button>
+                        <div className={classes.audioCategory}>
+                            {station.category}
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div
                 className={[
                     classes.controlWrap,
-                    station.station === '' || stations.length === 0
+                    station.name === '' || stations.length === 0
                         ? classes.hidden
                         : null,
                 ].join(' ')}
             >
                 <div className={classes.audioControlPlay}>
+                    {isError && (
+                        <div className={classes.errorStation}>
+                            Radion can't connect to the radio station.
+                        </div>
+                    )}
+
                     <div className={classes.audioControlPlayBtn}>
                         {!isPlay ? (
                             <button

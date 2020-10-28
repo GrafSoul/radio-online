@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    // align-items: center;
     cursor: default;
 }
 
@@ -32,6 +32,27 @@
     border-radius: 18px;
     border: none;
     font-size: 1.7em;
+    line-height: 0;
+    outline: none;
+    cursor: pointer;
+    transition: .3s all ease;
+
+    &:hover {
+        color:  rgb(129, 186, 218);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.saveButton {
+    margin-top: 4px;
+    margin-right: 10px;
+    display: inline-block;
+    padding: 0;
+    height: 28px;    
+    background-color:transparent;
+    color:  rgb(64, 91, 107);
+    border: none;
+    font-size: 1.6em;
     line-height: 0;
     outline: none;
     cursor: pointer;
