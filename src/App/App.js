@@ -16,6 +16,7 @@ const App = () => {
     const [isAddModal, setIsAddModal] = useState(false);
     const [isFavorites, setIsFavorites] = useState(false);
     const [isError, setIsError] = useState(false);
+    const [isDeleteAllModal, setIsDeleteAllModal] = useState(false);
     const [station, setStation] = useState({
         id: '',
         name: '',
@@ -67,6 +68,16 @@ const App = () => {
         localStorage.setItem('stations', JSON.stringify(newStations));
     };
 
+    const handlerDeleteAllModal = () => {
+        setIsDeleteAllModal(!isDeleteAllModal);
+    };
+
+    const handlerDeleteAllStations = () => {
+        setStations([]);
+        localStorage.setItem('stations', JSON.stringify([]));
+        setIsDeleteAllModal(false);
+    };
+
     return (
         <Aux>
             <Header />
@@ -87,11 +98,15 @@ const App = () => {
                 isFavorites={isFavorites}
                 setFavorite={handlerSetFavorite}
                 setIsError={setIsError}
+                deleteAllStations={handlerDeleteAllStations}
+                deleteAllModal={handlerDeleteAllModal}
+                isDeleteAll={isDeleteAllModal}
             />
             <Footer
                 addStation={handlerAddStation}
                 selectAll={handlerSelectAll}
                 selectFavorites={handlerSelectFavorites}
+                deleteAllModal={handlerDeleteAllModal}
                 isFavorites={isFavorites}
                 writeData={handlerWriteData}
             />

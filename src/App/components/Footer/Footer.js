@@ -8,6 +8,7 @@ const Footer = ({
     selectFavorites,
     isFavorites,
     writeData,
+    deleteAllModal,
 }) => {
     return (
         <div className={classes.footerContent}>
@@ -46,6 +47,13 @@ const Footer = ({
             </div>
 
             <div className={classes.rightBtns}>
+                <button
+                    className={classes.deleteButton}
+                    onClick={deleteAllModal}
+                    title="Delete all radio stations"
+                >
+                    <i className="fal fa-minus-circle"></i>
+                </button>
                 <button
                     className={classes.addButton}
                     onClick={addStation}

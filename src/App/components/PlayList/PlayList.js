@@ -5,6 +5,7 @@ import ReactListItem from './PlayListItem/PlayListItem';
 import ModalAdd from '../ModalAdd/ModalAdd.js';
 import ModalEdit from '../ModalEdit/ModalEdit.js';
 import ModalDelete from '../ModalDelete/ModalDelete.js';
+import ModalAllDelete from '../ModalAllDelete/ModalAllDelete.js';
 
 import classes from './PlayList.module.scss';
 
@@ -17,11 +18,13 @@ const PlayList = ({
     isFavorites,
     setIsError,
     setFavorite,
+    deleteAllStations,
+    deleteAllModal,
+    isDeleteAll,
 }) => {
     const currentStations = useRef([]);
     const [currentId, setCurrentId] = useState('');
     const [editStation, setEditStation] = useState({});
-
     const [isDeleteModal, setIsDeleteModal] = useState(false);
     const [isEditModal, setIsEditModal] = useState(false);
 
@@ -144,6 +147,13 @@ const PlayList = ({
                     currentId={currentId}
                     cancelModal={handlerCancelModal}
                     deleteStation={handlerDeleteStation}
+                />
+            )}
+
+            {isDeleteAll && (
+                <ModalAllDelete
+                    deleteAllModal={deleteAllModal}
+                    deleteAllStations={deleteAllStations}
                 />
             )}
         </div>
