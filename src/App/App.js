@@ -48,7 +48,7 @@ const App = () => {
     };
     const handlerWriteData = () => {
         let data = JSON.parse(localStorage.getItem('stations'));
-        let file = new File([JSON.stringify(data)], 'radiostations.txt', {
+        let file = new File([JSON.stringify(data)], 'radion.txt', {
             type: 'text/plain;charset=utf-8',
         });
         FileSaver.saveAs(file);
