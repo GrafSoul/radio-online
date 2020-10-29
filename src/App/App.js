@@ -64,9 +64,11 @@ const App = () => {
         });
         setStations(newStations);
 
-        let newStation = station;
-        newStation.favorite = !station.favorite;
-        setStation(newStation);
+        if (station.id === id) {
+            let newStation = station;
+            newStation.favorite = !station.favorite;
+            setStation(newStation);
+        }
         localStorage.setItem('stations', JSON.stringify(newStations));
     };
 

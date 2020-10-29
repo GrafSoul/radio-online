@@ -32,16 +32,8 @@ const PlayList = ({
     const listStations = () => {
         let allCategory = [];
 
-        currentStations.current.forEach((item) => {
-            allCategory.push(item.category);
-        });
-
-        currentStations.current = isFavorites
-            ? stations.filter((item) => item.favorite === true)
-            : stations;
-
-        if (searchWords !== '') {
-            let currentList = stations.filter(
+        if (searchWords && searchWords !== '') {
+            currentStations.current = stations.filter(
                 (item) =>
                     item.name
                         .toLowerCase()
@@ -50,9 +42,15 @@ const PlayList = ({
                         .toLowerCase()
                         .includes(searchWords.toLowerCase()),
             );
-
-            currentStations.current = currentList;
+        } else {
+            currentStations.current = isFavorites
+                ? stations.filter((item) => item.favorite === true)
+                : stations;
         }
+
+        currentStations.current.forEach((item) => {
+            allCategory.push(item.category);
+        });
 
         let uniqueCategory = Array.from(new Set(allCategory));
 
