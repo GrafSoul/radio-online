@@ -18,6 +18,7 @@ const App = () => {
     const [isSearch, setIsSearch] = useState(false);
     const [isError, setIsError] = useState(false);
     const [isDeleteAllModal, setIsDeleteAllModal] = useState(false);
+    const [searchWords, setSearchWords] = useState('');
     const [station, setStation] = useState({
         id: '',
         name: '',
@@ -75,6 +76,10 @@ const App = () => {
 
     const handlerSetSearch = () => {
         setIsSearch(!isSearch);
+        setSearchWords('');
+    };
+    const handlerSetSearchWords = (e) => {
+        setSearchWords(e.target.value);
     };
 
     const handlerDeleteAllStations = () => {
@@ -107,6 +112,7 @@ const App = () => {
                 deleteAllStations={handlerDeleteAllStations}
                 deleteAllModal={handlerDeleteAllModal}
                 isDeleteAll={isDeleteAllModal}
+                searchWords={searchWords}
             />
             <Footer
                 addStation={handlerAddStation}
@@ -117,6 +123,8 @@ const App = () => {
                 writeData={handlerWriteData}
                 isSearch={isSearch}
                 setSearch={handlerSetSearch}
+                setSearchNewWords={handlerSetSearchWords}
+                searchWords={searchWords}
             />
         </Aux>
     );

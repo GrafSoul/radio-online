@@ -8,9 +8,10 @@
 }
 
 .searchContent input {
-    width:175px;
+    width:178px;
     margin-right: 7px;
-    padding: 3px 5px 3px;    
+    padding: 3px 5px 3px; 
+    border-radius: 6px;   
     font-size: .7em;
     border: 1px solid rgb(64, 91, 107);
     color:  rgb(129, 186, 218);
@@ -20,6 +21,11 @@
 
 .searchInput {
     padding: 0;
+    display: none;
+}
+
+.searchActive {
+    display: block;
 }
 
 .searchButton {

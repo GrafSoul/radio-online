@@ -1,5 +1,5 @@
 .playListItemContent {
-    height: 30px;
+    min-height: 30px;
     position: relative;
     z-index: 50;
     display: flex;
@@ -16,20 +16,23 @@
 }
 
 .playListItemName {
+    margin-right: 100px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     flex: 1;
 }
 
 .nameStation {
-    padding: 0 10px 0 15px;
+    padding: 0 0 0 10px;
     color: rgb(129, 186, 218);;
     font-size: .8em;
 }
 
 .categoryStation {
+    margin-left: 10px;
     padding: 0 5px;
     color: rgb(8, 12, 14);
     font-family: "SFUIProDisplay", sans-serif;

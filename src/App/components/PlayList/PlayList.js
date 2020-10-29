@@ -21,6 +21,7 @@ const PlayList = ({
     deleteAllStations,
     deleteAllModal,
     isDeleteAll,
+    searchWords,
 }) => {
     const currentStations = useRef([]);
     const [currentId, setCurrentId] = useState('');
@@ -30,13 +31,28 @@ const PlayList = ({
 
     const listStations = () => {
         let allCategory = [];
-        currentStations.current = isFavorites
-            ? stations.filter((item) => item.favorite === true)
-            : stations;
 
         currentStations.current.forEach((item) => {
             allCategory.push(item.category);
         });
+
+        currentStations.current = isFavorites
+            ? stations.filter((item) => item.favorite === true)
+            : stations;
+
+        if (searchWords !== '') {
+            let currentList = stations.filter(
+                (item) =>
+                    item.name
+                        .toLowerCase()
+                        .includes(searchWords.toLowerCase()) ||
+                    item.category
+                        .toLowerCase()
+                        .includes(searchWords.toLowerCase()),
+            );
+
+            currentStations.current = currentList;
+        }
 
         let uniqueCategory = Array.from(new Set(allCategory));
 
@@ -102,67 +118,61 @@ const PlayList = ({
     };
 
     return (
-        <>
-            <div>dsdgsdgfsdfg</div>
-
-            <div className={classes.playListContentWrap}>
-                <div className={classes.playListContent}>
-                    {isFavorites && currentStations.current.length === 0 && (
-                        <div className={classes.favoritesInfo}>
-                            Add stations to your favorites!
-                        </div>
-                    )}
-
-                    <Scrollbars
-                        style={{
-                            position: 'absolute',
-                            width: '100vw',
-                            top: '0',
-                            bottom: '0',
-                        }}
-                    >
-                        {listStations()}
-                    </Scrollbars>
-
-                    {isAddModal && (
-                        <ModalAdd
-                            stations={stations}
-                            station={editStation}
-                            setStations={setStations}
-                            setIsAddModal={setIsAddModal}
-                            cancelModal={handlerCancelModal}
-                        />
-                    )}
-
-                    {isEditModal && (
-                        <ModalEdit
-                            stations={stations}
-                            station={editStation}
-                            setStation={setStation}
-                            setStations={setStations}
-                            setIsEditModal={setIsEditModal}
-                            cancelModal={handlerCancelModal}
-                            setIsError={setIsError}
-                        />
-                    )}
-
-                    {isDeleteModal && (
-                        <ModalDelete
-                            currentId={currentId}
-                            cancelModal={handlerCancelModal}
-                            deleteStation={handlerDeleteStation}
-                        />
-                    )}
-
-                    {isDeleteAll && (
-                        <ModalAllDelete
-                            deleteAllModal={deleteAllModal}
-                            deleteAllStations={deleteAllStations}
-                        />
-                    )}
+        <div className={classes.playListContent}>
+            {isFavorites && currentStations.current.length === 0 && (
+                <div className={classes.favoritesInfo}>
+                    Add stations to your favorites!
                 </div>
-            </div>
-        </>
+            )}
+
+            <Scrollbars
+                style={{
+                    position: 'absolute',
+                    width: '100vw',
+                    top: '0',
+                    bottom: '0',
+                }}
+            >
+                {listStations()}
+            </Scrollbars>
+
+            {isAddModal && (
+                <ModalAdd
+                    stations={stations}
+                    station={editStation}
+                    setStations={setStations}
+                    setIsAddModal={setIsAddModal}
+                    cancelModal={handlerCancelModal}
+                />
+            )}
+
+            {isEditModal && (
+                <ModalEdit
+                    stations={stations}
+                    station={editStation}
+                    setStation={setStation}
+                    setStations={setStations}
+                    setIsEditModal={setIsEditModal}
+                    cancelModal={handlerCancelModal}
+                    setIsError={setIsError}
+                />
+            )}
+
+            {isDeleteModal && (
+                <ModalDelete
+                    currentId={currentId}
+                    cancelModal={handlerCancelModal}
+                    deleteStation={handlerDeleteStation}
+                />
+            )}
+
+            {isDeleteAll && (
+                <ModalAllDelete
+                    deleteAllModal={deleteAllModal}
+                    deleteAllStations={deleteAllStations}
+                />
+            )}
+        </div>
     );
 };
 

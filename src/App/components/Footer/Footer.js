@@ -12,6 +12,8 @@ const Footer = ({
     deleteAllModal,
     isSearch,
     setSearch,
+    setSearchNewWords,
+    searchWords,
 }) => {
     return (
         <div className={classes.footerContent}>
@@ -50,7 +52,12 @@ const Footer = ({
                     </button>
                 </div>
 
-                <Search isSearch={isSearch} setSearch={setSearch} />
+                <Search
+                    isSearch={isSearch}
+                    setSearch={setSearch}
+                    setSearchNewWords={setSearchNewWords}
+                    searchWords={searchWords}
+                />
             </div>
 
             <div className={classes.rightBtns}>
