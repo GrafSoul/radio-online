@@ -1,6 +1,7 @@
 import React from 'react';
 
 import classes from './Footer.module.scss';
+import Search from '../Search/Search';
 
 const Footer = ({
     addStation,
@@ -9,41 +10,47 @@ const Footer = ({
     isFavorites,
     writeData,
     deleteAllModal,
+    isSearch,
+    setSearch,
 }) => {
     return (
         <div className={classes.footerContent}>
             <div className={classes.leftBtns}>
-                <button
-                    disabled={!isFavorites}
-                    className={[
-                        classes.allButton,
-                        !isFavorites ? classes.noActive : null,
-                    ].join(' ')}
-                    onClick={selectAll}
-                    title="All radio stations"
-                >
-                    <i className="fas fa-list-alt"></i>
-                </button>
+                <div>
+                    <button
+                        disabled={!isFavorites}
+                        className={[
+                            classes.allButton,
+                            !isFavorites ? classes.noActive : null,
+                        ].join(' ')}
+                        onClick={selectAll}
+                        title="All radio stations"
+                    >
+                        <i className="fas fa-list-alt"></i>
+                    </button>
 
-                <button
-                    disabled={isFavorites}
-                    className={[
-                        classes.favoritesButton,
-                        isFavorites ? classes.noActive : null,
-                    ].join(' ')}
-                    onClick={selectFavorites}
-                    title="Selected radio stations"
-                >
-                    <i className="fal fa-heart-circle"></i>
-                </button>
+                    <button
+                        disabled={isFavorites}
+                        className={[
+                            classes.favoritesButton,
+                            isFavorites ? classes.noActive : null,
+                        ].join(' ')}
+                        onClick={selectFavorites}
+                        title="Selected radio stations"
+                    >
+                        <i className="fal fa-heart-circle"></i>
+                    </button>
 
-                <button
-                    className={classes.saveButton}
-                    onClick={writeData}
-                    title="Save radio stations"
-                >
-                    <i className="fal fa-save"></i>
-                </button>
+                    <button
+                        className={classes.saveButton}
+                        onClick={writeData}
+                        title="Save radio stations"
+                    >
+                        <i className="fal fa-save"></i>
+                    </button>
+                </div>
+
+                <Search isSearch={isSearch} setSearch={setSearch} />
             </div>
 
             <div className={classes.rightBtns}>

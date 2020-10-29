@@ -15,6 +15,7 @@ const App = () => {
     const [stations, setStations] = useState([]);
     const [isAddModal, setIsAddModal] = useState(false);
     const [isFavorites, setIsFavorites] = useState(false);
+    const [isSearch, setIsSearch] = useState(false);
     const [isError, setIsError] = useState(false);
     const [isDeleteAllModal, setIsDeleteAllModal] = useState(false);
     const [station, setStation] = useState({
@@ -72,6 +73,10 @@ const App = () => {
         setIsDeleteAllModal(!isDeleteAllModal);
     };
 
+    const handlerSetSearch = () => {
+        setIsSearch(!isSearch);
+    };
+
     const handlerDeleteAllStations = () => {
         setStations([]);
         localStorage.setItem('stations', JSON.stringify([]));
@@ -89,6 +94,7 @@ const App = () => {
                 setIsError={setIsError}
                 setFavorite={handlerSetFavorite}
             />
+
             <PlayList
                 stations={stations}
                 setStation={setStation}
@@ -109,6 +115,8 @@ const App = () => {
                 deleteAllModal={handlerDeleteAllModal}
                 isFavorites={isFavorites}
                 writeData={handlerWriteData}
+                isSearch={isSearch}
+                setSearch={handlerSetSearch}
             />
         </Aux>
     );

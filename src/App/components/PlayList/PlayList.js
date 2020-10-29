@@ -102,61 +102,67 @@ const PlayList = ({
     };
 
     return (
-        <div className={classes.playListContent}>
-            {isFavorites && currentStations.current.length === 0 && (
-                <div className={classes.favoritesInfo}>
-                    Add stations to your favorites!
+        <>
+            <div>dsdgsdgfsdfg</div>
+
+            <div className={classes.playListContentWrap}>
+                <div className={classes.playListContent}>
+                    {isFavorites && currentStations.current.length === 0 && (
+                        <div className={classes.favoritesInfo}>
+                            Add stations to your favorites!
+                        </div>
+                    )}
+
+                    <Scrollbars
+                        style={{
+                            position: 'absolute',
+                            width: '100vw',
+                            top: '0',
+                            bottom: '0',
+                        }}
+                    >
+                        {listStations()}
+                    </Scrollbars>
+
+                    {isAddModal && (
+                        <ModalAdd
+                            stations={stations}
+                            station={editStation}
+                            setStations={setStations}
+                            setIsAddModal={setIsAddModal}
+                            cancelModal={handlerCancelModal}
+                        />
+                    )}
+
+                    {isEditModal && (
+                        <ModalEdit
+                            stations={stations}
+                            station={editStation}
+                            setStation={setStation}
+                            setStations={setStations}
+                            setIsEditModal={setIsEditModal}
+                            cancelModal={handlerCancelModal}
+                            setIsError={setIsError}
+                        />
+                    )}
+
+                    {isDeleteModal && (
+                        <ModalDelete
+                            currentId={currentId}
+                            cancelModal={handlerCancelModal}
+                            deleteStation={handlerDeleteStation}
+                        />
+                    )}
+
+                    {isDeleteAll && (
+                        <ModalAllDelete
+                            deleteAllModal={deleteAllModal}
+                            deleteAllStations={deleteAllStations}
+                        />
+                    )}
                 </div>
-            )}
-
-            <Scrollbars
-                style={{
-                    position: 'absolute',
-                    width: '100vw',
-                    top: '0',
-                    bottom: '0',
-                }}
-            >
-                {listStations()}
-            </Scrollbars>
-
-            {isAddModal && (
-                <ModalAdd
-                    stations={stations}
-                    station={editStation}
-                    setStations={setStations}
-                    setIsAddModal={setIsAddModal}
-                    cancelModal={handlerCancelModal}
-                />
-            )}
-
-            {isEditModal && (
-                <ModalEdit
-                    stations={stations}
-                    station={editStation}
-                    setStation={setStation}
-                    setStations={setStations}
-                    setIsEditModal={setIsEditModal}
-                    cancelModal={handlerCancelModal}
-                    setIsError={setIsError}
-                />
-            )}
-
-            {isDeleteModal && (
-                <ModalDelete
-                    currentId={currentId}
-                    cancelModal={handlerCancelModal}
-                    deleteStation={handlerDeleteStation}
-                />
-            )}
-
-            {isDeleteAll && (
-                <ModalAllDelete
-                    deleteAllModal={deleteAllModal}
-                    deleteAllStations={deleteAllStations}
-                />
-            )}
-        </div>
+            </div>
+        </>
     );
 };
 
