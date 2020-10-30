@@ -5,6 +5,33 @@ Made using - Electron.js, React.js.
 
 ### Download
 
+[Radion Setup 0.3.0](http://bit.do/radion-030) - (OS Windows, zip, 64 Mb)  
+[Radion Portable 0.3.0](http://bit.do/radion-portable-030) - (OS Windows, zip, 64 Mb)
+
+<span id="qr_code" style="
+ display: inline-block;
+ margin-top: 7px;
+ font-size: 12px;
+ text-align: center;
+ background-color: white;
+ padding: 5px;
+"><a href="http://bit.do/radion-030-?qrcode=1" style="border: 0;">QR Code:<br>
+<img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-030" alt="QR Code" title="Enlarge QR Code">
+<br>http://bit.do/radion-030</a>
+</span>
+
+<span id="qr_code" style="
+ display: inline-block;
+ margin-top: 7px;
+ font-size: 12px;
+ text-align: center;
+ background-color: white;
+ padding: 5px;
+"><a href="http://bit.do/radion-portable-030-?qrcode=1" style="border: 0;">QR Code:<br>
+<img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-portable-030" alt="QR Code" title="Enlarge QR Code">
+<br>http://bit.do/radion-portable-030</a>
+</span>
+
 ## Run for start development version
 
 Install [NodeJS]. I also recommend installing and using [Yarn] for developing applications.
