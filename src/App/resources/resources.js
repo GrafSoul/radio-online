@@ -2,7 +2,7 @@ const resources = [
     {
         id: '268e3260-1822-11eb-b030-97ce9fa7892b',
         name: 'Classic Rock Florida (TM)',
-        url: 'http://vip2.fastcast4u.com/proxy/classicrockdoug?mp=/1',
+        url: 'https://vip2.fastcast4u.com/proxy/classicrockdoug?mp=/1',
         category: 'Rock',
         favorite: false,
     },
