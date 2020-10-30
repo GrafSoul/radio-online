@@ -3,6 +3,13 @@
 Applications for listening to the broadcast of radio stations.
 Made using - Electron.js, React.js.
 
+![alt text](/design/screen_1.png 'Radion - Select a radio station')
+![alt text](/design/screen_2.png 'Radion - A radio station is playing')
+![alt text](/design/screen_3.png 'Radion - Add a new radio station')
+![alt text](/design/screen_4.png 'Radion - Edit information about a radio station')
+![alt text](/design/screen_5.png 'Radion - Delete a radio station')
+![alt text](/design/screen_6.png 'Radion - Use radio station search')
+
 ### Download
 
 [Radion Setup 0.3.0](http://bit.do/radion-030) - (OS Windows, zip, 64 Mb)  
