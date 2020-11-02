@@ -1,0 +1,59 @@
+.aboutApp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 250;
+    background-color: rgba(3, 4, 7, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.aboutAppContent {
+    width: 300px;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(88, 125, 144);
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: "SFUIProDisplay", sans-serif;
+    font-size: 1.4em;
+    color:rgb(129, 186, 218);
+}
+
+.info {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.2em;
+    color:rgb(90, 131, 155);
+}
+
+.author {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: .8em;
+    color:rgb(90, 131, 155);
+}
+
+.logo {
+    margin-bottom: -2px;
+    margin-right: 1px;
+    display: inline-block;
+}
+
+.link {
+    color:rgb(113, 168, 200);
+    text-decoration: underline;   
+}

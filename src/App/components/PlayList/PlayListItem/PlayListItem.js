@@ -13,6 +13,7 @@ const PlayListItem = ({
     deleteModal,
     editModal,
     setFavorite,
+    openLink,
 }) => {
     const handlerSetStation = () => {
         setStation({ id, name: station, url, category, favorite, site });
@@ -31,15 +32,13 @@ const PlayListItem = ({
 
             <div className={classes.playListItemControl}>
                 {site && (
-                    <a
+                    <span
                         title={'Open radio station - ' + station}
                         className={classes.linkBtn}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={site}
+                        onClick={() => openLink(site)}
                     >
                         <i className="far fa-external-link-alt"></i>
-                    </a>
+                    </span>
                 )}
                 <button
                     title={'Edit radio station - ' + station}

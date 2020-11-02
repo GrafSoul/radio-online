@@ -5,7 +5,15 @@ import classes from './Header.module.scss';
 const { remote } = window.require('electron');
 const mainWindow = remote.getCurrentWindow();
 
-const Header = () => {
+const Header = ({
+    isMenu,
+    setIsMenu,
+    openData,
+    writeData,
+    deleteAllModal,
+    addStation,
+    aboutAppModal,
+}) => {
     const [status, setStatus] = useState(false);
 
     const handleMinimizeWindow = () => {
@@ -35,9 +43,74 @@ const Header = () => {
                         alt="Logo"
                         className={classes.logo}
                     />{' '}
-                    Radion <span className={classes.addVersion}>0.4.0</span>
+                    Radion <span className={classes.addVersion}>0.5.0</span>
                 </div>
-                <div>
+                <div className={classes.btnGroup}>
+                    <div className={classes.menuListWrap}>
+                        {isMenu && (
+                            <div className={classes.menuList}>
+                                <ul>
+                                    <li>
+                                        <button
+                                            className={classes.openButton}
+                                            onClick={openData}
+                                            title="Open radio stations list"
+                                        >
+                                            <i className="fal fa-file-import"></i>{' '}
+                                            Load a playlist
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            className={classes.saveButton}
+                                            onClick={writeData}
+                                            title="Save radio stations"
+                                        >
+                                            <i className="fal fa-file-export"></i>{' '}
+                                            Save a playlist
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            className={classes.addButton}
+                                            onClick={addStation}
+                                            title="Add a new radio station"
+                                        >
+                                            <i className="fal fa-plus-circle"></i>{' '}
+                                            Add a new
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            className={classes.deleteButton}
+                                            onClick={deleteAllModal}
+                                            title="Delete all radio stations"
+                                        >
+                                            <i className="fal fa-minus-circle"></i>{' '}
+                                            Delete all
+                                        </button>
+                                    </li>
+
+                                    <li>
+                                        <button
+                                            className={classes.deleteButton}
+                                            onClick={aboutAppModal}
+                                            title="About the app"
+                                        >
+                                            <i className="fal fa-info-square"></i>{' '}
+                                            About the app
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                        <button
+                            className={classes.btnWindow}
+                            onClick={() => setIsMenu(!isMenu)}
+                        >
+                            <i className="fal fa-bars"></i>
+                        </button>
+                    </div>
                     <button
                         className={classes.btnWindow}
                         onClick={handleMinimizeWindow}

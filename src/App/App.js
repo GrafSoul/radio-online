@@ -9,6 +9,8 @@ import Footer from './components/Footer/Footer';
 
 import resources from './resources/resources';
 
+const { shell } = window.require('electron');
+
 const App = () => {
     const audioStream = useRef(null);
     const localStations = useRef([]);
@@ -19,6 +21,10 @@ const App = () => {
     const [isError, setIsError] = useState(false);
     const [isErrorList, setIsErrorList] = useState(false);
     const [isDeleteAllModal, setIsDeleteAllModal] = useState(false);
+    const [isAboutAppModal, setIsAboutAppModal] = useState(false);
+    const [isDeleteModal, setIsDeleteModal] = useState(false);
+    const [isEditModal, setIsEditModal] = useState(false);
+    const [isMenu, setIsMenu] = useState(false);
     const [searchWords, setSearchWords] = useState('');
     const [station, setStation] = useState({
         id: '',
@@ -42,15 +48,6 @@ const App = () => {
         }
     }, []);
 
-    const handlerAddStation = () => {
-        setIsAddModal(true);
-    };
-    const handlerSelectAll = () => {
-        setIsFavorites(false);
-    };
-    const handlerSelectFavorites = () => {
-        setIsFavorites(true);
-    };
     const handlerWriteData = () => {
         setIsErrorList(false);
         let data = JSON.parse(localStorage.getItem('stations'));
@@ -58,6 +55,7 @@ const App = () => {
             type: 'text/plain;charset=utf-8',
         });
         FileSaver.saveAs(file);
+        setIsMenu(false);
     };
 
     const handlerOpenData = () => {
@@ -97,6 +95,24 @@ const App = () => {
         };
 
         input.click();
+        setIsMenu(false);
+    };
+
+    const handlerAddStation = () => {
+        setIsDeleteAllModal(false);
+        setIsAboutAppModal(false);
+        setIsDeleteModal(false);
+        setIsEditModal(false);
+        setIsAddModal(true);
+        setIsMenu(false);
+    };
+
+    const handlerSelectAll = () => {
+        setIsFavorites(false);
+    };
+
+    const handlerSelectFavorites = () => {
+        setIsFavorites(true);
     };
 
     const handlerSetFavorite = (id) => {
@@ -115,7 +131,21 @@ const App = () => {
     };
 
     const handlerDeleteAllModal = () => {
+        setIsAboutAppModal(false);
+        setIsAddModal(false);
+        setIsDeleteModal(false);
+        setIsEditModal(false);
+        setIsMenu(false);
         setIsDeleteAllModal(!isDeleteAllModal);
+    };
+
+    const handlerAboutAppModal = () => {
+        setIsDeleteAllModal(false);
+        setIsAddModal(false);
+        setIsDeleteModal(false);
+        setIsEditModal(false);
+        setIsMenu(false);
+        setIsAboutAppModal(!isAboutAppModal);
     };
 
     const handlerSetSearch = () => {
@@ -130,11 +160,24 @@ const App = () => {
         setStations([]);
         localStorage.setItem('stations', JSON.stringify([]));
         setIsDeleteAllModal(false);
+        setIsMenu(false);
+    };
+
+    const handlerOpenLink = (url) => {
+        shell.openExternal(url);
     };
 
     return (
         <Aux>
-            <Header />
+            <Header
+                isMenu={isMenu}
+                setIsMenu={setIsMenu}
+                writeData={handlerWriteData}
+                openData={handlerOpenData}
+                addStation={handlerAddStation}
+                deleteAllModal={handlerDeleteAllModal}
+                aboutAppModal={handlerAboutAppModal}
+            />
             <Player
                 audioStream={audioStream}
                 station={station}
@@ -144,6 +187,7 @@ const App = () => {
                 isErrorList={isErrorList}
                 setIsErrorList={setIsErrorList}
                 setFavorite={handlerSetFavorite}
+                openLink={handlerOpenLink}
             />
 
             <PlayList
@@ -159,6 +203,13 @@ const App = () => {
                 deleteAllModal={handlerDeleteAllModal}
                 isDeleteAll={isDeleteAllModal}
                 searchWords={searchWords}
+                aboutAppModal={handlerAboutAppModal}
+                isAboutAppModal={isAboutAppModal}
+                isDeleteModal={isDeleteModal}
+                setIsDeleteModal={setIsDeleteModal}
+                isEditModal={isEditModal}
+                setIsEditModal={setIsEditModal}
+                openLink={handlerOpenLink}
             />
             <Footer
                 addStation={handlerAddStation}

@@ -56,11 +56,76 @@
 
 		&:hover {
 			color: rgb(255, 255, 255);
-			background-color:#262f41;
+			background-color:rgb(38, 47, 65);
 		}
 	}
 
 	.closeWindow:hover {
 		background-color: rgb(245, 10, 61) !important;
 	}
+
+	.btnGroup {
+		display: flex;
+		position: relative;		
+	}
+
+	.menuListWrap {
+		display: block;
+		position: relative;
+		z-index: 300;
+	}
+
+	.menuList {
+		width: 125px;
+		display: block;
+		position: absolute;
+		top: 32px;
+		right: 0;
+		left: 0;
+		background-color: rgb(25, 30, 41);
+		box-shadow: 3px 3px 12px rgba(0, 0, 0, .7);
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			margin: 0;
+			padding: 3px 8px 3px;
+			border-bottom: 1px solid rgb(39, 55, 65);
+			cursor: pointer;
+
+			&:hover {
+				background-color: rgb(28, 48, 61);
+
+				button {
+					color:rgb(118, 171, 202);
+				}
+			}
+
+			&:last-child {
+				border: none;
+			}
+			
+		}
+
+		button {
+			color:rgb(74, 107, 126);
+			font-size: .9em;
+			text-align: left;
+			margin: 0;
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			outline: none;
+			cursor: pointer;
+
+			i {
+				display: inline-block;
+				margin-right: 3px;
+			}
+		}
+	} 
 }

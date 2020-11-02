@@ -11,6 +11,7 @@ const Player = ({
     setFavorite,
     isErrorList,
     setIsErrorList,
+    openLink,
 }) => {
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
@@ -134,15 +135,13 @@ const Player = ({
                         </button>
 
                         {station.site && (
-                            <a
+                            <span
                                 title={'Open radio station - ' + station}
                                 className={classes.linkBtn}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.classicrockflorida.com/"
+                                onClick={() => openLink(station.site)}
                             >
                                 <i className="far fa-external-link-alt"></i>
-                            </a>
+                            </span>
                         )}
                         <div className={classes.audioCategory}>
                             {station.category}

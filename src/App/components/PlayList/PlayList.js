@@ -6,6 +6,7 @@ import ModalAdd from '../ModalAdd/ModalAdd.js';
 import ModalEdit from '../ModalEdit/ModalEdit.js';
 import ModalDelete from '../ModalDelete/ModalDelete.js';
 import ModalAllDelete from '../ModalAllDelete/ModalAllDelete.js';
+import ModalAbout from '../ModalAbout/ModalAbout.js';
 
 import classes from './PlayList.module.scss';
 
@@ -22,12 +23,17 @@ const PlayList = ({
     deleteAllModal,
     isDeleteAll,
     searchWords,
+    aboutAppModal,
+    isAboutAppModal,
+    isDeleteModal,
+    setIsDeleteModal,
+    isEditModal,
+    setIsEditModal,
+    openLink,
 }) => {
     const currentStations = useRef([]);
     const [currentId, setCurrentId] = useState('');
     const [editStation, setEditStation] = useState({});
-    const [isDeleteModal, setIsDeleteModal] = useState(false);
-    const [isEditModal, setIsEditModal] = useState(false);
 
     const listStations = () => {
         let allCategory = [];
@@ -72,6 +78,7 @@ const PlayList = ({
                                 deleteModal={handlerDeleteModal}
                                 editModal={handlerEditModal}
                                 setFavorite={setFavorite}
+                                openLink={openLink}
                             />
                         ) : null;
                     })}
@@ -171,6 +178,10 @@ const PlayList = ({
                     deleteAllModal={deleteAllModal}
                     deleteAllStations={deleteAllStations}
                 />
+            )}
+
+            {isAboutAppModal && (
+                <ModalAbout aboutAppModal={aboutAppModal} openLink={openLink} />
             )}
         </div>
     );
