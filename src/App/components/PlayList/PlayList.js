@@ -67,6 +67,7 @@ const PlayList = ({
                                 url={item.url}
                                 category={item.category}
                                 favorite={item.favorite}
+                                site={item.site}
                                 setStation={setStation}
                                 deleteModal={handlerDeleteModal}
                                 editModal={handlerEditModal}
@@ -96,6 +97,7 @@ const PlayList = ({
                 url: '',
                 category: '',
                 favorite: false,
+                site: '',
             });
         }
         setIsDeleteModal(false);

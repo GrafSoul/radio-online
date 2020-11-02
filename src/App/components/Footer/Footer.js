@@ -14,6 +14,7 @@ const Footer = ({
     setSearch,
     setSearchNewWords,
     searchWords,
+    openData,
 }) => {
     return (
         <div className={classes.footerContent}>
@@ -44,11 +45,19 @@ const Footer = ({
                     </button>
 
                     <button
+                        className={classes.openButton}
+                        onClick={openData}
+                        title="Open radio stations list"
+                    >
+                        <i className="fal fa-file-import"></i>
+                    </button>
+
+                    <button
                         className={classes.saveButton}
                         onClick={writeData}
                         title="Save radio stations"
                     >
-                        <i className="fal fa-save"></i>
+                        <i className="fal fa-file-export"></i>
                     </button>
                 </div>
 

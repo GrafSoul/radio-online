@@ -14,11 +14,12 @@ const ModalEdit = ({
     const [name, setName] = useState(station.name);
     const [url, setUrl] = useState(station.url);
     const [category, setCategory] = useState(station.category);
+    const [site, setSite] = useState(station.site);
 
     const handlerSaveStation = (e) => {
         e.preventDefault();
 
-        let editedStation = { id: station.id, name, url, category };
+        let editedStation = { id: station.id, name, url, category, site };
         let newStations = stations.map((item) =>
             item.id === station.id ? editedStation : item,
         );
@@ -28,6 +29,7 @@ const ModalEdit = ({
         setName('');
         setUrl('');
         setCategory('');
+        setSite('');
         setIsEditModal(false);
         setIsError(false);
     };
@@ -48,8 +50,17 @@ const ModalEdit = ({
                     type="text"
                     name="url"
                     value={url}
-                    placeholder="Enter URL"
+                    placeholder="Enter URL radio station"
                     onChange={(e) => setUrl(e.target.value)}
+                />
+
+                <input
+                    type="text"
+                    name="site"
+                    value={site}
+                    maxLength="30"
+                    placeholder="Enter the site page url"
+                    onChange={(e) => setSite(e.target.value)}
                 />
 
                 <input
@@ -60,6 +71,7 @@ const ModalEdit = ({
                     placeholder="Enter category"
                     onChange={(e) => setCategory(e.target.value)}
                 />
+
                 <div className={classes.editStationBtns}>
                     <button
                         className={classes.saveBtn}

@@ -9,6 +9,8 @@ const Player = ({
     isError,
     setIsError,
     setFavorite,
+    isErrorList,
+    setIsErrorList,
 }) => {
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
@@ -106,6 +108,15 @@ const Player = ({
                 </div>
             ) : null}
 
+            {isErrorList && (
+                <div
+                    className={classes.errorStation}
+                    onClick={() => setIsErrorList(false)}
+                >
+                    You are importing an invalid file!
+                </div>
+            )}
+
             <div className={classes.audioInfo}>
                 {station.name === '' || stations.length === 0 ? null : (
                     <div>
@@ -121,6 +132,18 @@ const Player = ({
                                 <i className="far fa-heart"></i>
                             )}
                         </button>
+
+                        {station.site && (
+                            <a
+                                title={'Open radio station - ' + station}
+                                className={classes.linkBtn}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.classicrockflorida.com/"
+                            >
+                                <i className="far fa-external-link-alt"></i>
+                            </a>
+                        )}
                         <div className={classes.audioCategory}>
                             {station.category}
                         </div>
@@ -138,8 +161,20 @@ const Player = ({
             >
                 <div className={classes.audioControlPlay}>
                     {isError && (
-                        <div className={classes.errorStation}>
-                            Radion can't connect to the radio station.
+                        <div
+                            className={classes.errorStation}
+                            onClick={() => setIsError(false)}
+                        >
+                            Radion can't connect to the radio station!
+                        </div>
+                    )}
+
+                    {isErrorList && (
+                        <div
+                            className={classes.errorStation}
+                            onClick={() => setIsErrorList(false)}
+                        >
+                            You are importing an invalid file!
                         </div>
                     )}
 

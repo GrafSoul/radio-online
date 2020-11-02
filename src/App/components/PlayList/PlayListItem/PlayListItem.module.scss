@@ -75,5 +75,27 @@
     &:hover {
         color: rgb(129, 184, 214);
     }
+   
+}
+
+.linkBtn {
+    display: block;
+    width: 28px;
+    height: 28px;
+    padding: 8px 0;
+    // outline: 1px solid red;
+    margin: 0 5px 0 0;
+    line-height: 0em;
+    background-color: transparent;
+    border: none;
+    color: rgb(58, 84, 98);
+    font-size: .8em;
+    cursor: pointer;
+    outline: none;
+    transition: .3s all ease;
+
+    &:hover {
+        color: rgb(129, 184, 214);
+    } 
 }
 

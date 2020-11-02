@@ -8,13 +8,14 @@ const PlayListItem = ({
     url,
     category,
     favorite,
+    site,
     setStation,
     deleteModal,
     editModal,
     setFavorite,
 }) => {
     const handlerSetStation = () => {
-        setStation({ id, name: station, url, category, favorite });
+        setStation({ id, name: station, url, category, favorite, site });
     };
 
     return (
@@ -29,6 +30,17 @@ const PlayListItem = ({
             </div>
 
             <div className={classes.playListItemControl}>
+                {site && (
+                    <a
+                        title={'Open radio station - ' + station}
+                        className={classes.linkBtn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={site}
+                    >
+                        <i className="far fa-external-link-alt"></i>
+                    </a>
+                )}
                 <button
                     title={'Edit radio station - ' + station}
                     onClick={() => editModal(id)}

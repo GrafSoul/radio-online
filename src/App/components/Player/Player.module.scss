@@ -253,3 +253,24 @@
     color: rgb(255, 255, 255);
     background-color: rgb(245, 10, 61);
 }
+
+.linkBtn {
+    display: inline-block;
+    width: 20px;
+    height: 28px;
+    padding: 8px 0;
+    margin: 0;
+    line-height: 0em;
+    background-color: transparent;
+    border: none;
+    color: rgb(58, 84, 98);
+    font-size: .8em;
+    cursor: pointer;
+    outline: none;
+    // outline: 1px solid red;
+    transition: .3s all ease;
+
+    &:hover {
+        color: rgb(129, 184, 214);
+    } 
+}

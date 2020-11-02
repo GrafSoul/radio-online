@@ -17,6 +17,7 @@ const App = () => {
     const [isFavorites, setIsFavorites] = useState(false);
     const [isSearch, setIsSearch] = useState(false);
     const [isError, setIsError] = useState(false);
+    const [isErrorList, setIsErrorList] = useState(false);
     const [isDeleteAllModal, setIsDeleteAllModal] = useState(false);
     const [searchWords, setSearchWords] = useState('');
     const [station, setStation] = useState({
@@ -25,6 +26,7 @@ const App = () => {
         url: '',
         category: '',
         favorite: false,
+        site: '',
     });
 
     useEffect(() => {
@@ -50,11 +52,51 @@ const App = () => {
         setIsFavorites(true);
     };
     const handlerWriteData = () => {
+        setIsErrorList(false);
         let data = JSON.parse(localStorage.getItem('stations'));
-        let file = new File([JSON.stringify(data)], 'radion.txt', {
+        let file = new File([JSON.stringify(data)], 'radion.plist', {
             type: 'text/plain;charset=utf-8',
         });
         FileSaver.saveAs(file);
+    };
+
+    const handlerOpenData = () => {
+        setIsErrorList(false);
+        let input = document.createElement('input');
+        input.type = 'file';
+
+        input.onchange = (e) => {
+            let file = e.target.files[0];
+            let reader = new FileReader();
+            reader.readAsText(file, 'UTF-8');
+            reader.onload = (readerEvent) => {
+                try {
+                    let content = readerEvent.target.result;
+                    let newStations = JSON.parse(content);
+                    if (
+                        newStations[0].hasOwnProperty('id') &&
+                        newStations[0].hasOwnProperty('name') &&
+                        newStations[0].hasOwnProperty('url') &&
+                        newStations[0].hasOwnProperty('category') &&
+                        newStations[0].hasOwnProperty('favorite') &&
+                        newStations[0].hasOwnProperty('site')
+                    ) {
+                        setStations(newStations);
+                        localStorage.setItem(
+                            'stations',
+                            JSON.stringify(newStations),
+                        );
+                    } else {
+                        return false;
+                    }
+                } catch (error) {
+                    setIsErrorList(true);
+                    console.log(error);
+                }
+            };
+        };
+
+        input.click();
     };
 
     const handlerSetFavorite = (id) => {
@@ -99,6 +141,8 @@ const App = () => {
                 stations={stations}
                 isError={isError}
                 setIsError={setIsError}
+                isErrorList={isErrorList}
+                setIsErrorList={setIsErrorList}
                 setFavorite={handlerSetFavorite}
             />
 
@@ -127,6 +171,7 @@ const App = () => {
                 setSearch={handlerSetSearch}
                 setSearchNewWords={handlerSetSearchWords}
                 searchWords={searchWords}
+                openData={handlerOpenData}
             />
         </Aux>
     );

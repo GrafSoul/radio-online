@@ -7,6 +7,7 @@ const ModalAdd = ({ stations, setStations, setIsAddModal, cancelModal }) => {
     const [name, setName] = useState('');
     const [url, setUrl] = useState('');
     const [category, setCategory] = useState('');
+    const [site, setSite] = useState('');
 
     const handlerAddNewStation = (e) => {
         e.preventDefault();
@@ -18,6 +19,7 @@ const ModalAdd = ({ stations, setStations, setIsAddModal, cancelModal }) => {
                 url,
                 category,
                 favorite: false,
+                site,
             };
             setStations((prevStations) => [...prevStations, newStation]);
             localStorage.setItem(
@@ -27,6 +29,7 @@ const ModalAdd = ({ stations, setStations, setIsAddModal, cancelModal }) => {
             setName('');
             setUrl('');
             setCategory('');
+            setSite('');
             setIsAddModal(false);
         }
     };
@@ -48,8 +51,17 @@ const ModalAdd = ({ stations, setStations, setIsAddModal, cancelModal }) => {
                     type="text"
                     name="url"
                     value={url}
-                    placeholder="Enter URL"
+                    placeholder="Enter URL radio station"
                     onChange={(e) => setUrl(e.target.value)}
+                />
+
+                <input
+                    type="text"
+                    name="site"
+                    value={site}
+                    maxLength="30"
+                    placeholder="Enter the site page url"
+                    onChange={(e) => setSite(e.target.value)}
                 />
 
                 <input
