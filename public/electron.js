@@ -1,5 +1,5 @@
 'use strict';
-const { app, BrowserWindow, Tray, Menu } = require('electron');
+const { app, BrowserWindow, Tray, Menu, ipcMain } = require('electron');
 const windowStateKeeper = require('electron-window-state');
 
 const {
@@ -69,6 +69,8 @@ const createWindow = async () => {
         }
     });
 
+    mainWindow.setAlwaysOnTop(false);
+
     mainWindow.on('closed', () => (mainWindow = null));
 
     // Tray ///////////////////////////////////////////////////////////
@@ -125,4 +127,8 @@ app.on('activate', () => {
     if (mainWindow === null) {
         createWindow();
     }
+});
+
+ipcMain.on('on-top', (event, args) => {
+    mainWindow.setAlwaysOnTop(args);
 });

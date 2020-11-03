@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import classes from './Header.module.scss';
 
-const { remote } = window.require('electron');
+const { remote, ipcRenderer } = window.require('electron');
 const mainWindow = remote.getCurrentWindow();
 
 const Header = ({
@@ -10,18 +10,20 @@ const Header = ({
     isMenu,
     setIsMenu,
     openData,
+    addData,
     writeData,
     deleteAllModal,
     addStation,
     aboutAppModal,
 }) => {
     const [status, setStatus] = useState(false);
+    const [isTop, setIsTop] = useState(false);
 
-    const handleMinimizeWindow = () => {
+    const handlerMinimizeWindow = () => {
         mainWindow.hide();
     };
 
-    const handleMaximizeWindow = () => {
+    const handlerMaximizeWindow = () => {
         if (status) {
             mainWindow.unmaximize();
             setStatus(!status);
@@ -31,8 +33,17 @@ const Header = ({
         }
     };
 
-    const handleCloseWindow = () => {
+    const handlerCloseWindow = () => {
         mainWindow.close();
+    };
+    const handlerDownWindow = () => {
+        ipcRenderer.send('on-top', false);
+        setIsTop(!isTop);
+    };
+
+    const handlerTopWindow = () => {
+        ipcRenderer.send('on-top', true);
+        setIsTop(!isTop);
     };
 
     return (
@@ -42,28 +53,28 @@ const Header = ({
                     className={
                         classes.btnWindowMini + ' ' + classes.closeWindowMini
                     }
-                    onClick={handleCloseWindow}
+                    onClick={handlerCloseWindow}
                 >
                     <i className="fal fa-window-close" />
                 </button>
                 {!status ? (
                     <button
                         className={classes.btnWindowMini}
-                        onClick={handleMaximizeWindow}
+                        onClick={handlerMaximizeWindow}
                     >
                         <i className="fal fa-window-maximize" />
                     </button>
                 ) : (
                     <button
                         className={classes.btnWindowMini}
-                        onClick={handleMaximizeWindow}
+                        onClick={handlerMaximizeWindow}
                     >
                         <i className="fal fa-window-restore"></i>
                     </button>
                 )}
                 <button
                     className={classes.btnWindowMini}
-                    onClick={handleMinimizeWindow}
+                    onClick={handlerMinimizeWindow}
                 >
                     <i className="fal fa-window-minimize" />
                 </button>
@@ -84,6 +95,16 @@ const Header = ({
                                 <ul>
                                     <li>
                                         <button
+                                            className={classes.saveButton}
+                                            onClick={addData}
+                                            title="Add to playlist"
+                                        >
+                                            <i className="fal fa-file-upload"></i>{' '}
+                                            Add to playlist
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
                                             className={classes.openButton}
                                             onClick={openData}
                                             title="Open radio stations list"
@@ -102,6 +123,7 @@ const Header = ({
                                             Save a playlist
                                         </button>
                                     </li>
+
                                     <li>
                                         <button
                                             className={classes.addButton}
@@ -143,23 +165,38 @@ const Header = ({
                             <i className="fal fa-bars"></i>
                         </button>
                     </div>
+                    {isTop ? (
+                        <button
+                            className={classes.btnWindow}
+                            onClick={handlerDownWindow}
+                        >
+                            <i className="fal fa-arrow-from-top"></i>
+                        </button>
+                    ) : (
+                        <button
+                            className={classes.btnWindow}
+                            onClick={handlerTopWindow}
+                        >
+                            <i className="fal fa-arrow-to-top"></i>
+                        </button>
+                    )}
                     <button
                         className={classes.btnWindow}
-                        onClick={handleMinimizeWindow}
+                        onClick={handlerMinimizeWindow}
                     >
                         <i className="fal fa-window-minimize" />
                     </button>
                     {!status ? (
                         <button
                             className={classes.btnWindow}
-                            onClick={handleMaximizeWindow}
+                            onClick={handlerMaximizeWindow}
                         >
                             <i className="fal fa-window-maximize" />
                         </button>
                     ) : (
                         <button
                             className={classes.btnWindow}
-                            onClick={handleMaximizeWindow}
+                            onClick={handlerMaximizeWindow}
                         >
                             <i className="fal fa-window-restore"></i>
                         </button>
@@ -168,7 +205,7 @@ const Header = ({
                         className={
                             classes.btnWindow + ' ' + classes.closeWindow
                         }
-                        onClick={handleCloseWindow}
+                        onClick={handlerCloseWindow}
                     >
                         <i className="fal fa-window-close" />
                     </button>

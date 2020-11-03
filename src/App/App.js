@@ -12,7 +12,7 @@ import resources from './resources/resources';
 const { shell } = window.require('electron');
 
 const App = () => {
-    const version = '0.6.0';
+    const version = '0.7.0';
     const audioStream = useRef(null);
     const localStations = useRef([]);
     const [stations, setStations] = useState([]);
@@ -73,18 +73,66 @@ const App = () => {
                 try {
                     let content = readerEvent.target.result;
                     let newStations = JSON.parse(content);
+
+                    console.log(newStations[0]);
+
                     if (
-                        newStations[0].hasOwnProperty('id') &&
-                        newStations[0].hasOwnProperty('name') &&
-                        newStations[0].hasOwnProperty('url') &&
-                        newStations[0].hasOwnProperty('category') &&
-                        newStations[0].hasOwnProperty('favorite') &&
-                        newStations[0].hasOwnProperty('site')
+                        'id' in newStations[0] &&
+                        'name' in newStations[0] &&
+                        'url' in newStations[0] &&
+                        'category' in newStations[0] &&
+                        'favorite' in newStations[0] &&
+                        'site' in newStations[0]
                     ) {
                         setStations(newStations);
                         localStorage.setItem(
                             'stations',
                             JSON.stringify(newStations),
+                        );
+                    } else {
+                        return false;
+                    }
+                } catch (error) {
+                    setIsErrorList(true);
+                    console.log(error);
+                }
+            };
+        };
+
+        input.click();
+        setIsMenu(false);
+    };
+
+    const handlerAddData = () => {
+        setIsErrorList(false);
+
+        let input = document.createElement('input');
+        input.type = 'file';
+
+        input.onchange = (e) => {
+            let file = e.target.files[0];
+            let reader = new FileReader();
+            reader.readAsText(file, 'UTF-8');
+            reader.onload = (readerEvent) => {
+                try {
+                    let current = stations;
+                    let content = readerEvent.target.result;
+                    let newStations = JSON.parse(content);
+
+                    if (
+                        'id' in newStations[0] &&
+                        'name' in newStations[0] &&
+                        'url' in newStations[0] &&
+                        'category' in newStations[0] &&
+                        'favorite' in newStations[0] &&
+                        'site' in newStations[0]
+                    ) {
+                        let result = current.concat(newStations);
+                        console.log(result);
+                        setStations(result);
+                        localStorage.setItem(
+                            'stations',
+                            JSON.stringify(result),
                         );
                     } else {
                         return false;
@@ -179,6 +227,7 @@ const App = () => {
                 writeData={handlerWriteData}
                 openData={handlerOpenData}
                 addStation={handlerAddStation}
+                addData={handlerAddData}
                 deleteAllModal={handlerDeleteAllModal}
                 aboutAppModal={handlerAboutAppModal}
             />
