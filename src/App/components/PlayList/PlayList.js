@@ -11,6 +11,7 @@ import ModalAbout from '../ModalAbout/ModalAbout.js';
 import classes from './PlayList.module.scss';
 
 const PlayList = ({
+    version,
     stations,
     setStation,
     setStations,
@@ -30,10 +31,15 @@ const PlayList = ({
     isEditModal,
     setIsEditModal,
     openLink,
+    setCountStations,
 }) => {
     const currentStations = useRef([]);
     const [currentId, setCurrentId] = useState('');
     const [editStation, setEditStation] = useState({});
+
+    const handlerCountStations = (num) => {
+        setCountStations(num);
+    };
 
     const listStations = () => {
         let allCategory = [];
@@ -53,6 +59,10 @@ const PlayList = ({
                 ? stations.filter((item) => item.favorite === true)
                 : stations;
         }
+
+        setTimeout(() => {
+            handlerCountStations(currentStations.current.length);
+        }, 300);
 
         currentStations.current.forEach((item) => {
             allCategory.push(item.category);
@@ -181,7 +191,11 @@ const PlayList = ({
             )}
 
             {isAboutAppModal && (
-                <ModalAbout aboutAppModal={aboutAppModal} openLink={openLink} />
+                <ModalAbout
+                    version={version}
+                    aboutAppModal={aboutAppModal}
+                    openLink={openLink}
+                />
             )}
         </div>
     );

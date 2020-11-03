@@ -1,4 +1,6 @@
 .audioContent {
+    position: relative;
+    z-index: 300;
     margin-top: 36px;    
     padding: 10px 10px 12px 15px ;
     height: 80px;
@@ -273,4 +275,12 @@
     &:hover {
         color: rgb(129, 184, 214);
     } 
+}
+
+@media only screen and (max-height : 80px) {
+
+	.audioContent {
+        margin-top: 0;
+        z-index: 300;
+    }
 }

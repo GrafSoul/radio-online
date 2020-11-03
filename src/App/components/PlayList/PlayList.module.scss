@@ -34,3 +34,10 @@
     background-color: rgb(88, 125, 144);
     color:rgb(12, 17, 20);
 }
+
+@media only screen and (max-height : 80px) {
+
+    .playListContent {
+        top: 80px;
+    }
+}

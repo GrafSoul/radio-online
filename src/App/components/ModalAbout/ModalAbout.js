@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ModalAbout.module.scss';
 
-const ModalAbout = ({ aboutAppModal, openLink }) => {
+const ModalAbout = ({ version, aboutAppModal, openLink }) => {
     return (
         <div className={classes.aboutApp} onClick={aboutAppModal}>
             <div className={classes.aboutAppContent}>
@@ -11,7 +11,7 @@ const ModalAbout = ({ aboutAppModal, openLink }) => {
                         alt="Logo"
                         className={classes.logo}
                     />{' '}
-                    Radion <span className={classes.addVersion}>0.5.0</span>
+                    Radion <span className={classes.addVersion}>{version}</span>
                 </div>
                 <div className={classes.info}>
                     Applications for listening to the broadcast of radio

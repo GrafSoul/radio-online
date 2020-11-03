@@ -12,6 +12,7 @@ import resources from './resources/resources';
 const { shell } = window.require('electron');
 
 const App = () => {
+    const version = '0.6.0';
     const audioStream = useRef(null);
     const localStations = useRef([]);
     const [stations, setStations] = useState([]);
@@ -26,6 +27,7 @@ const App = () => {
     const [isEditModal, setIsEditModal] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
     const [searchWords, setSearchWords] = useState('');
+    const [countStations, setCountStations] = useState(0);
     const [station, setStation] = useState({
         id: '',
         name: '',
@@ -152,6 +154,7 @@ const App = () => {
         setIsSearch(!isSearch);
         setSearchWords('');
     };
+
     const handlerSetSearchWords = (e) => {
         setSearchWords(e.target.value);
     };
@@ -170,6 +173,7 @@ const App = () => {
     return (
         <Aux>
             <Header
+                version={version}
                 isMenu={isMenu}
                 setIsMenu={setIsMenu}
                 writeData={handlerWriteData}
@@ -191,6 +195,7 @@ const App = () => {
             />
 
             <PlayList
+                version={version}
                 stations={stations}
                 setStation={setStation}
                 setStations={setStations}
@@ -210,7 +215,9 @@ const App = () => {
                 isEditModal={isEditModal}
                 setIsEditModal={setIsEditModal}
                 openLink={handlerOpenLink}
+                setCountStations={setCountStations}
             />
+
             <Footer
                 addStation={handlerAddStation}
                 selectAll={handlerSelectAll}
@@ -223,6 +230,7 @@ const App = () => {
                 setSearchNewWords={handlerSetSearchWords}
                 searchWords={searchWords}
                 openData={handlerOpenData}
+                countStations={countStations}
             />
         </Aux>
     );

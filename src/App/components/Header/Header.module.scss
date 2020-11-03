@@ -1,6 +1,6 @@
 .header {
 	position: relative;
-	z-index: 2000;
+	z-index: 400;
 	-webkit-user-select: none;
 	background-color: rgb(21, 26, 36);
 	overflow: hidden;
@@ -11,6 +11,8 @@
 	}
 
 	.topBar {
+		position: relative;
+		z-index: 400;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -24,15 +26,14 @@
 		right: 0;
 		color: rgb(105, 133, 156);
 		z-index: 10;
-		transition: all 0.3s ease;
+		transition: all 0.8s ease;
 	}
 
 	.title {
 		margin-top: 0;
 		font-family: "SFUIProDisplay", sans-serif;
 		font-size: 1em;
-		color:rgb(129, 186, 218);
-		;
+		color:rgb(129, 186, 218);		
 	}
 
 	.logo {
@@ -42,7 +43,8 @@
 	}
 
 	.btnWindow,
-	.closeWindow {
+	.closeWindow,
+	.btnMenu {
 		font-size: 16px;
 		margin: -4px 0;
 		padding: 5px 10px 3px;
@@ -128,4 +130,34 @@
 			}
 		}
 	} 
+}
+
+@media only screen and (max-height : 80px) {
+
+	.header {
+		position: absolute;
+		height: 35px;
+		right: 0;
+		left: 0;
+		top: 0;
+		-webkit-app-region: drag;
+		background-color: transparent;
+
+		.topBar {
+			display: none;
+			visibility: hidden;
+		}
+	}
+}
+
+@media only screen and (max-height : 260px) {
+	.menuList {
+		display: none;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.btnMenu {
+		display: none;
+	}
 }

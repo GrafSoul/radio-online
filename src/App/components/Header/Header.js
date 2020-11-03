@@ -6,6 +6,7 @@ const { remote } = window.require('electron');
 const mainWindow = remote.getCurrentWindow();
 
 const Header = ({
+    version,
     isMenu,
     setIsMenu,
     openData,
@@ -43,7 +44,7 @@ const Header = ({
                         alt="Logo"
                         className={classes.logo}
                     />{' '}
-                    Radion <span className={classes.addVersion}>0.5.0</span>
+                    Radion <span className={classes.addVersion}>{version}</span>
                 </div>
                 <div className={classes.btnGroup}>
                     <div className={classes.menuListWrap}>
@@ -105,7 +106,7 @@ const Header = ({
                             </div>
                         )}
                         <button
-                            className={classes.btnWindow}
+                            className={classes.btnMenu}
                             onClick={() => setIsMenu(!isMenu)}
                         >
                             <i className="fal fa-bars"></i>

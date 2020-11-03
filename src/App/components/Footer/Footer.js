@@ -12,6 +12,7 @@ const Footer = ({
     setSearch,
     setSearchNewWords,
     searchWords,
+    countStations,
 }) => {
     return (
         <div className={classes.footerContent}>
@@ -48,6 +49,12 @@ const Footer = ({
                     setSearchNewWords={setSearchNewWords}
                     searchWords={searchWords}
                 />
+
+                {!isSearch && (
+                    <div className={classes.countStation}>
+                        There are <b>{countStations}</b> stations in the list
+                    </div>
+                )}
             </div>
 
             <div className={classes.rightBtns}>
