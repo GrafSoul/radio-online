@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import classes from './Player.module.scss';
 
+const { remote } = window.require('electron');
+const mainWindow = remote.getCurrentWindow();
+
 const Player = ({
     audioStream,
     station,
@@ -13,6 +16,7 @@ const Player = ({
     setIsErrorList,
     openLink,
 }) => {
+    const [status, setStatus] = useState(false);
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
     const [isStop, setIsStop] = useState(true);
@@ -26,6 +30,24 @@ const Player = ({
         setIsStop(true);
         setIsError(false);
     }, [station, audioStream, setIsError]);
+
+    const handleMinimizeWindow = () => {
+        mainWindow.hide();
+    };
+
+    const handleMaximizeWindow = () => {
+        if (status) {
+            mainWindow.unmaximize();
+            setStatus(!status);
+        } else {
+            mainWindow.maximize();
+            setStatus(!status);
+        }
+    };
+
+    const handleCloseWindow = () => {
+        mainWindow.close();
+    };
 
     const playAudio = () => {
         if (isStop) {

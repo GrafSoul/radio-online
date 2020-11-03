@@ -3,8 +3,54 @@
 	z-index: 400;
 	-webkit-user-select: none;
 	background-color: rgb(21, 26, 36);
-	overflow: hidden;
 	cursor: default;
+
+	.controlWindowMini {
+		height: 69px;
+		position: absolute;
+		top: 5px;
+		right: -80px;
+		z-index: 15000;
+		padding: 3px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgb(18, 21, 31);
+		border-top: 1px solid rgb(38, 47, 66);
+		border-left: 1px solid rgb(38, 47, 66);
+		border-bottom: 1px solid rgb(38, 47, 66);
+		border-radius: 12px 0 0 12px;
+		transition: all 0.8s ease;
+	}
+	
+	.btnWindowMini,
+	.closeWindowMini{
+		width: 16px;
+		height: 16px;
+		font-size: .9em;
+		line-height: 0;
+		margin: 1px 1px 1px 3px;
+		padding: 0;
+		cursor: pointer;
+		-webkit-app-region: no-drag;
+		background-color:rgb(21, 26, 36);
+		color:rgb(129, 186, 218);
+		border: none;
+		outline: none;
+		transition: all 0.3s ease;
+	
+		button {
+			padding: 0;
+			margin: 0;
+			width: 10px;
+			height: 10px;
+		}
+	
+		&:hover {
+			color: rgb(255, 255, 255);
+		}
+	}
 
 	.addVersion {
 		font-size: .8em;
@@ -132,6 +178,8 @@
 	} 
 }
 
+
+
 @media only screen and (max-height : 80px) {
 
 	.header {
@@ -142,6 +190,10 @@
 		top: 0;
 		-webkit-app-region: drag;
 		background-color: transparent;
+
+		.controlWindowMini {
+			right: 0;
+		}
 
 		.topBar {
 			display: none;

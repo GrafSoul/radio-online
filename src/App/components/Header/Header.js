@@ -37,6 +37,37 @@ const Header = ({
 
     return (
         <div className={classes.header}>
+            <div className={classes.controlWindowMini}>
+                <button
+                    className={
+                        classes.btnWindowMini + ' ' + classes.closeWindowMini
+                    }
+                    onClick={handleCloseWindow}
+                >
+                    <i className="fal fa-window-close" />
+                </button>
+                {!status ? (
+                    <button
+                        className={classes.btnWindowMini}
+                        onClick={handleMaximizeWindow}
+                    >
+                        <i className="fal fa-window-maximize" />
+                    </button>
+                ) : (
+                    <button
+                        className={classes.btnWindowMini}
+                        onClick={handleMaximizeWindow}
+                    >
+                        <i className="fal fa-window-restore"></i>
+                    </button>
+                )}
+                <button
+                    className={classes.btnWindowMini}
+                    onClick={handleMinimizeWindow}
+                >
+                    <i className="fal fa-window-minimize" />
+                </button>
+            </div>
             <div className={classes.topBar}>
                 <div className={classes.title}>
                     <img
