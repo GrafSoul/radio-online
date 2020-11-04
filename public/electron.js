@@ -142,7 +142,7 @@ ipcMain.on('size-default', (event) => {
     mainWindow.setSize(410, 500);
 });
 
-ipcMain.on('openWindow', (event, title, url, id) => {
+ipcMain.on('openWindow', (event, id, title, url) => {
     childWindows[id] = new BrowserWindow({
         title: title,
         width: 1280,
@@ -160,6 +160,7 @@ ipcMain.on('openWindow', (event, title, url, id) => {
         webPreferences: {
             webviewTag: true,
             nodeIntegration: true,
+            enableRemoteModule: true,
             webSecurity: false,
         },
     });
@@ -169,7 +170,7 @@ ipcMain.on('openWindow', (event, title, url, id) => {
     childWindows[id].show();
     childWindows[id].webContents.openDevTools();
     childWindows[id].webContents.on('did-finish-load', () => {
-        childWindows[id].webContents.send('urlOpen', title, url);
+        childWindows[id].webContents.send('urlOpen', id, title, url);
     });
 
     childWindows[id].on('close', () => {

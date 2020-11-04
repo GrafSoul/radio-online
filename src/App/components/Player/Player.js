@@ -162,9 +162,9 @@ const Player = ({
                                 className={classes.linkBtn}
                                 onClick={() =>
                                     openLink(
-                                        // station.name,
+                                        station.id,
+                                        station.name,
                                         station.site,
-                                        // station.id,
                                     )
                                 }
                             >

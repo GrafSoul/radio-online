@@ -9,13 +9,11 @@ import Footer from './components/Footer/Footer';
 
 import resources from './resources/resources';
 
-const { shell } = window.require('electron');
-
-// const electron = window.require('electron');
-// const ipcRenderer = electron.ipcRenderer;
+const electron = window.require('electron');
+const ipcRenderer = electron.ipcRenderer;
 
 const App = () => {
-    const version = '0.8.0';
+    const version = '1.0.0';
     const audioStream = useRef(null);
     const localStations = useRef([]);
     const [stations, setStations] = useState([]);
@@ -217,12 +215,8 @@ const App = () => {
         setIsMenu(false);
     };
 
-    // const handlerOpenLink = (title, url, id) => {
-    //     ipcRenderer.send('openWindow', title, url, id);
-    // };
-
-    const handlerOpenLink = (url) => {
-        shell.openExternal(url);
+    const handlerOpenLink = (id, title, url) => {
+        ipcRenderer.send('openWindow', id, title, url);
     };
 
     return (

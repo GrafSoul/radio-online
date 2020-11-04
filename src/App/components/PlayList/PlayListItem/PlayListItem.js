@@ -41,7 +41,7 @@ const PlayListItem = ({
                     <span
                         title={'Open radio station - ' + station}
                         className={classes.linkBtn}
-                        onClick={() => openLink(site)}
+                        onClick={() => openLink(id, station, site)}
                     >
                         <i className="far fa-external-link-alt"></i>
                     </span>
