@@ -48,10 +48,33 @@ const Header = ({
 
     return (
         <div className={classes.header}>
-            <div className={classes.controlWindowMini}>
+            <div className={classes.controlWindowMiniLeft}>
+                <span className={classes.dragPanel}>
+                    <i className="fal fa-ellipsis-v-alt"></i>
+                </span>
+                {isTop ? (
+                    <button
+                        className={classes.btnWindowMiniLeft}
+                        onClick={handlerDownWindow}
+                    >
+                        <i className="fal fa-arrow-from-top"></i>
+                    </button>
+                ) : (
+                    <button
+                        className={classes.btnWindowMiniLeft}
+                        onClick={handlerTopWindow}
+                    >
+                        <i className="fal fa-arrow-to-top"></i>
+                    </button>
+                )}
+            </div>
+
+            <div className={classes.controlWindowMiniRight}>
                 <button
                     className={
-                        classes.btnWindowMini + ' ' + classes.closeWindowMini
+                        classes.btnWindowMiniRight +
+                        ' ' +
+                        classes.closeWindowMini
                     }
                     onClick={handlerCloseWindow}
                 >
@@ -59,21 +82,21 @@ const Header = ({
                 </button>
                 {!status ? (
                     <button
-                        className={classes.btnWindowMini}
+                        className={classes.btnWindowMiniRight}
                         onClick={handlerMaximizeWindow}
                     >
                         <i className="fal fa-window-maximize" />
                     </button>
                 ) : (
                     <button
-                        className={classes.btnWindowMini}
+                        className={classes.btnWindowMiniRight}
                         onClick={handlerMaximizeWindow}
                     >
                         <i className="fal fa-window-restore"></i>
                     </button>
                 )}
                 <button
-                    className={classes.btnWindowMini}
+                    className={classes.btnWindowMiniRight}
                     onClick={handlerMinimizeWindow}
                 >
                     <i className="fal fa-window-minimize" />

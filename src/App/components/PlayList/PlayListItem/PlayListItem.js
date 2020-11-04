@@ -56,7 +56,7 @@ const PlayListItem = ({
                 <button
                     title={'Delete radio station - ' + station}
                     className={classes.deleteBtn}
-                    onClick={() => deleteModal(id)}
+                    onClick={() => deleteModal(id, station)}
                 >
                     <i className="far fa-trash-alt"></i>
                 </button>

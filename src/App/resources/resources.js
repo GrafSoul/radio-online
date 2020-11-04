@@ -5,7 +5,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/classicrockdoug?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '31d9bcc0-1822-11eb-946c-a53d2f480df5',
@@ -13,7 +12,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/mellowrock?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '3be80c30-1822-11eb-bc9e-0fa386761b3a',
@@ -21,7 +19,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/crphd?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '49438ad0-1822-11eb-ad5a-b702af6de265',
@@ -29,7 +26,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/crhd?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '54ff8a40-1822-11eb-8124-9f98b0a6eb52',
@@ -37,7 +33,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/miamirock?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '5fdfcfb0-1822-11eb-aa8c-a3368f475571',
@@ -45,7 +40,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/miarockhd?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '733bb6a0-1822-11eb-b8d0-db75343e43e1',
@@ -53,7 +47,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/albumrockmia?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '7964dca0-1822-11eb-875c-7d19a47ceed4',
@@ -61,7 +54,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/miarockhd?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '8083ad40-1822-11eb-b953-9b9f221f9e9c',
@@ -69,7 +61,6 @@ const resources = [
         url: 'https://vip2.fastcast4u.com/proxy/boomtownrich?mp=/1',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '88ff9ce0-1822-11eb-80cb-2da6c480efed',
@@ -77,7 +68,6 @@ const resources = [
         url: 'http://uk3.internet-radio.com:8160/stream',
         category: 'Rock n Roll',
         favorite: false,
-        site: '',
     },
     {
         id: '916b38d0-1822-11eb-bff6-67007922c1bb',
@@ -85,7 +75,6 @@ const resources = [
         url: 'http://us3.internet-radio.com:8342/stream',
         category: 'Jazz/Blues',
         favorite: false,
-        site: '',
     },
     {
         id: '9832c1b0-1822-11eb-8ab6-bde223f0d51a',
@@ -93,7 +82,6 @@ const resources = [
         url: 'http://us3.internet-radio.com:8297/stream',
         category: 'Country',
         favorite: false,
-        site: '',
     },
     {
         id: '9fe7c8c0-182b-11eb-808a-adf41c4b8291',
@@ -101,7 +89,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c18_17',
         category: 'Commercial',
         favorite: false,
-        site: '',
     },
     {
         id: 'fd6e3290-182b-11eb-808a-adf41c4b8291',
@@ -109,7 +96,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c4_2',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '16a805b0-182c-11eb-808a-adf41c4b8291',
@@ -117,7 +103,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a1',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '309179c0-182c-11eb-808a-adf41c4b8291',
@@ -125,7 +110,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c4_2',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '3faafc10-182c-11eb-808a-adf41c4b8291',
@@ -133,7 +117,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c13_16',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '53d52f80-182c-11eb-808a-adf41c4b8291',
@@ -141,7 +124,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c16_13',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '64b65270-182c-11eb-808a-adf41c4b8291',
@@ -149,7 +131,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c6_5',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '77707b20-182c-11eb-808a-adf41c4b8291',
@@ -157,7 +138,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c18_18',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '894f10e0-182c-11eb-808a-adf41c4b8291',
@@ -165,7 +145,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c6_3',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '9c9acb30-182c-11eb-808a-adf41c4b8291',
@@ -173,7 +152,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c4_4',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: 'b6f6d730-182c-11eb-808a-adf41c4b8291',
@@ -181,7 +159,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a144',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: 'cbb55b60-182c-11eb-808a-adf41c4b8291',
@@ -189,7 +166,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a33',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: 'de5a7570-182c-11eb-808a-adf41c4b8291',
@@ -197,7 +173,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c4_6',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: 'ff242a80-182c-11eb-808a-adf41c4b8291',
@@ -205,7 +180,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c7_39',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '1b109a80-182d-11eb-808a-adf41c4b8291',
@@ -213,7 +187,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c8_4',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '311fba90-182d-11eb-808a-adf41c4b8291',
@@ -221,7 +194,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a74',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '4d545720-182d-11eb-808a-adf41c4b8291',
@@ -229,7 +201,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a80',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: '627fa6e0-182d-11eb-808a-adf41c4b8291',
@@ -237,7 +208,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a161',
         category: 'Dance',
         favorite: false,
-        site: '',
     },
     {
         id: 'a92c4da0-182d-11eb-808a-adf41c4b8291',
@@ -245,7 +215,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c13_3',
         category: 'Electronic',
         favorite: false,
-        site: '',
     },
     {
         id: 'bedcfa00-182d-11eb-808a-adf41c4b8291',
@@ -253,7 +222,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c18_5',
         category: 'Electronic',
         favorite: false,
-        site: '',
     },
     {
         id: 'eaa79be0-182d-11eb-808a-adf41c4b8291',
@@ -261,7 +229,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a136',
         category: 'Electronic',
         favorite: false,
-        site: '',
     },
     {
         id: '114fd960-182e-11eb-808a-adf41c4b8291',
@@ -269,7 +236,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a260',
         category: 'Electronic',
         favorite: false,
-        site: '',
     },
     {
         id: '373fc360-182e-11eb-808a-adf41c4b8291',
@@ -277,7 +243,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a6',
         category: 'Electronic',
         favorite: false,
-        site: '',
     },
     {
         id: '4a374330-182e-11eb-808a-adf41c4b8291',
@@ -285,7 +250,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a193',
         category: 'Electronic',
         favorite: false,
-        site: '',
     },
     {
         id: '6788e880-182e-11eb-808a-adf41c4b8291',
@@ -293,7 +257,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c17_3',
         category: 'Electronic',
         favorite: false,
-        site: '',
     },
     {
         id: 'e49c2db0-1846-11eb-ab44-3fcbe1beaeb1',
@@ -301,7 +264,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a285',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: 'fcc30a30-1846-11eb-ab44-3fcbe1beaeb1',
@@ -309,7 +271,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a286',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '0fb3fa50-1847-11eb-ab44-3fcbe1beaeb1',
@@ -317,7 +278,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a287',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '247e3e50-1847-11eb-ab44-3fcbe1beaeb1',
@@ -325,7 +285,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a2',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '44064ba0-1847-11eb-ab44-3fcbe1beaeb1',
@@ -333,7 +292,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a75',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '61ad3ce0-1847-11eb-ab44-3fcbe1beaeb1',
@@ -341,7 +299,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a192',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '8520dc40-1847-11eb-ab44-3fcbe1beaeb1',
@@ -349,7 +306,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a198',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: 'a74bf610-1847-11eb-ab44-3fcbe1beaeb1',
@@ -357,7 +313,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c7_29',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: 'ecb854a0-1847-11eb-ab44-3fcbe1beaeb1',
@@ -365,7 +320,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c18_2',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: '23bf1790-1848-11eb-ab44-3fcbe1beaeb1',
@@ -373,7 +327,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a27',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: '382c9590-1848-11eb-ab44-3fcbe1beaeb1',
@@ -381,7 +334,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c15_3',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: '471ff240-1848-11eb-ab44-3fcbe1beaeb1',
@@ -389,7 +341,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a120',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: '5c332620-1848-11eb-ab44-3fcbe1beaeb1',
@@ -397,7 +348,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a23',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: '68cc1810-1848-11eb-ab44-3fcbe1beaeb1',
@@ -405,7 +355,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c13_29',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: '95a60710-1848-11eb-ab44-3fcbe1beaeb1',
@@ -413,7 +362,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c16_34',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: 'ad5876e0-1848-11eb-ab44-3fcbe1beaeb1',
@@ -421,7 +369,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a30',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: 'e089eee0-1848-11eb-ab44-3fcbe1beaeb1',
@@ -429,7 +376,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a28',
         category: 'Background',
         favorite: false,
-        site: '',
     },
     {
         id: 'f4132760-1848-11eb-ab44-3fcbe1beaeb1',
@@ -437,7 +383,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a283',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '26b1d540-1849-11eb-ab44-3fcbe1beaeb1',
@@ -445,7 +390,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a148',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '377e10a0-1849-11eb-ab44-3fcbe1beaeb1',
@@ -453,7 +397,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a34',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '46569250-1849-11eb-ab44-3fcbe1beaeb1',
@@ -461,7 +404,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a155',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '589f3480-1849-11eb-ab44-3fcbe1beaeb1',
@@ -469,7 +411,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c7_46',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '780784d0-1849-11eb-ab44-3fcbe1beaeb1',
@@ -477,7 +418,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a130',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: '918b5940-1849-11eb-ab44-3fcbe1beaeb1',
@@ -485,7 +425,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a147',
         category: 'Pop',
         favorite: false,
-        site: '',
     },
     {
         id: 'db442e90-1849-11eb-ab44-3fcbe1beaeb1',
@@ -493,7 +432,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a280',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: 'ee19f590-1849-11eb-ab44-3fcbe1beaeb1',
@@ -501,7 +439,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c1_4',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '02411bc0-184a-11eb-ab44-3fcbe1beaeb1',
@@ -509,7 +446,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a160',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '1825d070-184a-11eb-ab44-3fcbe1beaeb1',
@@ -517,7 +453,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a211',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '2b092c00-184a-11eb-ab44-3fcbe1beaeb1',
@@ -525,7 +460,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a176',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '4e26e330-184a-11eb-ab44-3fcbe1beaeb1',
@@ -533,7 +467,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c1_2',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '5c3a1910-184a-11eb-ab44-3fcbe1beaeb1',
@@ -541,7 +474,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a185',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '9c782c60-184a-11eb-ab44-3fcbe1beaeb1',
@@ -549,7 +481,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a16',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: 'ce719990-184a-11eb-ab44-3fcbe1beaeb1',
@@ -557,7 +488,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a152',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: 'e0f485a0-184a-11eb-ab44-3fcbe1beaeb1',
@@ -565,7 +495,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a206',
         category: 'Rock',
         favorite: false,
-        site: '',
     },
     {
         id: '5bc48900-184c-11eb-ab44-3fcbe1beaeb1',
@@ -573,7 +502,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a50',
         category: 'Russian',
         favorite: false,
-        site: '',
     },
     {
         id: '73fe0320-184c-11eb-ab44-3fcbe1beaeb1',
@@ -581,7 +509,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a35',
         category: 'Russian',
         favorite: false,
-        site: '',
     },
     {
         id: '975281c0-184c-11eb-ab44-3fcbe1beaeb1',
@@ -589,7 +516,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c2_3',
         category: 'Jazz/Blues',
         favorite: false,
-        site: '',
     },
     {
         id: '1b91f1f0-184d-11eb-ab44-3fcbe1beaeb1',
@@ -597,7 +523,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a84',
         category: 'Jazz/Blues',
         favorite: false,
-        site: '',
     },
     {
         id: '8e1a2a80-184d-11eb-93d0-fda59cb31819',
@@ -605,7 +530,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a8',
         category: 'Rap/Hip-Hop',
         favorite: false,
-        site: '',
     },
     {
         id: 'b0d4b310-184d-11eb-93d0-fda59cb31819',
@@ -613,7 +537,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a15',
         category: 'Rap/Hip-Hop',
         favorite: false,
-        site: '',
     },
     {
         id: 'f230e090-184d-11eb-93d0-fda59cb31819',
@@ -621,7 +544,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c2_4',
         category: 'Humor',
         favorite: false,
-        site: '',
     },
     {
         id: 'ffc08e90-184d-11eb-93d0-fda59cb31819',
@@ -629,7 +551,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c3_5',
         category: 'Humor',
         favorite: false,
-        site: '',
     },
     {
         id: '28789940-184e-11eb-93d0-fda59cb31819',
@@ -637,7 +558,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c4_1',
         category: 'Humor',
         favorite: false,
-        site: '',
     },
     {
         id: '55fcf910-184e-11eb-93d0-fda59cb31819',
@@ -645,7 +565,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a282',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '2a1d7a30-184f-11eb-93d0-fda59cb31819',
@@ -653,7 +572,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a111',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '3b8b73d0-184f-11eb-93d0-fda59cb31819',
@@ -661,7 +579,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c10_3',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '4a797950-184f-11eb-93d0-fda59cb31819',
@@ -669,7 +586,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a117',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '5931c8d0-184f-11eb-93d0-fda59cb31819',
@@ -677,7 +593,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a53',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '6756b1f0-184f-11eb-93d0-fda59cb31819',
@@ -685,7 +600,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a54',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '74c0d690-184f-11eb-93d0-fda59cb31819',
@@ -693,7 +607,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a109',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '84ad8760-184f-11eb-93d0-fda59cb31819',
@@ -701,7 +614,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a115',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '92c6b0b0-184f-11eb-93d0-fda59cb31819',
@@ -709,7 +621,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a123',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '9fe5c290-184f-11eb-93d0-fda59cb31819',
@@ -717,7 +628,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a125',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'b08e9770-184f-11eb-93d0-fda59cb31819',
@@ -725,7 +635,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a149',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'bfd36f80-184f-11eb-93d0-fda59cb31819',
@@ -733,7 +642,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a59',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'cf5d3fd0-184f-11eb-93d0-fda59cb31819',
@@ -741,7 +649,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a112',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'e3c3b8f0-184f-11eb-93d0-fda59cb31819',
@@ -749,7 +656,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a137',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'f30c88a0-184f-11eb-93d0-fda59cb31819',
@@ -757,7 +663,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a103',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '01c6d3f0-1850-11eb-93d0-fda59cb31819',
@@ -765,7 +670,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a57',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '0fddb350-1850-11eb-93d0-fda59cb31819',
@@ -773,7 +677,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a221',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '1e90f9c0-1850-11eb-93d0-fda59cb31819',
@@ -781,7 +684,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a126',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '30945590-1850-11eb-93d0-fda59cb31819',
@@ -789,7 +691,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a157',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '41289100-1850-11eb-93d0-fda59cb31819',
@@ -797,7 +698,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a139',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '559ac9f0-1850-11eb-93d0-fda59cb31819',
@@ -805,7 +705,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a106',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '66a56de0-1850-11eb-93d0-fda59cb31819',
@@ -813,7 +712,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a182',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '7747b310-1850-11eb-93d0-fda59cb31819',
@@ -821,7 +719,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a191',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '8b845d10-1850-11eb-93d0-fda59cb31819',
@@ -829,7 +726,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a158',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '9daf1700-1850-11eb-93d0-fda59cb31819',
@@ -837,7 +733,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a129',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'ae26f0d0-1850-11eb-93d0-fda59cb31819',
@@ -845,7 +740,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a135',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'c16ba640-1850-11eb-93d0-fda59cb31819',
@@ -853,7 +747,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a52',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '36b79d40-1852-11eb-93d0-fda59cb31819',
@@ -861,7 +754,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a277',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '457f2f00-1852-11eb-93d0-fda59cb31819',
@@ -869,7 +761,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a128',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '53ec1da0-1852-11eb-93d0-fda59cb31819',
@@ -877,7 +768,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a166',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '60580c20-1852-11eb-93d0-fda59cb31819',
@@ -885,7 +775,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a179',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '6d81cc60-1852-11eb-93d0-fda59cb31819',
@@ -893,7 +782,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a138',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '7c763a80-1852-11eb-93d0-fda59cb31819',
@@ -901,7 +789,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a142',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '889d30c0-1852-11eb-93d0-fda59cb31819',
@@ -909,7 +796,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a104',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '94da9530-1852-11eb-93d0-fda59cb31819',
@@ -917,7 +803,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a114',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'a454ae10-1852-11eb-93d0-fda59cb31819',
@@ -925,7 +810,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a115',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'b5730110-1852-11eb-93d0-fda59cb31819',
@@ -933,7 +817,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a105',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'c2a0b8f0-1852-11eb-93d0-fda59cb31819',
@@ -941,7 +824,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a175',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'd49c9ab0-1852-11eb-93d0-fda59cb31819',
@@ -949,7 +831,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a156',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'e1b40b70-1852-11eb-93d0-fda59cb31819',
@@ -957,7 +838,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a56',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'edb6d7e0-1852-11eb-93d0-fda59cb31819',
@@ -965,7 +845,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a116',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: 'f98303f0-1852-11eb-93d0-fda59cb31819',
@@ -973,7 +852,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a154',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '06cf8e70-1853-11eb-93d0-fda59cb31819',
@@ -981,7 +859,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a119',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '15e1bdc0-1853-11eb-93d0-fda59cb31819',
@@ -989,7 +866,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a163',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '2679f0d0-1853-11eb-93d0-fda59cb31819',
@@ -997,7 +873,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a58',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '35a0e0a0-1853-11eb-93d0-fda59cb31819',
@@ -1005,7 +880,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a110',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '43ff5050-1853-11eb-93d0-fda59cb31819',
@@ -1013,7 +887,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a153',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '51142900-1853-11eb-93d0-fda59cb31819',
@@ -1021,7 +894,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a171',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '5dd34090-1853-11eb-93d0-fda59cb31819',
@@ -1029,7 +901,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a121',
         category: 'Golden Collection',
         favorite: false,
-        site: '',
     },
     {
         id: '7d0d54f0-1853-11eb-93d0-fda59cb31819',
@@ -1037,7 +908,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a65',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: '8d8a37d0-1853-11eb-93d0-fda59cb31819',
@@ -1045,7 +915,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c7_42',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'bb74fa90-1853-11eb-93d0-fda59cb31819',
@@ -1053,7 +922,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a78',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'd9d72580-1853-11eb-93d0-fda59cb31819',
@@ -1061,7 +929,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a88',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'e8b6ac10-1853-11eb-93d0-fda59cb31819',
@@ -1069,7 +936,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a44',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'f69febc0-1853-11eb-93d0-fda59cb31819',
@@ -1077,7 +943,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a262',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: '271fff60-1854-11eb-93d0-fda59cb31819',
@@ -1085,7 +950,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/c7_25',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: '32b62750-1854-11eb-93d0-fda59cb31819',
@@ -1093,7 +957,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a39',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: '53738050-1854-11eb-93d0-fda59cb31819',
@@ -1101,7 +964,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a62',
         category: 'World Music',
         favorite: false,
-        site: '',
     },
     {
         id: '683deb60-1854-11eb-93d0-fda59cb31819',
@@ -1109,7 +971,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a51',
         category: 'Ethnic',
         favorite: false,
-        site: '',
     },
     {
         id: 'a22511f0-1854-11eb-93d0-fda59cb31819',
@@ -1117,7 +978,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a38',
         category: 'Ethnic',
         favorite: false,
-        site: '',
     },
     {
         id: 'cf036dc0-1854-11eb-93d0-fda59cb31819',
@@ -1125,7 +985,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a96',
         category: 'Classic',
         favorite: false,
-        site: '',
     },
     {
         id: 'dcdd9240-1854-11eb-93d0-fda59cb31819',
@@ -1133,7 +992,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a97',
         category: 'Classic',
         favorite: false,
-        site: '',
     },
     {
         id: 'e9a890b0-1854-11eb-93d0-fda59cb31819',
@@ -1141,7 +999,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a275',
         category: 'Classic',
         favorite: false,
-        site: '',
     },
     {
         id: '1131b850-1855-11eb-93d0-fda59cb31819',
@@ -1149,7 +1006,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/a100',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: '434e16d0-1855-11eb-93d0-fda59cb31819',
@@ -1157,7 +1013,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v1_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: '50a88400-1855-11eb-93d0-fda59cb31819',
@@ -1165,7 +1020,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v4_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: '5f533ef0-1855-11eb-93d0-fda59cb31819',
@@ -1173,7 +1027,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v5_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: '6c0696b0-1855-11eb-93d0-fda59cb31819',
@@ -1181,7 +1034,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v12_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: '841d4690-1855-11eb-93d0-fda59cb31819',
@@ -1189,7 +1041,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v13_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: '9ad83700-1855-11eb-93d0-fda59cb31819',
@@ -1197,7 +1048,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v11_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: 'ae9b1d20-1855-11eb-93d0-fda59cb31819',
@@ -1205,7 +1055,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v14_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: 'bbaaecc0-1855-11eb-93d0-fda59cb31819',
@@ -1213,7 +1062,6 @@ const resources = [
         url: 'http://ic7.101.ru:8000/v15_1',
         category: 'Broadcast Stations',
         favorite: false,
-        site: '',
     },
     {
         id: 'c8d967f0-1855-11eb-93d0-fda59cb31819',
@@ -1221,7 +1069,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_rock_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: 'b5710870-1856-11eb-93d0-fda59cb31819',
@@ -1229,7 +1076,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_disco_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: 'c1535490-1856-11eb-93d0-fda59cb31819',
@@ -1237,7 +1083,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_club_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: 'cdf54730-1856-11eb-93d0-fda59cb31819',
@@ -1245,7 +1090,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_pop_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: 'db3d16c0-1856-11eb-93d0-fda59cb31819',
@@ -1253,7 +1097,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_relax_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: 'e9b242c0-1856-11eb-93d0-fda59cb31819',
@@ -1261,7 +1104,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_rnb_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: 'f4ed2b50-1856-11eb-93d0-fda59cb31819',
@@ -1269,7 +1111,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_rus_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: '0163a120-1857-11eb-93d0-fda59cb31819',
@@ -1277,7 +1118,6 @@ const resources = [
         url: 'https://zaycevfm.cdnvideo.ru/ZaycevFM_shanson_256.mp3',
         category: 'ZaycevFM',
         favorite: false,
-        site: '',
     },
     {
         id: '38321600-1857-11eb-93d0-fda59cb31819',
@@ -1285,7 +1125,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/newjazz192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'e54d1e70-1857-11eb-8df0-bd842c0a7c99',
@@ -1293,7 +1132,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Alternative_Rock192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '7d3e4bd0-185a-11eb-8fa9-7364ca67ee8b',
@@ -1301,7 +1139,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Ballads192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'a6ef5c80-185a-11eb-8fa9-7364ca67ee8b',
@@ -1309,7 +1146,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Old192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'cb8e3570-185a-11eb-8fa9-7364ca67ee8b',
@@ -1317,7 +1153,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/blues192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'dd855c40-185a-11eb-8fa9-7364ca67ee8b',
@@ -1325,7 +1160,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/breakbeat192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '20146470-185b-11eb-8fa9-7364ca67ee8b',
@@ -1333,7 +1167,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/chillout192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '304fd180-185b-11eb-8fa9-7364ca67ee8b',
@@ -1341,7 +1174,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/coolschool192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '5e2a1980-185b-11eb-8fa9-7364ca67ee8b',
@@ -1349,7 +1181,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/country192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '6cbcdfa0-185b-11eb-8fa9-7364ca67ee8b',
@@ -1357,7 +1188,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/dance192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '843ddf30-185b-11eb-8fa9-7364ca67ee8b',
@@ -1365,7 +1195,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/depechemode192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'e9344910-186a-11eb-8ade-51199442e91f',
@@ -1373,7 +1202,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Disco192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '99071e80-186b-11eb-b750-d567b31ad2cf',
@@ -1381,7 +1209,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/disco90192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'ad851740-186b-11eb-b750-d567b31ad2cf',
@@ -1389,7 +1216,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/DrumAndBass192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '900ce6d0-191e-11eb-a315-29ad173163f6',
@@ -1397,7 +1223,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/dubstep192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'dcf26b00-191e-11eb-a315-29ad173163f6',
@@ -1405,7 +1230,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Electro-House192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'f1b6e2a0-191e-11eb-a315-29ad173163f6',
@@ -1413,7 +1237,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/gangstarap192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '0a5957c0-191f-11eb-a315-29ad173163f6',
@@ -1421,7 +1244,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Gothic192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '210cce20-191f-11eb-a315-29ad173163f6',
@@ -1429,7 +1251,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/HardRock192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '304e71e0-191f-11eb-a315-29ad173163f6',
@@ -1437,7 +1258,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/heavymetal192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '3ffbcfc0-191f-11eb-a315-29ad173163f6',
@@ -1445,7 +1265,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/hip-hop192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '4f9138d0-191f-11eb-a315-29ad173163f6',
@@ -1453,7 +1272,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/hiphopandrnb192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '5f9ff090-191f-11eb-a315-29ad173163f6',
@@ -1461,7 +1279,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Jazz192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '76019d70-191f-11eb-a315-29ad173163f6',
@@ -1469,7 +1286,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/JazzRockFusion192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '8814d7c0-191f-11eb-a315-29ad173163f6',
@@ -1477,7 +1293,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/latino192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '9f905910-191f-11eb-a315-29ad173163f6',
@@ -1485,7 +1300,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/LOUNGE192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'ad8b9a20-191f-11eb-a315-29ad173163f6',
@@ -1493,7 +1307,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/main_stream_rock192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'c0c68b90-191f-11eb-a315-29ad173163f6',
@@ -1501,7 +1314,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/melodicrock192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'd8d9e010-191f-11eb-a315-29ad173163f6',
@@ -1509,7 +1321,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/new-age192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'e74b1470-191f-11eb-a315-29ad173163f6',
@@ -1517,7 +1328,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/pophit192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'f60cd9d0-191f-11eb-a315-29ad173163f6',
@@ -1525,7 +1335,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Punk192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '047cd5b0-1920-11eb-a315-29ad173163f6',
@@ -1533,7 +1342,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/queen192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '28cfffa0-1920-11eb-a315-29ad173163f6',
@@ -1547,7 +1355,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/rock-n-roll192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '54d97f40-1920-11eb-a315-29ad173163f6',
@@ -1555,7 +1362,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/soul192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '61b19d10-1920-11eb-a315-29ad173163f6',
@@ -1563,7 +1369,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/soundtrack192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '76425a80-1920-11eb-a315-29ad173163f6',
@@ -1571,7 +1376,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/techno192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '877e2090-1920-11eb-a315-29ad173163f6',
@@ -1579,7 +1383,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Trash_Metal192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '9eec0d50-1920-11eb-a315-29ad173163f6',
@@ -1587,7 +1390,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/trance192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'af495a40-1920-11eb-a315-29ad173163f6',
@@ -1595,7 +1397,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/trip-hop192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'cbb07880-1920-11eb-a315-29ad173163f6',
@@ -1603,7 +1404,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/world-hit192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'e0a500d0-1920-11eb-a315-29ad173163f6',
@@ -1611,7 +1411,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/absolute-hit192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'eeb80fa0-1920-11eb-a315-29ad173163f6',
@@ -1619,7 +1418,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/bard192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '10542fe0-1921-11eb-a315-29ad173163f6',
@@ -1627,7 +1425,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/balkanmusic192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '4a2399a0-192a-11eb-a315-29ad173163f6',
@@ -1636,7 +1433,6 @@ const resources = [
             'http://relay.myradio.ua:8000/viktor-tsoy-i-gruppa-kino192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '58a548c0-192a-11eb-a315-29ad173163f6',
@@ -1644,7 +1440,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/kids-songs192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '6632faf0-192a-11eb-a315-29ad173163f6',
@@ -1652,7 +1447,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/fairytales192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '73536c60-192a-11eb-a315-29ad173163f6',
@@ -1660,7 +1454,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/eurovision2010192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '81b362b0-192a-11eb-a315-29ad173163f6',
@@ -1668,7 +1461,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Hits90s192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '8e633800-192a-11eb-a315-29ad173163f6',
@@ -1676,7 +1468,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/italjanskaja-muzyka192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '99c7c8a0-192a-11eb-a315-29ad173163f6',
@@ -1684,7 +1475,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Classica192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'a9a5fa80-192a-11eb-a315-29ad173163f6',
@@ -1692,7 +1482,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/shansonlyrics192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'b91abc30-192a-11eb-a315-29ad173163f6',
@@ -1700,7 +1489,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/sleepmusic192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'c93533c0-192a-11eb-a315-29ad173163f6',
@@ -1708,7 +1496,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Kazantip192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'd54fcdf0-192a-11eb-a315-29ad173163f6',
@@ -1716,7 +1503,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/kino192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'e20fa8d0-192a-11eb-a315-29ad173163f6',
@@ -1730,7 +1516,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/parkovka192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '13b2b8a0-192b-11eb-a315-29ad173163f6',
@@ -1738,7 +1523,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/pesni-vysockogo192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '218c19d0-192b-11eb-a315-29ad173163f6',
@@ -1746,7 +1530,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/mihail-krug192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '2e9ab0f0-192b-11eb-a315-29ad173163f6',
@@ -1754,7 +1537,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/pophit192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '43715100-192b-11eb-a315-29ad173163f6',
@@ -1762,7 +1544,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Kapec192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '50ae7230-192b-11eb-a315-29ad173163f6',
@@ -1770,7 +1551,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/funkreggi192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '5f3db5e0-192b-11eb-a315-29ad173163f6',
@@ -1778,7 +1558,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/retro192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '6a656490-192b-11eb-a315-29ad173163f6',
@@ -1786,7 +1565,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/rockmusic192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '78ad3f00-192b-11eb-a315-29ad173163f6',
@@ -1794,7 +1572,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/RusLyrics192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '890b7650-192b-11eb-a315-29ad173163f6',
@@ -1802,7 +1579,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/russkie-hity-90-h192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '973d09a0-192b-11eb-a315-29ad173163f6',
@@ -1810,7 +1586,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/RusRock192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'a532f380-192b-11eb-a315-29ad173163f6',
@@ -1818,7 +1593,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/rep192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'b47114d0-192b-11eb-a315-29ad173163f6',
@@ -1826,7 +1600,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/Rus-pop192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'c4418b10-192b-11eb-a315-29ad173163f6',
@@ -1834,7 +1607,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/skryabin192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'dd99bba0-192b-11eb-a315-29ad173163f6',
@@ -1842,7 +1614,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/onlyukraine192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'e8edf890-192b-11eb-a315-29ad173163f6',
@@ -1850,7 +1621,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/tnmk192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: 'f4369cc0-192b-11eb-a315-29ad173163f6',
@@ -1858,7 +1628,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/top-100-kiev192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '0144beb0-192c-11eb-a315-29ad173163f6',
@@ -1866,7 +1635,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/ukrainian_wedding192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '2268a1b0-192c-11eb-a315-29ad173163f6',
@@ -1880,7 +1648,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/UkrPophit192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '54185bb0-192c-11eb-a315-29ad173163f6',
@@ -1888,7 +1655,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/phrases192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '5fd98b40-192c-11eb-a315-29ad173163f6',
@@ -1896,7 +1662,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/france192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '6c8c6dd0-192c-11eb-a315-29ad173163f6',
@@ -1904,7 +1669,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/shanson192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '795b15c0-192c-11eb-a315-29ad173163f6',
@@ -1912,7 +1676,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/sheshory192.mp3?v=3',
         category: 'Radio Observer - Music',
         favorite: false,
-        site: '',
     },
     {
         id: '57960b40-1aa1-11eb-afc9-8bd8c01d546e',
@@ -1932,7 +1695,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/kissfm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: '72b041b0-1aa2-11eb-afc9-8bd8c01d546e',
@@ -1940,7 +1702,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/loungefm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: '818eb6d0-1aa2-11eb-afc9-8bd8c01d546e',
@@ -1948,7 +1709,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/luxfm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: '901484a0-1aa2-11eb-afc9-8bd8c01d546e',
@@ -1956,7 +1716,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/more128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: '9f6ae8e0-1aa2-11eb-afc9-8bd8c01d546e',
@@ -1964,7 +1723,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/europaplusfm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'ae9003f0-1aa2-11eb-afc9-8bd8c01d546e',
@@ -1978,7 +1736,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/radiorelaxfm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'e8508fb0-1aa2-11eb-afc9-8bd8c01d546e',
@@ -1986,7 +1743,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/radiorocksfm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'f5f01c30-1aa2-11eb-afc9-8bd8c01d546e',
@@ -1994,7 +1750,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/avtoradiofm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: '06d8b930-1aa3-11eb-afc9-8bd8c01d546e',
@@ -2014,7 +1769,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/PRK128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: '8094a9f0-1aa3-11eb-afc9-8bd8c01d546e',
@@ -2028,7 +1782,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/taktfm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'b4763810-1aa3-11eb-afc9-8bd8c01d546e',
@@ -2036,7 +1789,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/radioec128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'c2442790-1aa3-11eb-afc9-8bd8c01d546e',
@@ -2044,7 +1796,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/retrofm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'd2867270-1aa3-11eb-afc9-8bd8c01d546e',
@@ -2052,7 +1803,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/rusradiofm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'e9793bc0-1aa3-11eb-afc9-8bd8c01d546e',
@@ -2060,7 +1810,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/sre128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: 'fb309a70-1aa3-11eb-afc9-8bd8c01d546e',
@@ -2074,7 +1823,6 @@ const resources = [
         url: 'http://relay.myradio.ua:8000/shansonkievfm128.mp3',
         category: 'Radio Observer - Broadcast',
         favorite: false,
-        site: '',
     },
     {
         id: '73b9d790-1aa4-11eb-afc9-8bd8c01d546e',
@@ -2082,7 +1830,6 @@ const resources = [
         url: 'http://air.radiorecord.ru:805/sd90_320',
         category: 'Radio Record',
         favorite: false,
-        site: '',
     },
     {
         id: '437517e0-1aa7-11eb-afc9-8bd8c01d546e',
@@ -2102,7 +1849,6 @@ const resources = [
         url: 'http://navo.online:8000/stream',
         category: 'Tashkent TAS-IX',
         favorite: false,
-        site: '',
     },
     {
         id: '20757a90-1aa8-11eb-afc9-8bd8c01d546e',
@@ -2116,7 +1862,6 @@ const resources = [
         url: 'http://91.203.172.88:8000/qalbimnavosi',
         category: 'Tashkent TAS-IX',
         favorite: false,
-        site: '',
     },
     {
         id: '034ceba0-1aa9-11eb-afc9-8bd8c01d546e',
@@ -2130,7 +1875,6 @@ const resources = [
         url: 'https://classicfm.uz:8444/retrofm.ogg',
         category: 'Tashkent TAS-IX',
         favorite: false,
-        site: '',
     },
     {
         id: '466216f0-1aad-11eb-afc9-8bd8c01d546e',
@@ -2138,7 +1882,6 @@ const resources = [
         url: 'https://classicfm.uz:8444/classic.ogg',
         category: 'Tashkent TAS-IX',
         favorite: false,
-        site: '',
     },
     {
         id: '818ba890-1aad-11eb-afc9-8bd8c01d546e',
@@ -2146,7 +1889,6 @@ const resources = [
         url: 'https://classicfm.uz:8444/nostalgie.ogg',
         category: 'Tashkent TAS-IX',
         favorite: false,
-        site: '',
     },
     {
         id: 'd19a0f40-1d17-11eb-8a92-235d5809e13f',
@@ -2527,39 +2269,616 @@ const resources = [
         id: '82ab77d0-1d1b-11eb-8a92-235d5809e13f',
         name: '50’s - 50s/60s',
         url: 'http://192.99.34.205:8005/stream',
-        category: '101.RU',
-        favorite: false,
+        category: 'Miled Music',
         site: '',
     },
     {
         id: 'a8ba3470-1d1b-11eb-8a92-235d5809e13f',
         name: '60’s - 50s/60s',
         url: 'http://192.99.34.205:8007/stream',
-        category: '101.RU',
-        favorite: false,
+        category: 'Miled Music',
         site: '',
     },
     {
         id: 'c3e1f4e0-1d1b-11eb-8a92-235d5809e13f',
         name: '70’s - 70s/80s',
         url: 'http://192.99.34.205:8008/stream',
-        category: '101.RU',
-        favorite: false,
+        category: 'Miled Music',
         site: '',
     },
     {
         id: 'd558ef30-1d1b-11eb-8a92-235d5809e13f',
         name: '80’s - 70s/80s',
         url: 'http://192.99.34.205:8030/stream',
-        category: '101.RU',
-        favorite: false,
+        category: 'Miled Music',
         site: '',
     },
     {
         id: 'e6dcbac0-1d1b-11eb-8a92-235d5809e13f',
         name: '90’s',
         url: 'http://192.99.34.205:8046/stream',
-        category: '101.RU',
+        category: 'Miled Music',
+        site: '',
+    },
+    {
+        id: '41d0f700-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Alternative',
+        url: 'http://192.99.34.205:8201/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '4e716300-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Ambient',
+        url: 'http://192.99.34.205:8079/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '5aab4500-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Americano',
+        url: 'http://192.99.34.205:8021/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '653d6a70-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Arabic',
+        url: 'http://192.99.34.205:8094/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '7318a060-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Bachata',
+        url: 'http://192.99.34.205:8465/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '8338bd40-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Banda',
+        url: 'http://192.99.34.205:8401/stream',
+        category: 'Miled Music',
+        site: '',
+    },
+    {
+        id: 'c7e1a4c0-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Bandas',
+        url: 'http://192.99.34.205:8480/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'dcda72d0-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Bebop',
+        url: 'http://192.99.34.205:8450/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'ea921b30-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Blues',
+        url: 'http://192.99.34.205:8144/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'fae6dca0-1dd7-11eb-ab5e-bf5a48cbeef0',
+        name: 'Bolero',
+        url: 'http://192.99.34.205:8444/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '06fbaa70-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Bossa Nova',
+        url: 'http://192.99.34.205:8399/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '11a09490-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Castro',
+        url: 'http://192.99.34.205:8483/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '253fc610-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Classic Rock',
+        url: 'http://192.99.34.205:8127/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '42fd4c90-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Classical',
+        url: 'http://192.99.34.205:8126/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '4dc268e0-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Country',
+        url: 'http://192.99.34.205:8145/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '5a855100-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Cubana',
+        url: 'http://192.99.34.205:8400/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '6d52daa0-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Cumbia',
+        url: 'http://192.99.34.205:8445/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '7e8b9370-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Dance',
+        url: 'http://192.99.34.205:8448/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '8ffe20f0-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Disco',
+        url: 'http://192.99.34.205:8202/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'a68a6040-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Drum and Bass',
+        url: 'http://192.99.34.205:8446/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'b36c1b00-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'EBM',
+        url: 'http://192.99.34.205:8227/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'c0c3f020-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Electro House',
+        url: 'http://192.99.34.205:8460/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'ce4df8d0-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Electronica',
+        url: 'http://192.99.34.205:8096/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'da3cef20-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Elvis Presley',
+        url: 'http://192.99.34.205:8453/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'e6ff8920-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Enrique Batiz',
+        url: 'http://192.99.34.205:8476/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'f43ea620-1dd8-11eb-ab5e-bf5a48cbeef0',
+        name: 'Exitos en ingles',
+        url: 'http://192.99.34.205:8454/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '0197b3c0-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Fernandez',
+        url: 'http://192.99.34.205:8478/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '0c3a2ce0-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Fiesta Mexicana',
+        url: 'http://192.99.34.205:8073/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '20cdf790-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Gospel',
+        url: 'http://192.99.34.205:8449/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '2b0af820-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Grupera',
+        url: 'http://192.99.34.205:8472/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '3ae46f10-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Hard Rock',
+        url: 'http://192.99.34.205:8456/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '535091f0-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Heavy Metal',
+        url: 'http://192.99.34.205:8109/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '5db84c00-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Hip Hop',
+        url: 'http://192.99.34.205:8125/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '68e244a0-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Indie Rock',
+        url: 'http://192.99.34.205:8455/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '74ad1120-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Jazz',
+        url: 'http://192.99.34.205:8108/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '7f1abea0-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Jorge Negrete',
+        url: 'http://192.99.34.205:8474/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '8dd7a200-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Jose Alfredo',
+        url: 'http://192.99.34.205:8477/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'a9c26450-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Julio Iglesias',
+        url: 'http://192.99.34.205:8479/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'b2d20870-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Kids',
+        url: 'http://192.99.34.205:8042/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'bfe92b10-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Las Sonoras',
+        url: 'http://192.99.34.205:8475/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'cb29b8f0-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Latina',
+        url: 'http://192.99.34.205:8166/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'dee41390-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Mambo',
+        url: 'http://192.99.34.205:8443/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'eb52e840-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Mariachi',
+        url: 'http://192.99.34.205:8165/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'f8083bd0-1dd9-11eb-ab5e-bf5a48cbeef0',
+        name: 'Mijares & Emmanuel',
+        url: 'http://192.99.34.205:8031/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '07641e50-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Naviden Christian',
+        url: 'http://192.99.34.205:8237/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '131129a0-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'New Age',
+        url: 'http://192.99.34.205:8222/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '1ccd8880-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Nortena',
+        url: 'http://192.99.34.205:8469/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '2bd18700-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Oldies',
+        url: 'http://192.99.34.205:8146/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '3563a190-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Opera',
+        url: 'http://192.99.34.205:8203/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '3fb821c0-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Pedro Infante',
+        url: 'http://192.99.34.205:8452/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '4935c9f0-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Pop',
+        url: 'http://192.99.34.205:8147/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '53245c60-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Psycho',
+        url: 'http://192.99.34.205:8148/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '6737d380-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Punk',
+        url: 'http://192.99.34.205:8168/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '7131d7a0-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Rat Pack',
+        url: 'http://192.99.34.205:8238/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '7a73af50-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Reggae',
+        url: 'http://192.99.34.205:8143/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '890d2c30-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Reggaeton',
+        url: 'http://192.99.34.205:8466/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'a3338230-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Rock',
+        url: 'http://192.99.34.205:8175/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'b0e11870-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Rock Espanol',
+        url: 'http://192.99.34.205:8457/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'bb714210-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Salsa',
+        url: 'http://192.99.34.205:8239/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'c47aa4a0-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Ska',
+        url: 'http://192.99.34.205:8458/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'ce400430-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Social Club',
+        url: 'http://192.99.34.205:8482/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'df4eede0-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Solis',
+        url: 'http://192.99.34.205:8473/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'e83f2320-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Soul',
+        url: 'http://192.99.34.205:8167/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'f1c41e50-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Soundtrack',
+        url: 'http://192.99.34.205:8484/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: 'fe86b850-1dda-11eb-ab5e-bf5a48cbeef0',
+        name: 'Tango',
+        url: 'http://192.99.34.205:8240/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '0f547a50-1ddb-11eb-ab5e-bf5a48cbeef0',
+        name: 'The Beatles',
+        url: 'http://192.99.34.205:8481/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '1dea4db0-1ddb-11eb-ab5e-bf5a48cbeef0',
+        name: 'Tribal',
+        url: 'http://192.99.34.205:8471/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '293ae120-1ddb-11eb-ab5e-bf5a48cbeef0',
+        name: 'Trova',
+        url: 'http://192.99.34.205:8173/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '35ea1a30-1ddb-11eb-ab5e-bf5a48cbeef0',
+        name: 'World Electronica-Dance/DJ',
+        url: 'http://192.99.34.205:8174/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '448df750-1ddb-11eb-ab5e-bf5a48cbeef0',
+        name: 'My Radio',
+        url: 'http://192.99.34.205:8008/stream',
+        category: 'Miled Music',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '797d4bf0-1ddb-11eb-ab5e-bf5a48cbeef0',
+        name: '20th Century',
+        url: 'http://live.radioart.com:80/f20th_Century.mp3',
+        category: 'Radioart',
+        site: '',
+    },
+    {
+        id: 'f333e580-1ddb-11eb-ab5e-bf5a48cbeef0',
+        name: '21st Century',
+        url: 'http://live.radioart.com:80/f21st_Century.mp3',
+        category: 'Radioart',
+        favorite: false,
+        site: '',
+    },
+    {
+        id: '0222ae50-1ddc-11eb-ab5e-bf5a48cbeef0',
+        name: 'Acoustic Blues',
+        url: 'http://live.radioart.com:80/fAcoustic_blues.mp3',
+        category: 'Radioart',
         favorite: false,
         site: '',
     },

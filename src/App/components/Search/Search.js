@@ -21,7 +21,7 @@ const Search = ({ isSearch, setSearch, setSearchNewWords, searchWords }) => {
 
             {!isSearch ? (
                 <button className={classes.searchButton} onClick={setSearch}>
-                    <i className="far fa-search-plus"></i>
+                    <i className="fal fa-search-plus"></i>
                 </button>
             ) : (
                 <button className={classes.searchButton} onClick={setSearch}>

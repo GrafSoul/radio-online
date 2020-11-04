@@ -1,16 +1,21 @@
 .header {
-	position: relative;
+	position: absolute;
+	height: 35px;	
+	left: 0;
+	right: 0;
+	top:0;
 	z-index: 400;
 	-webkit-user-select: none;
 	background-color: rgb(21, 26, 36);
 	cursor: default;
+	transition: all 0.5s ease;
 
-	.controlWindowMini {
+	.controlWindowMiniRight {
 		height: 69px;
 		position: absolute;
-		top: 5px;
+		top: 40px;
 		right: -80px;
-		z-index: 15000;
+		z-index: 100;
 		padding: 3px;
 		display: flex;
 		flex-direction: column;
@@ -24,8 +29,8 @@
 		transition: all 0.8s ease;
 	}
 	
-	.btnWindowMini,
-	.closeWindowMini{
+	.btnWindowMiniRight,
+	.closeWindowMiniRight{
 		width: 16px;
 		height: 16px;
 		font-size: .9em;
@@ -35,7 +40,71 @@
 		cursor: pointer;
 		-webkit-app-region: no-drag;
 		background-color:rgb(21, 26, 36);
-		color:rgb(129, 186, 218);
+		color:rgb(64, 91, 107);
+		border: none;
+		outline: none;
+		transition: all 0.3s ease;
+	
+		button {
+			padding: 0;
+			margin: 0;
+			width: 10px;
+			height: 10px;
+		}
+	
+		&:hover {
+			color: rgb(255, 255, 255);
+		}
+	}
+
+	.controlWindowMiniLeft {
+		height: 69px;
+		position: absolute;
+		top: 40px;
+		left: -80px;
+		z-index: 100;
+		padding: 3px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgb(23, 26, 39);
+		border-top: 1px solid rgb(38, 47, 66);
+		border-right: 1px solid rgb(38, 47, 66);
+		border-bottom: 1px solid rgb(38, 47, 66);
+		border-radius: 0 12px 12px 0 ;
+		transition: all 0.8s ease;
+	}
+	
+	.dragPanel {
+		display: block;
+		width: 16px;
+		height: 26px;
+		margin-bottom: 7px;
+		text-align: center;
+		font-size: .9em;
+		line-height: 0;
+		border: 1px solid rgb(64, 91, 107);
+		border-radius: 6px;
+		padding: 5px 0 0;
+		color:rgb(25, 124, 0);
+		background-color: rgb(31, 35, 54);
+		cursor: move;
+		-webkit-app-region: drag;
+	}
+
+	.btnWindowMiniLeft,
+	.closeWindowMiniLeft{
+		width: 16px;
+		height: 16px;
+		font-size: .9em;
+		line-height: 0;
+		margin: 1px 1px 1px 3px;
+		padding: 0;
+		cursor: pointer;
+		-webkit-app-region: no-drag;
+		background-color:rgb(21, 26, 36);
+		color:rgb(64, 91, 107);
 		border: none;
 		outline: none;
 		transition: all 0.3s ease;
@@ -58,7 +127,8 @@
 
 	.topBar {
 		position: relative;
-		z-index: 400;
+		height: 35px;
+		z-index: 500;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -184,15 +254,16 @@
 
 	.header {
 		position: absolute;
-		height: 35px;
 		right: 0;
 		left: 0;
-		top: 0;
-		-webkit-app-region: drag;
-		background-color: transparent;
+		top: -35px;
 
-		.controlWindowMini {
+		.controlWindowMiniRight {
 			right: 0;
+		}
+
+		.controlWindowMiniLeft {
+			left: 0;
 		}
 
 		.topBar {

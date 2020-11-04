@@ -36,6 +36,7 @@ const PlayList = ({
 }) => {
     const currentStations = useRef([]);
     const [currentId, setCurrentId] = useState('');
+    const [currentName, setCurrentName] = useState('');
     const [editStation, setEditStation] = useState({});
 
     const handlerCountStations = (num) => {
@@ -100,9 +101,10 @@ const PlayList = ({
         return currentList;
     };
 
-    const handlerDeleteModal = (id) => {
+    const handlerDeleteModal = (id, name) => {
         setIsDeleteModal(true);
         setCurrentId(id);
+        setCurrentName(name);
     };
 
     const handlerDeleteStation = () => {
@@ -180,6 +182,7 @@ const PlayList = ({
             {isDeleteModal && (
                 <ModalDelete
                     currentId={currentId}
+                    currentName={currentName}
                     cancelModal={handlerCancelModal}
                     deleteStation={handlerDeleteStation}
                 />
