@@ -26,6 +26,7 @@ const getIcon = () => {
 
 const nameApp = 'Radion';
 let mainWindow, tray, contextMenu;
+let childWindows = {};
 
 const createWindow = async () => {
     installExtension(REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS);
@@ -131,4 +132,51 @@ app.on('activate', () => {
 
 ipcMain.on('on-top', (event, args) => {
     mainWindow.setAlwaysOnTop(args);
+});
+
+ipcMain.on('size-min', (event) => {
+    mainWindow.setSize(410, 80);
+});
+
+ipcMain.on('size-default', (event) => {
+    mainWindow.setSize(410, 500);
+});
+
+ipcMain.on('openWindow', (event, title, url, id) => {
+    childWindows[id] = new BrowserWindow({
+        title: title,
+        width: 1280,
+        height: 720,
+        minWidth: 340,
+        minHeight: 220,
+        frame: false,
+        show: false,
+        parent: 'mainWindow',
+        focusable: true,
+        fullscreenable: false,
+        alwaysOnTop: true,
+        icon: getIcon(),
+        backgroundColor: '#1b212e',
+        webPreferences: {
+            webviewTag: true,
+            nodeIntegration: true,
+            webSecurity: false,
+        },
+    });
+
+    childWindows[id].setMenuBarVisibility(false);
+    childWindows[id].loadURL(`file://${path.join(__dirname, '/browser.html')}`);
+    childWindows[id].show();
+    childWindows[id].webContents.openDevTools();
+    childWindows[id].webContents.on('did-finish-load', () => {
+        childWindows[id].webContents.send('urlOpen', title, url);
+    });
+
+    childWindows[id].on('close', () => {
+        childWindows[id] = null;
+    });
+});
+
+ipcMain.on('closeWindow', (event, id) => {
+    childWindows[id].close();
 });

@@ -11,8 +11,11 @@ import resources from './resources/resources';
 
 const { shell } = window.require('electron');
 
+// const electron = window.require('electron');
+// const ipcRenderer = electron.ipcRenderer;
+
 const App = () => {
-    const version = '0.7.0';
+    const version = '0.8.0';
     const audioStream = useRef(null);
     const localStations = useRef([]);
     const [stations, setStations] = useState([]);
@@ -213,6 +216,10 @@ const App = () => {
         setIsDeleteAllModal(false);
         setIsMenu(false);
     };
+
+    // const handlerOpenLink = (title, url, id) => {
+    //     ipcRenderer.send('openWindow', title, url, id);
+    // };
 
     const handlerOpenLink = (url) => {
         shell.openExternal(url);

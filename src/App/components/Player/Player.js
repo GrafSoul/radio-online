@@ -160,7 +160,13 @@ const Player = ({
                             <span
                                 title={'Open radio station - ' + station}
                                 className={classes.linkBtn}
-                                onClick={() => openLink(station.site)}
+                                onClick={() =>
+                                    openLink(
+                                        // station.name,
+                                        station.site,
+                                        // station.id,
+                                    )
+                                }
                             >
                                 <i className="far fa-external-link-alt"></i>
                             </span>

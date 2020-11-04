@@ -58,7 +58,7 @@ const ModalEdit = ({
                     type="text"
                     name="site"
                     value={site}
-                    maxLength="30"
+                    maxLength="100"
                     placeholder="Enter the site page url"
                     onChange={(e) => setSite(e.target.value)}
                 />
