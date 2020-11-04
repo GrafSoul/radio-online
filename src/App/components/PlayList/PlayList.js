@@ -12,6 +12,7 @@ import classes from './PlayList.module.scss';
 
 const PlayList = ({
     version,
+    station,
     stations,
     setStation,
     setStations,
@@ -79,6 +80,7 @@ const PlayList = ({
                             <ReactListItem
                                 key={item.id}
                                 id={item.id}
+                                current={station}
                                 station={item.name}
                                 url={item.url}
                                 category={item.category}

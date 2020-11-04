@@ -245,6 +245,7 @@ const App = () => {
 
             <PlayList
                 version={version}
+                station={station}
                 stations={stations}
                 setStation={setStation}
                 setStations={setStations}

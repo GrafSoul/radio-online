@@ -5,6 +5,7 @@ import classes from './PlayListItem.module.scss';
 const PlayListItem = ({
     id,
     station,
+    current,
     url,
     category,
     favorite,
@@ -20,7 +21,12 @@ const PlayListItem = ({
     };
 
     return (
-        <div className={classes.playListItemContent}>
+        <div
+            className={[
+                classes.playListItemContent,
+                current.id === id ? classes.active : null,
+            ].join(' ')}
+        >
             <div
                 className={classes.playListItemName}
                 onClick={handlerSetStation}

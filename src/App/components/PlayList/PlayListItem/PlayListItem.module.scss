@@ -15,6 +15,15 @@
     }
 }
 
+.active {
+    background-color: rgb(28, 48, 61);
+    box-shadow: inset 2px 2px 8px 0 rgba(0,0,0,0.4);
+
+    .nameStation {
+        color: rgb(31, 134, 0);
+    }
+}
+
 .playListItemName {
     margin-right: 100px;
     display: flex;
@@ -27,7 +36,7 @@
 
 .nameStation {
     padding: 0 0 0 10px;
-    color: rgb(129, 186, 218);;
+    color: rgb(129, 186, 218);
     font-size: .8em;
 }
 

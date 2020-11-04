@@ -31,7 +31,7 @@ const createWindow = async () => {
     installExtension(REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS);
 
     let mainWindowState = windowStateKeeper({
-        defaultWidth: 600,
+        defaultWidth: 410,
         defaultHeight: 500,
     });
 
