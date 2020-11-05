@@ -14,8 +14,8 @@ Made using - Electron.js, React.js.
 
 ### Download
 
-[Radion Setup 0.1.0](http://bit.do/radion-100) - (OS Windows, zip, 64 Mb)  
-[Radion Portable 0.1.0](http://bit.do/radion-portable-100) - (OS Windows, zip, 64 Mb)
+[Radion Setup 1.0.0](http://bit.do/radion-100) - (OS Windows, zip, 64 Mb)  
+[Radion Portable 1.0.0](http://bit.do/radion-portable-100) - (OS Windows, zip, 64 Mb)
 
 <span id="qr_code" style="
  display: inline-block;
