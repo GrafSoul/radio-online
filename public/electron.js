@@ -154,7 +154,7 @@ ipcMain.on('openWindow', (event, id, title, url) => {
         parent: 'mainWindow',
         focusable: true,
         fullscreenable: false,
-        alwaysOnTop: true,
+        alwaysOnTop: false,
         icon: getIcon(),
         backgroundColor: '#1b212e',
         webPreferences: {
@@ -168,7 +168,7 @@ ipcMain.on('openWindow', (event, id, title, url) => {
     childWindows[id].setMenuBarVisibility(false);
     childWindows[id].loadURL(`file://${path.join(__dirname, '/browser.html')}`);
     childWindows[id].show();
-    childWindows[id].webContents.openDevTools();
+    childWindows[id].setAlwaysOnTop(false);
     childWindows[id].webContents.on('did-finish-load', () => {
         childWindows[id].webContents.send('urlOpen', id, title, url);
     });
@@ -178,6 +178,12 @@ ipcMain.on('openWindow', (event, id, title, url) => {
     });
 });
 
+ipcMain.on('on-top-browser', (event, id, args) => {
+    childWindows[id].setAlwaysOnTop(args);
+});
+
 ipcMain.on('closeWindow', (event, id) => {
-    childWindows[id].close();
+    if (id) {
+        childWindows[id].close();
+    }
 });
