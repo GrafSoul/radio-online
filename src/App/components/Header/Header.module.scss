@@ -11,9 +11,9 @@
 	transition: all 0.5s ease;
 
 	.controlWindowMiniRight {
-		height: 69px;
+		height: 68px;
 		position: absolute;
-		top: 40px;
+		top: 41px;
 		right: -80px;
 		z-index: 100;
 		padding: 3px;
@@ -27,6 +27,7 @@
 		border-bottom: 1px solid rgb(38, 47, 66);
 		border-radius: 12px 0 0 12px;
 		transition: all 0.8s ease;
+		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 	}
 	
 	.btnWindowMiniRight,
@@ -58,9 +59,9 @@
 	}
 
 	.controlWindowMiniLeft {
-		height: 69px;
+		height: 68px;
 		position: absolute;
-		top: 40px;
+		top: 41px;
 		left: -80px;
 		z-index: 100;
 		padding: 3px;
@@ -73,6 +74,7 @@
 		border-right: 1px solid rgb(38, 47, 66);
 		border-bottom: 1px solid rgb(38, 47, 66);
 		border-radius: 0 12px 12px 0 ;
+		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 		transition: all 0.8s ease;
 	}
 	
@@ -80,7 +82,7 @@
 		display: block;
 		width: 18px;
 		height: 18px;
-		margin-bottom: 2px;
+		margin-bottom: 3px;
 		text-align: center;
 		font-size: .8em;
 		line-height: 0;
@@ -96,7 +98,7 @@
 		height: 18px;
 		font-size: .9em;
 		line-height: 0;
-		margin: 1px 1px 1px 3px;
+		margin: 1px 1px 4px 3px;
 		padding: 0;
 		cursor: pointer;
 		-webkit-app-region: no-drag;
@@ -105,6 +107,10 @@
 		border: none;
 		outline: none;
 		transition: all 0.3s ease;
+
+		&:last-child {
+			margin: 1px 1px 0 3px;
+		}
 	
 		button {
 			padding: 0;
@@ -117,6 +123,8 @@
 			color: rgb(255, 255, 255);
 		}
 	}
+
+
 
 	.addVersion {
 		font-size: .8em;
@@ -133,7 +141,7 @@
 		background-color: rgb(21, 26, 36);
 		-webkit-app-region: drag;
 		position: fixed;
-		box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.8);
+		box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.5);
 		top: 0;
 		left: 0;
 		right: 0;
@@ -226,7 +234,7 @@
 			
 		}
 
-		button {
+		button {			
 			color:rgb(74, 107, 126);
 			font-size: .9em;
 			text-align: left;
@@ -238,6 +246,7 @@
 			cursor: pointer;
 
 			i {
+				width: 16px;
 				display: inline-block;
 				margin-right: 3px;
 			}

@@ -1,7 +1,7 @@
 .audioContent {
     position: relative;
     z-index: 300;
-    margin-top: 36px;    
+    margin-top: 34px;    
     padding: 10px 10px 12px 15px ;
     height: 80px;
     display: flex;
@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgb(23, 28, 39);
+    border-top: 1px solid rgb(38, 47, 66);
     border-bottom: 1px solid rgb(38, 47, 66);
     box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.8);
     cursor: default;
@@ -233,7 +234,7 @@
 
 @media screen and (max-width: 740px) {
     .audioContent {
-        margin-top: 36px;
+        margin-top: 34px;
         padding: 10px ;
         display: flex;
         flex-direction: column;
