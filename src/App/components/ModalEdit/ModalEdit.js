@@ -19,7 +19,14 @@ const ModalEdit = ({
     const handlerSaveStation = (e) => {
         e.preventDefault();
 
-        let editedStation = { id: station.id, name, url, category, site };
+        let editedStation = {
+            id: station.id,
+            name,
+            url,
+            category,
+            favorite: station.favorite,
+            site,
+        };
         let newStations = stations.map((item) =>
             item.id === station.id ? editedStation : item,
         );
