@@ -24,9 +24,7 @@ Made using - Electron.js, React.js.
  text-align: center;
  background-color: white;
  padding: 5px;
-"><a href="http://bit.do/radion-100-?qrcode=1" style="border: 0;">QR Code:<br>
-<img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-100" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-100</a>
-</span>
+"><a href="http://bit.do/radion-110-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-110" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-110</a></span>
 
 <span id="qr_code" style="
  display: inline-block;
@@ -35,9 +33,7 @@ Made using - Electron.js, React.js.
  text-align: center;
  background-color: white;
  padding: 5px;
-"><a href="http://bit.do/radion-portable-100-?qrcode=1" style="border: 0;">QR Code:<br>
-<img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-portable-100" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-portable-100</a>
-</span>
+"><a href="http://bit.do/radion-portable-110-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-portable-110" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-portable-110</a></span>
 
 ## Run for start development version
 
