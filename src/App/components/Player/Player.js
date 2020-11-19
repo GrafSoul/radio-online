@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AudioSpectrum from 'react-audio-spectrum';
 
 import classes from './Player.module.scss';
 
@@ -21,6 +22,7 @@ const Player = ({
     const [isLive, setIsLive] = useState(true);
     const [isStop, setIsStop] = useState(true);
     const [isSound, setIsSound] = useState(true);
+    const [isVisual, setIsVisual] = useState(true);
     const [volume, setVolume] = useState(0.5);
     const [stopVolume, setStopVolume] = useState(0.5);
 
@@ -116,9 +118,13 @@ const Player = ({
         return false;
     };
 
+    const handlerAudioVisual = () => {
+        setIsVisual(!isVisual);
+    };
+
     return (
         <div className={classes.audioContent}>
-            <audio ref={audioStream}>
+            <audio id="audio-element" ref={audioStream}>
                 <source src={station.url} type="audio/mpeg"></source>
                 <source src={station.url} type="audio/ogg"></source>
             </audio>
@@ -158,7 +164,7 @@ const Player = ({
 
                         {station.site && (
                             <span
-                                title={'Open radio station - ' + station}
+                                title={'Open radio station - ' + station.name}
                                 className={classes.linkBtn}
                                 onClick={() =>
                                     openLink(
@@ -171,6 +177,17 @@ const Player = ({
                                 <i className="far fa-external-link-alt"></i>
                             </span>
                         )}
+                        <button
+                            title={
+                                isVisual
+                                    ? 'To turn off the visualization'
+                                    : 'Enable visualization'
+                            }
+                            className={classes.audioVisual}
+                            onClick={handlerAudioVisual}
+                        >
+                            <i className="fal fa-waveform-path"></i>
+                        </button>
                         <div className={classes.audioCategory}>
                             {station.category}
                         </div>
@@ -286,6 +303,29 @@ const Player = ({
                         )}
                     </button>
                 </div>
+            </div>
+            <div
+                className={[
+                    classes.analyserWrap,
+                    isVisual ? classes.activeVisual : null,
+                ].join(' ')}
+            >
+                <AudioSpectrum
+                    id="audio-canvas"
+                    height={78}
+                    width={500}
+                    audioId={'audio-element'}
+                    capColor={'#4d7186'}
+                    capHeight={2}
+                    meterWidth={4}
+                    meterCount={512}
+                    meterColor={[
+                        { stop: 0, color: '#000' },
+                        { stop: 0.5, color: '#1f2d35' },
+                        { stop: 1, color: '#1f2d35' },
+                    ]}
+                    gap={2}
+                />
             </div>
         </div>
     );
