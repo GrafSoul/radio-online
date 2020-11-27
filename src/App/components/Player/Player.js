@@ -33,10 +33,12 @@ const Player = ({
         setIsError(false);
     }, [station, audioStream, setIsError]);
 
+    // eslint-disable-next-line no-unused-vars
     const handleMinimizeWindow = () => {
         mainWindow.hide();
     };
 
+    // eslint-disable-next-line no-unused-vars
     const handleMaximizeWindow = () => {
         if (status) {
             mainWindow.unmaximize();
@@ -47,6 +49,7 @@ const Player = ({
         }
     };
 
+    // eslint-disable-next-line no-unused-vars
     const handleCloseWindow = () => {
         mainWindow.close();
     };
@@ -209,7 +212,7 @@ const Player = ({
                             className={classes.errorStation}
                             onClick={() => setIsError(false)}
                         >
-                            Radion can't connect to the radio station!
+                            Radion can not connect to the radio station!
                         </div>
                     )}
 

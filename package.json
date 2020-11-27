@@ -14,7 +14,6 @@
   },
   "private": true,
   "dependencies": {
-    "electron-devtools-installer": "^3.1.1",
     "electron-is-dev": "^1.2.0",
     "electron-log": "^4.3.0",
     "electron-reload": "^1.5.0",
@@ -40,7 +39,7 @@
     "electron-build": "electron-builder",
     "release": "yarn react-build && electron-builder --publish=always",
     "build": "yarn react-build && yarn electron-build",
-    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\" react-devtools",
     "prettier": "prettier --single-quote --write \"./src/**/*.js\""
   },
   "eslintConfig": {

@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 const resources = [
     {
         id: 'e0b51ba0-2b22-11eb-a764-099fe68bd378',

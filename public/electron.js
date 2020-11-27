@@ -2,12 +2,6 @@
 const { app, BrowserWindow, Tray, Menu, ipcMain } = require('electron');
 const windowStateKeeper = require('electron-window-state');
 
-const {
-    default: installExtension,
-    REACT_DEVELOPER_TOOLS,
-    REDUX_DEVTOOLS,
-} = require('electron-devtools-installer');
-
 const path = require('path');
 const isDev = require('electron-is-dev');
 require('electron-reload')(__dirname, {
@@ -29,8 +23,6 @@ let mainWindow, tray, contextMenu;
 let childWindows = {};
 
 const createWindow = async () => {
-    installExtension(REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS);
-
     let mainWindowState = windowStateKeeper({
         defaultWidth: 410,
         defaultHeight: 500,
@@ -65,7 +57,6 @@ const createWindow = async () => {
     mainWindow.once('ready-to-show', () => {
         mainWindow.show();
         if (isDev) {
-            installExtension(REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS);
             mainWindow.webContents.openDevTools();
         }
     });
@@ -82,11 +73,7 @@ const createWindow = async () => {
         contextMenu = Menu.buildFromTemplate([
             {
                 label: 'Developer Tools',
-                async click() {
-                    await installExtension(
-                        REACT_DEVELOPER_TOOLS,
-                        REDUX_DEVTOOLS,
-                    );
+                click() {
                     mainWindow.toggleDevTools();
                 },
             },
@@ -134,10 +121,12 @@ ipcMain.on('on-top', (event, args) => {
     mainWindow.setAlwaysOnTop(args);
 });
 
+// eslint-disable-next-line no-unused-vars
 ipcMain.on('size-min', (event) => {
     mainWindow.setSize(410, 80);
 });
 
+// eslint-disable-next-line no-unused-vars
 ipcMain.on('size-default', (event) => {
     mainWindow.setSize(410, 500);
 });
