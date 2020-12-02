@@ -123,7 +123,7 @@
 .controlWrap { 
     position: relative;  
     z-index: 300; 
-    width: 330px;
+    width: 360px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -242,6 +242,44 @@
         color: rgb(93, 132, 155);
     }
 }
+
+.audioRecordBtn {
+    display: block;
+    opacity: .5;
+    width: 28px;
+    height: 34px;
+    padding: 0;
+    margin: 0 0 0 10px;
+    line-height: 0em;
+    background-color: transparent;
+    border: none;
+    color: rgb(129, 186, 218);
+    font-size: 1.7em;    
+    outline: none;
+    font-size: 1.4em;
+    transition: .3s all ease;
+}
+
+.audioRecordActive {
+    opacity: 1;
+    cursor: pointer;   
+
+    &:hover {
+        color:rgb(245, 10, 61);
+    }
+}
+
+.audioRecordGo {
+    color:rgb(245, 10, 61);
+    animation:blinking 1s infinite;
+}
+
+@keyframes blinking{
+    0%{opacity: 1;}
+    50%{opacity: .3;}
+    100%{opacity: 1;}
+}
+
 
 .volume {
     -webkit-appearance: none;

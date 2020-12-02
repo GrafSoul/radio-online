@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import AudioSpectrum from 'react-audio-spectrum';
 
 import classes from './Player.module.scss';
@@ -17,12 +17,15 @@ const Player = ({
     setIsErrorList,
     openLink,
 }) => {
+    const mediaRecorder = useRef();
+    const stream = useRef();
     const [status, setStatus] = useState(false);
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
     const [isStop, setIsStop] = useState(true);
     const [isSound, setIsSound] = useState(true);
     const [isVisual, setIsVisual] = useState(true);
+    const [isRecord, setIsRecord] = useState(false);
     const [volume, setVolume] = useState(0.5);
     const [stopVolume, setStopVolume] = useState(0.5);
 
@@ -123,6 +126,23 @@ const Player = ({
 
     const handlerAudioVisual = () => {
         setIsVisual(!isVisual);
+    };
+
+    const handlerToggleRecordSound = () => {
+        console.log(isRecord);
+        if (!isRecord) {
+            setIsRecord(true);
+            console.log('Start Record');
+            stream.current = audioStream.current.captureStream();
+            mediaRecorder.current = new MediaRecorder(stream.current);
+            mediaRecorder.current.start();
+            console.log(mediaRecorder.current);
+        } else {
+            setIsRecord(false);
+            console.log('Stop Record');
+            mediaRecorder.current.stop();
+            console.log(mediaRecorder.current);
+        }
     };
 
     return (
@@ -302,6 +322,35 @@ const Player = ({
                             <i
                                 className="fas fa-volume-up"
                                 title="Sound On"
+                            ></i>
+                        )}
+                    </button>
+
+                    <button
+                        disabled={isStop ? true : false}
+                        className={[
+                            classes.audioRecordBtn,
+                            !isStop ? classes.audioRecordActive : null,
+                            isRecord ? classes.audioRecordGo : null,
+                        ].join(' ')}
+                        onClick={() => handlerToggleRecordSound()}
+                    >
+                        {!isStop ? (
+                            isRecord ? (
+                                <i
+                                    className="fas fa-record-vinyl"
+                                    title="Record Sound"
+                                ></i>
+                            ) : (
+                                <i
+                                    className="far fa-record-vinyl"
+                                    title="Record Sound"
+                                ></i>
+                            )
+                        ) : (
+                            <i
+                                className="fal fa-record-vinyl"
+                                title="Record Sound Off"
                             ></i>
                         )}
                     </button>
