@@ -1,6 +1,6 @@
-# Radion | Internet Radio Online Player
+# Radion | Internet Radio Online Player and Recorder.
 
-Applications for listening to the broadcast of radio stations.
+Applications for listening and recording broadcast radio stations.
 Made using - Electron.js, React.js.
 
 ![alt text](/design/screen_1.png 'Radion - Select a radio station')
@@ -14,8 +14,8 @@ Made using - Electron.js, React.js.
 
 ### Download
 
-[Radion Setup 1.1.0](http://bit.do/radion-110) - (OS Windows, zip, 64 Mb)  
-[Radion Portable 1.1.0](http://bit.do/radion-portable-110) - (OS Windows, zip, 64 Mb)
+[Radion Setup 1.2.0](http://bit.do/radion-120) - (OS Windows, zip, 106 Mb)  
+[Radion Portable 1.2.0](http://bit.do/radion-portable-120) - (OS Windows, zip, 133 Mb)
 
 <span id="qr_code" style="
  display: inline-block;
@@ -24,7 +24,7 @@ Made using - Electron.js, React.js.
  text-align: center;
  background-color: white;
  padding: 5px;
-"><a href="http://bit.do/radion-110-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-110" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-110</a></span>
+"><a href="http://bit.do/radion-120-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-120" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-120</a></span>
 
 <span id="qr_code" style="
  display: inline-block;
@@ -33,7 +33,7 @@ Made using - Electron.js, React.js.
  text-align: center;
  background-color: white;
  padding: 5px;
-"><a href="http://bit.do/radion-portable-110-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-portable-110" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-portable-110</a></span>
+"><a href="http://bit.do/radion-portable-120-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-portable-120" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-portable-120</a></span>
 
 ## Run for start development version
 
