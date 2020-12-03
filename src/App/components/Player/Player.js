@@ -19,6 +19,8 @@ const Player = ({
 }) => {
     const mediaRecorder = useRef();
     const stream = useRef();
+    const chunks = useRef([]);
+
     const [status, setStatus] = useState(false);
     const [isPlay, setIsPlay] = useState(false);
     const [isLive, setIsLive] = useState(true);
@@ -129,19 +131,37 @@ const Player = ({
     };
 
     const handlerToggleRecordSound = () => {
-        console.log(isRecord);
         if (!isRecord) {
             setIsRecord(true);
             console.log('Start Record');
+
             stream.current = audioStream.current.captureStream();
             mediaRecorder.current = new MediaRecorder(stream.current);
             mediaRecorder.current.start();
-            console.log(mediaRecorder.current);
         } else {
             setIsRecord(false);
             console.log('Stop Record');
             mediaRecorder.current.stop();
-            console.log(mediaRecorder.current);
+
+            mediaRecorder.current.ondataavailable = (e) => {
+                chunks.current = [];
+                chunks.current.push(e.data);
+
+                if (mediaRecorder.current.state === 'inactive') {
+                    let blob = new Blob(chunks.current, {
+                        type: 'audio/ogg; codecs=vorbis',
+                    });
+                    let url = URL.createObjectURL(blob);
+                    let link = document.createElement('a');
+                    link.href = url;
+                    link.download = `${station.name}.ogg`;
+                    document.body.appendChild(link);
+
+                    setTimeout(() => {
+                        link.click();
+                    }, 500);
+                }
+            };
         }
     };
 
