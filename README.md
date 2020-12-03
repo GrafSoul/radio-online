@@ -1,4 +1,4 @@
-# Radion | Internet Radio Online Player and Recorder.
+# Radion | Internet Radio Online Player and Recorder
 
 Applications for listening and recording broadcast radio stations.
 Made using - Electron.js, React.js.

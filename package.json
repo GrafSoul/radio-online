@@ -1,7 +1,7 @@
 {
   "name": "radio-online",
   "productName": "Radion",
-  "description": "Applications for listening to the broadcast of radio stations. Made using - Electron.js, React.js.",
+  "description": "Applications for listening and recording broadcast radio stations. Made using - Electron.js, React.js",
   "version": "1.2.0",
   "repository": {
     "type": "git",
