@@ -30,6 +30,7 @@ const Player = ({
     const [isRecord, setIsRecord] = useState(false);
     const [volume, setVolume] = useState(0.5);
     const [stopVolume, setStopVolume] = useState(0.5);
+    const [countSound, setCountSound] = useState(1);
 
     useEffect(() => {
         audioStream.current.load();
@@ -134,9 +135,13 @@ const Player = ({
         if (!isRecord) {
             setIsRecord(true);
             console.log('Start Record');
+            let options = {
+                audioBitsPerSecond: 128000,
+                mimeType: 'audio/webm;codecs=pcm',
+            };
 
             stream.current = audioStream.current.captureStream();
-            mediaRecorder.current = new MediaRecorder(stream.current);
+            mediaRecorder.current = new MediaRecorder(stream.current, options);
             mediaRecorder.current.start();
         } else {
             setIsRecord(false);
@@ -148,13 +153,14 @@ const Player = ({
                 chunks.current.push(e.data);
 
                 if (mediaRecorder.current.state === 'inactive') {
+                    setCountSound(countSound + 1);
                     let blob = new Blob(chunks.current, {
-                        type: 'audio/ogg; codecs=vorbis',
+                        type: 'audio/mpeg3',
                     });
                     let url = URL.createObjectURL(blob);
                     let link = document.createElement('a');
                     link.href = url;
-                    link.download = `${station.name}.ogg`;
+                    link.download = `${station.name}-${countSound}.mp3`;
                     document.body.appendChild(link);
 
                     setTimeout(() => {
