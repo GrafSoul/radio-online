@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import AudioSpectrum from 'react-audio-spectrum';
+import MediaStreamRecorder from 'msr';
+import StereoAudioRecorder from 'msr';
 
 import classes from './Player.module.scss';
 
@@ -135,41 +137,69 @@ const Player = ({
         if (!isRecord) {
             setIsRecord(true);
             console.log('Start Record');
-            let options = {
-                audioBitsPerSecond: 128000,
-                mimeType: 'audio/webm;codecs=pcm',
-            };
 
             stream.current = audioStream.current.captureStream();
-            mediaRecorder.current = new MediaRecorder(stream.current, options);
-            mediaRecorder.current.start();
+
+            mediaRecorder.current = new MediaStreamRecorder(stream.current);
+            mediaRecorder.current.recorderType = StereoAudioRecorder;
+            mediaRecorder.current.mimeType = 'audio/wav';
+
+            mediaRecorder.current.ondataavailable = (blob) => {
+                chunks.current = blob;
+            };
+
+            mediaRecorder.current.start(86400000);
         } else {
             setIsRecord(false);
+            setCountSound(countSound + 1);
             console.log('Stop Record');
             mediaRecorder.current.stop();
-
-            mediaRecorder.current.ondataavailable = (e) => {
-                chunks.current = [];
-                chunks.current.push(e.data);
-
-                if (mediaRecorder.current.state === 'inactive') {
-                    setCountSound(countSound + 1);
-                    let blob = new Blob(chunks.current, {
-                        type: 'audio/mpeg3',
-                    });
-                    let url = URL.createObjectURL(blob);
-                    let link = document.createElement('a');
-                    link.href = url;
-                    link.download = `${station.name}-${countSound}.mp3`;
-                    document.body.appendChild(link);
-
-                    setTimeout(() => {
-                        link.click();
-                    }, 500);
-                }
-            };
+            mediaRecorder.current.save(
+                chunks.current,
+                `${station.name}-${countSound}.wav`,
+            );
         }
     };
+
+    // const handlerToggleRecordSound = () => {
+    //     if (!isRecord) {
+    //         setIsRecord(true);
+    //         console.log('Start Record');
+    //         let options = {
+    //             audioBitsPerSecond: 128000,
+    //             mimeType: 'audio/webm;codecs=pcm',
+    //         };
+
+    //         stream.current = audioStream.current.captureStream();
+    //         mediaRecorder.current = new MediaRecorder(stream.current, options);
+    //         mediaRecorder.current.start();
+    //     } else {
+    //         setIsRecord(false);
+    //         console.log('Stop Record');
+    //         mediaRecorder.current.stop();
+
+    //         mediaRecorder.current.ondataavailable = (e) => {
+    //             chunks.current = [];
+    //             chunks.current.push(e.data);
+
+    //             if (mediaRecorder.current.state === 'inactive') {
+    //                 setCountSound(countSound + 1);
+    //                 let blob = new Blob(chunks.current, {
+    //                     type: 'audio/mpeg3',
+    //                 });
+    //                 let url = URL.createObjectURL(blob);
+    //                 let link = document.createElement('a');
+    //                 link.href = url;
+    //                 link.download = `${station.name}-${countSound}.mp3`;
+    //                 document.body.appendChild(link);
+
+    //                 setTimeout(() => {
+    //                     link.click();
+    //                 }, 500);
+    //             }
+    //         };
+    //     }
+    // };
 
     return (
         <div className={classes.audioContent}>

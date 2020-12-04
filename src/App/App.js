@@ -13,7 +13,7 @@ const electron = window.require('electron');
 const ipcRenderer = electron.ipcRenderer;
 
 const App = () => {
-    const version = '1.2.0';
+    const version = '1.3.0';
     const audioStream = useRef(null);
     const localStations = useRef([]);
     const [stations, setStations] = useState([]);
