@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import classes from './Header.module.scss';
+import RecordTimer from '../RecordTimer/RecordTimer';
 
 const { remote, ipcRenderer } = window.require('electron');
 const mainWindow = remote.getCurrentWindow();
@@ -15,6 +16,7 @@ const Header = ({
     deleteAllModal,
     addStation,
     aboutAppModal,
+    isRecord,
 }) => {
     const [status, setStatus] = useState(false);
     const [isTop, setIsTop] = useState(false);
@@ -126,6 +128,7 @@ const Header = ({
                         className={classes.logo}
                     />{' '}
                     Radion <span className={classes.addVersion}>{version}</span>
+                    {isRecord && <RecordTimer isRecord={isRecord} />}
                 </div>
                 <div className={classes.btnGroup}>
                     <div className={classes.menuListWrap}>

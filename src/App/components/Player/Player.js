@@ -3,6 +3,8 @@ import AudioSpectrum from 'react-audio-spectrum';
 
 import classes from './Player.module.scss';
 
+// import AudioCompiler from '../AudioCompiler/AudioCompiler';
+
 const { remote } = window.require('electron');
 const mainWindow = remote.getCurrentWindow();
 
@@ -16,6 +18,8 @@ const Player = ({
     isErrorList,
     setIsErrorList,
     openLink,
+    isRecord,
+    setIsRecord,
 }) => {
     const mediaRecorder = useRef();
     const stream = useRef();
@@ -27,7 +31,6 @@ const Player = ({
     const [isStop, setIsStop] = useState(true);
     const [isSound, setIsSound] = useState(true);
     const [isVisual, setIsVisual] = useState(true);
-    const [isRecord, setIsRecord] = useState(false);
     const [volume, setVolume] = useState(0.5);
     const [stopVolume, setStopVolume] = useState(0.5);
     const [countSound, setCountSound] = useState(1);
@@ -154,18 +157,11 @@ const Player = ({
 
                 if (mediaRecorder.current.state === 'inactive') {
                     setCountSound(countSound + 1);
-                    let blob = new Blob(chunks.current, {
-                        type: 'audio/webm',
-                    });
-                    let url = URL.createObjectURL(blob);
-                    let link = document.createElement('a');
-                    link.href = url;
-                    link.download = `${station.name}-${countSound}.webm`;
-                    document.body.appendChild(link);
 
-                    setTimeout(() => {
-                        link.click();
-                    }, 500);
+                    // AudioCompiler(
+                    //     chunks.current,
+                    //     `${station.name}-${countSound}`,
+                    // );
                 }
             };
         }
@@ -351,7 +347,6 @@ const Player = ({
                             ></i>
                         )}
                     </button>
-
                     <button
                         disabled={isStop ? true : false}
                         className={[

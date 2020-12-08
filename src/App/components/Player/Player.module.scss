@@ -244,6 +244,7 @@
 }
 
 .audioRecordBtn {
+    position: relative;
     display: block;
     opacity: .5;
     width: 28px;
@@ -252,12 +253,13 @@
     margin: 0 0 0 10px;
     line-height: 0em;
     background-color: transparent;
-    border: none;
+    border:none;
     color: rgb(129, 186, 218);
     font-size: 1.7em;    
     outline: none;
     font-size: 1.4em;
     transition: .3s all ease;
+
 }
 
 .audioRecordActive {

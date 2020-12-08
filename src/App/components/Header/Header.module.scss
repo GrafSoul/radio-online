@@ -124,7 +124,16 @@
 		}
 	}
 
-
+	.recordTime {
+		margin-left: 12px;
+		padding: 5px 8px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: .7em;
+		font-weight: normal;
+		color: rgb(255, 255, 255);
+		border: 1px solid rgb(38, 56, 66);
+		border-radius: 12px;
+	}
 
 	.addVersion {
 		font-size: .8em;
