@@ -129,10 +129,7 @@ const Header = ({
                         className={classes.logo}
                     />{' '}
                     Radion <span className={classes.addVersion}>{version}</span>
-                    {isRecord && <RecordTimer isRecord={isRecord} />}
-                    {isSave && (
-                        <span className={classes.saving}>Prepare audio...</span>
-                    )}
+                    <RecordTimer isRecord={isRecord} isSave={isSave} />
                 </div>
                 <div className={classes.btnGroup}>
                     <div className={classes.menuListWrap}>

@@ -48,6 +48,8 @@ const makeDownload = (abuffer, total_samples, nameStation) => {
     setTimeout(() => {
         link.click();
     }, 500);
+
+    return false;
 };
 
 const bufferToWave = (abuffer, len) => {

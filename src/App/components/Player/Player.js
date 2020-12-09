@@ -164,7 +164,9 @@ const Player = ({
                         chunks.current,
                         `${station.name}-${countSound}`,
                     );
-                    setIsSave(false);
+                    setTimeout(() => {
+                        setIsSave(false);
+                    }, 3000);
                 }
             };
         }

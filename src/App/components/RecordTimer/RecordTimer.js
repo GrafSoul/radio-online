@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import classes from './RecordTimer.module.scss';
 
-const RecordTimer = () => {
+const RecordTimer = ({ isRecord, isSave }) => {
+    const interval = useRef(null);
     const [hour, setHour] = useState(0);
     const [min, setMin] = useState(0);
     const [sec, setSec] = useState(0);
@@ -10,8 +11,13 @@ const RecordTimer = () => {
     const [date, setDate] = useState(new Date().getTime());
 
     useEffect(() => {
-        setInterval(updateTime, 10);
-    }, []);
+        if (isRecord) {
+            interval.current = setInterval(updateTime, 10);
+        } else {
+            clearInterval(interval.current);
+            clearTime();
+        }
+    }, [isRecord]);
 
     const updateTime = () => {
         const data = new Date().getTime();
@@ -33,10 +39,23 @@ const RecordTimer = () => {
         return num < 10 ? '0' + num : num;
     };
 
+    const clearTime = () => {
+        setMs(0);
+        setSec(0);
+        setMin(0);
+        setHour(0);
+        setDate(new Date().getTime());
+    };
+
     return (
-        <span className={classes.recordTime}>
-            {addZero(hour)}:{addZero(min)}:{addZero(sec)}:{addZero(ms)}
-        </span>
+        <>
+            {isRecord && (
+                <span className={classes.recordTime}>
+                    {addZero(hour)}:{addZero(min)}:{addZero(sec)}:{addZero(ms)}
+                </span>
+            )}
+            {isSave && <span className={classes.saving}>Prepare audio...</span>}
+        </>
     );
 };
 

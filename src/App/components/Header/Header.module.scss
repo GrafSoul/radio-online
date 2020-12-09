@@ -135,20 +135,6 @@
 		border-radius: 12px;
 	}
 
-	.saving {
-		padding: 0;
-		font-size: .8em;
-		color:rgb(50, 158, 0);
-		margin-left: 8px;
-		animation:blink 1s infinite;	
-	}
-
-	@keyframes blink{
-		0%{color:rgb(50, 158, 0);}
-		50%{color: rgb(59, 90, 107);}
-		100%{color: rgb(50, 158, 0);}
-	}
-
 	.addVersion {
 		font-size: .8em;
 	}
