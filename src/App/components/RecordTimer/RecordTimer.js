@@ -8,11 +8,14 @@ const RecordTimer = ({ isRecord, isSave }) => {
     const [min, setMin] = useState(0);
     const [sec, setSec] = useState(0);
     const [ms, setMs] = useState(0);
-    const [date, setDate] = useState(new Date().getTime());
+    const [date, setDate] = useState(Date.now());
 
     useEffect(() => {
         if (isRecord) {
-            interval.current = setInterval(updateTime, 10);
+            clearTime();
+            setTimeout(() => {
+                interval.current = setInterval(updateTime, 10);
+            }, 300);
         } else {
             clearInterval(interval.current);
             clearTime();
@@ -20,7 +23,7 @@ const RecordTimer = ({ isRecord, isSave }) => {
     }, [isRecord]);
 
     const updateTime = () => {
-        const data = new Date().getTime();
+        const data = Date.now();
         const duration = data - date;
         setDate(data);
 
@@ -44,7 +47,7 @@ const RecordTimer = ({ isRecord, isSave }) => {
         setSec(0);
         setMin(0);
         setHour(0);
-        setDate(new Date().getTime());
+        setDate(Date.now());
     };
 
     return (

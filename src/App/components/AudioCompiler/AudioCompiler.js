@@ -49,7 +49,7 @@ const makeDownload = (abuffer, total_samples, nameStation) => {
         link.click();
     }, 500);
 
-    return false;
+    return true;
 };
 
 const bufferToWave = (abuffer, len) => {
