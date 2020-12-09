@@ -17,6 +17,7 @@ const Header = ({
     addStation,
     aboutAppModal,
     isRecord,
+    isSave,
 }) => {
     const [status, setStatus] = useState(false);
     const [isTop, setIsTop] = useState(false);
@@ -129,6 +130,9 @@ const Header = ({
                     />{' '}
                     Radion <span className={classes.addVersion}>{version}</span>
                     {isRecord && <RecordTimer isRecord={isRecord} />}
+                    {isSave && (
+                        <span className={classes.saving}>Prepare audio...</span>
+                    )}
                 </div>
                 <div className={classes.btnGroup}>
                     <div className={classes.menuListWrap}>

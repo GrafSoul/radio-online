@@ -28,6 +28,7 @@ const App = () => {
     const [isEditModal, setIsEditModal] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
     const [isRecord, setIsRecord] = useState(false);
+    const [isSave, setIsSave] = useState(false);
     const [searchWords, setSearchWords] = useState('');
     const [countStations, setCountStations] = useState(0);
     const [station, setStation] = useState({
@@ -233,6 +234,7 @@ const App = () => {
                 deleteAllModal={handlerDeleteAllModal}
                 aboutAppModal={handlerAboutAppModal}
                 isRecord={isRecord}
+                isSave={isSave}
             />
             <Player
                 audioStream={audioStream}
@@ -246,6 +248,7 @@ const App = () => {
                 openLink={handlerOpenLink}
                 isRecord={isRecord}
                 setIsRecord={setIsRecord}
+                setIsSave={setIsSave}
             />
 
             <PlayList

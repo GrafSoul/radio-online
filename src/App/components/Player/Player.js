@@ -3,7 +3,7 @@ import AudioSpectrum from 'react-audio-spectrum';
 
 import classes from './Player.module.scss';
 
-// import AudioCompiler from '../AudioCompiler/AudioCompiler';
+import AudioCompiler from '../AudioCompiler/AudioCompiler';
 
 const { remote } = window.require('electron');
 const mainWindow = remote.getCurrentWindow();
@@ -20,6 +20,7 @@ const Player = ({
     openLink,
     isRecord,
     setIsRecord,
+    setIsSave,
 }) => {
     const mediaRecorder = useRef();
     const stream = useRef();
@@ -148,6 +149,7 @@ const Player = ({
             mediaRecorder.current.start();
         } else {
             setIsRecord(false);
+            setIsSave(true);
             console.log('Stop Record');
             mediaRecorder.current.stop();
 
@@ -158,10 +160,11 @@ const Player = ({
                 if (mediaRecorder.current.state === 'inactive') {
                     setCountSound(countSound + 1);
 
-                    // AudioCompiler(
-                    //     chunks.current,
-                    //     `${station.name}-${countSound}`,
-                    // );
+                    AudioCompiler(
+                        chunks.current,
+                        `${station.name}-${countSound}`,
+                    );
+                    setIsSave(false);
                 }
             };
         }

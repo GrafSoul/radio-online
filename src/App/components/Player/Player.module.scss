@@ -247,39 +247,51 @@
     position: relative;
     display: block;
     opacity: .5;
-    width: 28px;
-    height: 34px;
+    width: 27px;    
+    height: 27px;
     padding: 0;
     margin: 0 0 0 10px;
     line-height: 0em;
     background-color: transparent;
-    border:none;
-    color: rgb(129, 186, 218);
+    border: 2px solid rgb(129, 186, 218);
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, .8);
+    border-radius: 50%;    
     font-size: 1.7em;    
     outline: none;
     font-size: 1.4em;
     transition: .3s all ease;
 
+    & i {
+        display: inline-block;
+        margin-left: 0;
+        color: rgb(129, 186, 218);
+    }
+
 }
 
 .audioRecordActive {
-    opacity: 1;
-    cursor: pointer;   
+    & i {
+        opacity: 1;
+        cursor: pointer; 
 
-    &:hover {
-        color:rgb(245, 10, 61);
+        &:hover {
+            color:rgb(245, 10, 61);
+        }  
     }
+
 }
 
 .audioRecordGo {
-    color:rgb(245, 10, 61);
-    animation:blinking 1s infinite;
+    & i {
+        color:rgb(255, 0, 0);
+        animation:blinking 1s infinite;
+    }
 }
 
 @keyframes blinking{
-    0%{opacity: 1;}
-    50%{opacity: .3;}
-    100%{opacity: 1;}
+    0%{color:rgb(255, 0, 0); }
+    50%{color: rgb(129, 186, 218);}
+    100%{color:rgb(255, 0, 0);}
 }
 
 
