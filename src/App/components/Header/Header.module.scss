@@ -135,6 +135,14 @@
 		border-radius: 12px;
 	}
 
+	.saving {
+		padding: 0;
+		font-size: .8em;
+		color:rgb(50, 158, 0);
+		margin-left: 8px;
+		animation:blink 1s infinite;	
+	}
+
 	.addVersion {
 		font-size: .8em;
 	}

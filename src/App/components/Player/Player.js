@@ -137,8 +137,8 @@ const Player = ({
 
     const handlerToggleRecordSound = () => {
         if (!isRecord) {
-            setIsRecord(true);
             console.log('Start Record');
+            setIsRecord(true);
             let options = {
                 audioBitsPerSecond: 128000,
                 mimeType: 'audio/webm',
@@ -148,10 +148,10 @@ const Player = ({
             mediaRecorder.current = new MediaRecorder(stream.current, options);
             mediaRecorder.current.start();
         } else {
-            setIsRecord(false);
-            setIsSave(true);
             console.log('Stop Record');
             mediaRecorder.current.stop();
+            setIsSave(true);
+            setIsRecord(false);
 
             mediaRecorder.current.ondataavailable = (e) => {
                 chunks.current = [];
