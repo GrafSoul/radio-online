@@ -10,12 +10,13 @@ Made using - Electron.js, React.js.
 ![alt text](/design/screen_5.png 'Radion - Delete a radio station')
 ![alt text](/design/screen_6.png 'Radion - Use radio station search')
 ![alt text](/design/screen_7.png 'Radion - Menu with a set of commands')
-![alt text](/design/screen_8.png 'Radion - Collapsed view of the application')
+![alt text](/design/screen_8.png 'Radion - Recording a stream and saving it in WAV format')
+![alt text](/design/screen_9.png 'Radion - Collapsed view of the application')
 
 ### Download
 
-[Radion Setup 1.2.0](http://bit.do/radion-120) - (OS Windows, zip, 106 Mb)  
-[Radion Portable 1.2.0](http://bit.do/radion-portable-120) - (OS Windows, zip, 133 Mb)
+[Radion Setup 1.3.0](http://bit.do/radion-130) - (OS Windows, zip, 106 Mb)  
+[Radion Portable 1.3.0](http://bit.do/radion-portable-130) - (OS Windows, zip, 133 Mb)
 
 <span id="qr_code" style="
  display: inline-block;
@@ -24,7 +25,7 @@ Made using - Electron.js, React.js.
  text-align: center;
  background-color: white;
  padding: 5px;
-"><a href="http://bit.do/radion-120-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-120" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-120</a></span>
+"><a href="http://bit.do/radion-130-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-130" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-130</a></span>
 
 <span id="qr_code" style="
  display: inline-block;
@@ -33,7 +34,7 @@ Made using - Electron.js, React.js.
  text-align: center;
  background-color: white;
  padding: 5px;
-"><a href="http://bit.do/radion-portable-120-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-portable-120" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-portable-120</a></span>
+"><a href="http://bit.do/radion-portable-130-?qrcode=1" style="border: 0;">QR Code:<br><img src="http://chart.apis.google.com/chart?cht=qr&amp;chs=100x100&amp;choe=UTF-8&amp;chld=H%7C0&amp;chl=http://bit.do/radion-portable-130" alt="QR Code" title="Enlarge QR Code"><br>http://bit.do/radion-portable-130</a></span>
 
 ## Run for start development version
 
